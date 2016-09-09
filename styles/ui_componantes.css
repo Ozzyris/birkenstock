@@ -1,0 +1,95 @@
+/*
+    MOBILE VERSION
+*/
+h2.title{
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: #498098;
+    width: auto;
+    min-width: 50%;
+    border-bottom: 3px solid #94c7e4;
+    margin-bottom: 20px;
+}
+h2.sub_title{
+	font-size: 3.2rem;
+	font-weight: 600;
+	color: #498098;
+	width: auto;
+	min-width: 50%;
+	margin-bottom: 20px;
+}
+
+p{
+    font-size: 2.7em;
+    color: #303030;
+}
+
+    /* COLUMNS */
+    ul.Two_column, ul.Three_column{
+        -moz-columns: 1 260px;
+        -webkit-columns: 1 260px;
+        columns: 1 260px;
+    }
+    ul.Two_column li, ul.Three_column li{
+    	-webkit-column-break-inside: avoid;
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+
+.button{
+	display:block;
+	width: auto;
+	height: 30px;
+	float: right;
+	font-size: 2.7em;
+	line-height: 30px;
+	padding: 0 10px;
+	transition: background-color 200ms;
+}
+.button.blue{
+	background-color: #498098;
+	color: white;
+}
+.button.blue:hover{ background-color: #9ad2e8; }
+
+
+
+/*
+    TABLET VERSION
+*/
+@media screen and (min-width: 768px ){
+    ul.Two_column{
+        -moz-columns: 2 260px;
+        -webkit-columns: 2 260px;
+        columns: 2 260px;
+        -webkit-column-gap: 20px;
+        -moz-column-gap: 20px;
+        column-gap: 20px;
+    }
+    ul.Three_column{
+        -moz-columns: 3 160px;
+        -webkit-columns: 3 160px;
+        columns: 3 160px;
+        -webkit-column-gap: 20px;
+        -moz-column-gap: 20px;
+        column-gap: 20px;
+    }
+}
+
+/*
+    SMALL SCREEN COMPUTER VERSION
+*/
+@media screen and (min-width: 992px ){
+
+}
+
+/*
+    LARGE SCREEN COMPUTER VERSION
+*/
+@media screen and (min-width: 1200px ){}
+
+/*
+    SUPER LARGE SCREEN COMPUTER VERSION
+*/
+@media screen and (min-width: 1600px ){}

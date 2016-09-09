@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	  <meta charset="utf-8">
+	  <title>Bondi Birkenstock</title>
+	  <!-- META -->
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <meta name="format-detection" content="telephone=no">
+	  <!-- LINK -->
+	  <link rel="shortcut icon" href="images/favicon.png">
+	  <link rel="stylesheet" href="styles/main.css">
+	  <link rel="stylesheet" href="styles/ui_componantes.css">
+	  <link rel="stylesheet" href="styles/home.css">
+	</head>
+	<body>
+	
+	<header>
+		<img src="images/LOGO_logocolour.svg" alt="logo birkenstock">
+	</header>
+
+	<!-- NAVIGATION -->
+	<nav class="useless">
+		<a id="hamburger_icon" href="#" onclick="sidemenu()" title="Menu">
+			<span class="line line-1"></span>
+			<span class="line line-2"></span>
+			<span class="line line-3"></span>
+		</a>
+		<a class="image_logo" href="#"><img class="logo" src="images/LOGO_logomenu.svg" alt="Birkenstock"></a>
+		<div class="left_menu" id="left_menu">
+			<ul>
+				<li class="active"><a href="#">Home</a></li>
+				<li><a href="views/products.html">Product</a></li>
+				<li><a href="#">Seasonal</a></li>
+				<li><a href="views/about.html">About Us</a></li>
+				<li><a href="views/contact.html">Contact Us</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="quick_contact">
+		<a class="quick_contact_button" onclick="launch_detail_information();" href="#"><img src="images/ICON_mail.svg" alt=""><img style="display: none;" src="images/ICON_cross.svg" alt=""></a>
+		<div class="content" style="display:none;">
+			<h4>Birkenstock<br>7/178 Campbell Parade, Sydney NSW</h4>
+			<div class="open_hours">
+				<h5 class="open">Open Now</h5>
+				<div class="line_containter">
+					<div class="days_container">Monday - Friday</div>
+					<div class="hours_container">10am -8pm</div>
+				</div>
+				<div class="line_containter">
+					<div class="days_container">Saturday</div>
+					<div class="hours_container">9am - 9pm</div>
+				</div>
+				<div class="line_containter">
+					<div class="days_container">Monday - Friday</div>
+					<div class="hours_container">11am - 10pm</div>
+				</div>
+			</div>
+			<div class="external_link">
+				<a href="">
+					<i><img src="images/ICON_location.svg" alt=""></i>
+					<p>Get Direction</p>
+				</a>
+				<a href="">
+					<i><img src="images/ICON_phone.svg" alt=""></i>
+					<p>Call Us</p>
+				</a>
+				<a href="">
+					<i><img src="images/ICON_arobase.svg" alt=""></i>
+					<p>Email Us</p>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<section id="collection">
+		<h2 class="title">Collection</h2>
+		<ul class="Two_column">
+			<li class="image_link" style="background-image: url(images/THUMB_sesonal.jpg)" >
+				<a href="views/products.html">
+					<h3>Seasonals</h3>
+				</a>
+			</li>
+			<li class="image_link" style="background-image: url(images/THUMB_allcollections.jpg)" >
+				<a href="views/products.html">
+					<h3>All Collections</h3>
+				</a>
+			</li>
+		</ul>
+		<ul class="Three_column">
+			<li class="image_link" style="background-image: url(images/THUMB_women.jpg)" >
+				<a href="#">
+					<h3>Women</h3>
+				</a>
+			</li>
+			<li class="image_link" style="background-image: url(images/THUMB_men.jpg)" >
+				<a href="#">
+					<h3>Men</h3>
+				</a>
+			</li>
+			<li class="image_link" style="background-image: url(images/THUMB_kids.jpg)" >
+				<a href="#">
+					<h3>Kids</h3>
+				</a>
+			</li>
+		</ul>
+	</section>
+
+	<section id="Featured_products">
+		<h2 class="title">Featured Products</h2>
+		<ul class="Three_column">
+			<li>
+				<a href="views/product_details.html">
+					<img src="images/products/SHOES_arizona_1.png" alt="Arizona">
+					<h3>ARIZONA</h3>
+				</a>
+			</li>
+			<li>
+				<a href="views/product_details.html">
+					<img src="images/products/SHOES_mayari_2.png" alt="Arizona">
+					<h3>MAYARI</h3>
+				</a>
+			</li>
+			<li>
+				<a href="views/product_details.html">
+					<img src="images/products/SHOES_gizeh_1.png" alt="Arizona">
+					<h3>GIZEH</h3>
+				</a>
+			</li>
+			<li>
+				<a href="views/product_details.html">
+					<img src="images/products/SHOES_rio_1.png" alt="Arizona">
+					<h3>RIO</h3>
+				</a>
+			</li>
+			<li>
+				<a href="views/product_details.html">
+					<img src="images/products/SHOES_boston_1.png" alt="Arizona">
+					<h3>BOSTON</h3>
+				</a>
+			</li>
+			<li>
+				<a href="views/product_details.html">
+					<img src="images/products/SHOES_madrid_2.png" alt="Arizona">
+					<h3>MADRID</h3>
+				</a>
+			</li>
+			<li>
+				<a href="views/product_details.html">
+					<img src="images/products/SHOES_rio_1.png" alt="Arizona">
+					<h3>MILANO</h3>
+				</a>
+			</li>
+			<li>
+				<a href="views/product_details.html">
+					<img src="images/products/SHOES_rio_1.png" alt="Arizona">
+					<h3>FLORIDA</h3>
+				</a>
+			</li>
+			<li>
+				<a href="views/product_details.html">
+					<img src="images/products/SHOES_rio_1.png" alt="Arizona">
+					<h3>SALINA</h3>
+				</a>
+			</li>
+			<li>
+				<a href="views/product_details.html">
+					<img src="images/products/SHOES_rio_1.png" alt="Arizona">
+					<h3>ROMA</h3>
+				</a>
+			</li>
+			<li>
+				<a href="views/product_details.html">
+					<img src="images/products/SHOES_rio_1.png" alt="Arizona">
+					<h3>YARA</h3>
+				</a>
+			</li>
+			<li>
+				<a href="views/product_details.html">
+					<img src="images/products/SHOES_rio_1.png" alt="Arizona">
+					<h3>PROFI BIRKI</h3>
+				</a>
+			</li>
+			<li>
+				<a href="views/product_details.html">
+					<img src="images/products/SHOES_rio_1.png" alt="Arizona">
+					<h3>ARRANG</h3>
+				</a>
+			</li>
+		</ul>
+	</section>
+
+	<section id="Home_History">
+		<h2 class="title">Birkenstock Bondi Beach - History</h2>
+		<div class="image"><span class="stylyzed_border"></span></div>
+		<div class="content">
+			<p>Birkenstock Bondi Beach is an independently owned, all Birkenstock retail shop that first opened it’s doors in Bondi Beach on 15th October 2015. It began as a ‘Pop-Up’ store and has since become a one stop, all season, retailer featuring one of the widest range of Birkenstock brand footwear in Sydney.</p>
+			<a href="#" class="button blue">See More</a>
+		</div>
+	</section>
+
+	<section id="latestNews">
+		<h2 class="title">Our last news</h2>
+		<!-- <article>
+			<div class="image" style="background-image: url(images/THUMB_news1.jpg);"></div>
+			<div class="content">
+				<h3>The new seasonal collection is out</h3>
+				<time>Monday 16 August</time>
+				<p>2016 spring is all NEON in classic Arizona, Madrid and Gizeh styles, as well as the beach happy, waterproof EVA neons in selected styles for adults and kids. Neon pink, orange, yellow and green are our limited edition colours, so be quick and don’t say I didn’t tell you so ;)</p>
+				<a class="button blue" href="#">Read More</a>
+				<span class="colorbackground"></span>
+				<span class="colorborder"></span>
+			</div>
+		</article> -->
+		<article>
+			<div class="image" style="background-image: url(images/THUMB_news2.jpg);"></div>
+			<div class="content">
+				<h3>Neon style for our classics.</h3>
+				<time>Friday 15 September</time>
+				<p>2016 spring is all NEON in classic Arizona, Madrid and Gizeh styles, as well as the beach happy, waterproof EVA neons in selected styles for adults and kids. Neon pink, orange, yellow and green are our limited edition colours, so be quick and don’t say I didn’t tell you so ;)</p>
+				<!-- <a class="button blue" href="#">Read More</a> -->
+				<span class="colorbackground"></span>
+				<span class="colorborder"></span>
+			</div>
+		</article>
+		<article>
+			<div class="image" style="background-image: url(images/THUMB_news3.jpg);"></div>
+			<div class="content">
+				<h3>New kids range instore</h3>
+				<time>Tuesday 06 September</time>
+				<p>Birkenstock kids range is also in-store now, sizes starting at 24 up to small adults 34/35. Prices start at $51 for the waterproof light weight sandals, and go up to $105 for the classic cork footbed sandals. Galaxy pink and flower rose prints are the pretty seasonal specials, while the two tone Milano blue and Arizona Spiderman comic complete the street look.</p>
+				<!-- <a class="button blue" href="#">Read More</a> -->
+				<span class="colorbackground"></span>
+				<span class="colorborder"></span>
+			</div>
+		</article>
+	</section>
+
+	<section id="map">
+		<h2 class="title">Come to see us !</h2>
+		<div class="map_container">
+			<span class="borderwhite"></span>
+		</div>
+	</section>
+
+	<footer>
+		<form class="newsletter">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacinia pulvinar mattis. Aliquam ullamcorper ipsum vulputate dictum ultrices. In vel tellus et neque posuere iaculis.</p>
+			<div class="input_group">
+				<input type="text" placeholder="Suscribe">
+				<a href="#"></a>
+			</div>
+		</form>
+		<ul class="external_link">
+    	  <li><a href=""><span>&#xf09a;</span><p>/Bondi Birkenstock</p></a></li>
+    	  <li><a href=""><span>&#xf16d;</span><P>/Bondi Birkenstock</p></a></li>
+    	  <li><a href=""><span>&#xf0f7;</span><P>245 rue du chène<br> Bondi,NSW <br> Australia</p></a></li>
+    	  <li><a href=""><span>&#xf095;</span><P>0242 356 378</p></a></li>
+    	</ul>
+    	<p class="copyright">Copyright - Bondi Birkenstock 2016</p>
+	</footer>
+
+	</body>
+
+	<!-- SCRIPT -->
+	<script src="plugins/jquery.js"></script>
+	<script src="scripts/main.js"></script>
+	<script src="scripts/home.js"></script>
+</html>

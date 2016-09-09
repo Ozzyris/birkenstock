@@ -1,0 +1,134 @@
+/*
+    MOBILE VERSION
+*/
+    section#Home_History{}
+        section#Home_History h2{}
+        section#Home_History div.image{
+            background-image: url('../images/BG_history.jpg');
+            background-size: cover;
+            background-position: center center;
+            display: block;
+            width: 100%;
+            height: 200px;
+        }
+        section#Home_History div.content{ width: 100; }
+            section#Home_History div.content p{
+                font-size: 2rem;
+                font-weight: 200;
+            }
+        section#Home_History div.content{}
+
+
+/* MAP */
+section#map{
+    width: 100%;
+    max-width: none;
+}
+    section#map h2.title{
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    section#map div.map_container{
+        margin-top: 20px;
+        display: block;
+        width: calc(100% - 40px);
+        height: calc(500px - 40px);
+        background-color: red;
+        padding: 20px 
+    }
+        section#map div.map_container span.borderwhite{
+            width: 100%;
+            height: 100%;
+            border: 1px solid white;
+            display: block;
+        }
+
+    /* GET IN TOUCH */
+    section#get_in_touch{}
+        section#get_in_touch h2{}
+        section#get_in_touch form{
+            max-width: 600px;
+            margin: 20px auto 0;
+        }
+            section#get_in_touch form div.inputs_group{
+                width: 100%;
+            }
+                section#get_in_touch form div.inputs_group label{
+                    font-size: 1.3rem;
+                    font-weight: 600;
+                    color: #303030;
+                }
+                section#get_in_touch form div.inputs_group input{
+                    font-size: 1.6rem;
+                    width: calc(100% - 30px);
+                    height: 30px;
+                    line-height: 30px
+                    font-weight: 400;
+                    padding: 5px 15px;
+                    border: none;
+                    margin-bottom: 30px;
+                    border-bottom: 1px solid black;
+                }
+                section#get_in_touch form div.inputs_group textarea{
+                    font-size: 1.6rem;
+                    width: calc(100% - 32px);
+                    height: 30px;
+                    line-height: 30px
+                    font-weight: 400;
+                    padding: 15px;
+                    border: none;
+                    margin-bottom: 30px;
+                    border: 1px solid black;
+                    height: 100px;
+                    resize: none;
+                }
+            section#get_in_touch form span.button{
+                cursor: pointer;
+            }
+
+
+/*
+    TABLET VERSION
+*/
+@media screen and (min-width: 768px ){
+    section#Home_History div.image{ height: 300px; }
+}
+
+
+
+/*
+    SMALL SCREEN COMPUTER VERSION
+*/
+@media screen and (min-width: 992px ){
+    section#Home_History div.image{ height: 300px }
+
+    section#get_in_touch form{
+        overflow: auto;
+        margin: 80px auto 0;
+    }
+    section#get_in_touch form div.inputs_group{
+        width: calc(50% - 10px);
+        float: left;
+    }
+    section#get_in_touch form div.inputs_group:nth-child(1){ margin-right: 20px; }
+    section#get_in_touch form div.inputs_group textarea{ height: 182px; }
+}
+
+
+/*
+    LARGE SCREEN COMPUTER VERSION
+*/
+@media screen and (min-width: 1200px ){
+    section#Home_History div.image{ height: 400px }
+
+}
+
+
+/*
+    SUPER LARGE SCREEN COMPUTER VERSION
+*/
+@media screen and (min-width: 1600px ){
+    section#Home_History div.image{ height: 500px }
+
+}
