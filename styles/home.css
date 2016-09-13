@@ -1,7 +1,6 @@
 /*
     MOBILE VERSION
 */
-
 header{
     width: 100vw;
     height: 92.4vh;
@@ -139,19 +138,19 @@ section#collection{}
         section#Home_History div.content{}
 
 
-    section#latestNews{}
+    section#latestNews, section#Home_History{}
         section#latestNews h2{}
-        section#latestNews article{
+        section#latestNews article, section#Home_History article{
             width: 100%;
         }
-            section#latestNews article div.image{
+            section#latestNews article div.image, section#Home_History article div.image{
                 background-size: cover;
                 background-position: center center;
                 display: block;
                 width: 100%;
                 height: 200px;
             }
-            section#latestNews article div.content{
+            section#latestNews article div.content, section#Home_History article div.content{
                 margin-top: 20px;
                 width: 100%;
                 position: relative;
@@ -169,7 +168,7 @@ section#collection{}
                 }
                 section#latestNews article div.content p{}
                 section#latestNews article div.content a{}
-                section#latestNews article div.content span.colorbackground{
+                section#latestNews article div.content span.colorbackground, section#Home_History article div.content span.colorbackground{
                     width: 100%;
                     height: 200px;
                     transform: translate(20px, 40px);
@@ -179,7 +178,7 @@ section#collection{}
                     z-index: -2;
                     top: 0;
                 }
-                section#latestNews article div.content span.colorborder{
+                section#latestNews article div.content span.colorborder, section#Home_History article div.content span.colorborder{
                     width: 100%;
                     height: 200px;
                     transform: translate(-20px, 0px);
@@ -195,15 +194,15 @@ section#map{
     section#map h2.title{
         width: 100%;
     }
-    section#map div.map_container{
+    section#map div#map_container{
         margin-top: 20px;
         display: block;
         width: calc(100% - 40px);
         height: calc(400px - 40px);
-        background-color: red;
+        background-color: #efefef;
         padding: 20px 
     }
-        section#map div.map_container span.borderwhite{
+        section#map div#map_container span.borderwhite{
             width: 100%;
             height: 100%;
             border: 1px solid white;
@@ -235,16 +234,16 @@ section#map{
         }
             section#Home_History div.image span.stylyzed_border{height: 280px;}
 
-        section#latestNews{ overflow: auto; }
+        section#latestNews, section#Home_History{ overflow: auto; }
         section#latestNews h2{}
         section#latestNews article{}
-            section#latestNews article div.image{
+            section#latestNews article div.image, section#Home_History article div.image{
                 width: calc(50% - 20px);
                 float: left;
                 margin-right: 10px;
                 z-index: 0;
             }
-            section#latestNews article div.content{
+            section#latestNews article div.content, section#Home_History article div.content{
                 margin: 0px;
                 width: 50%;
                 float: left;
@@ -264,7 +263,7 @@ section#map{
                 }
                 section#latestNews article div.content p{}
                 section#latestNews article div.content a{}
-                section#latestNews article div.content span.colorbackground{
+                section#latestNews article div.content span.colorbackground, section#Home_History article div.content span.colorbackground{
                     width: 95%;
                 }
                 section#latestNews article div.content span.colorborder{}
@@ -307,8 +306,8 @@ section#map{
     header img{ padding-top: calc(40% - 50px); }
     section#Home_History div.image{ height: 500px }
             section#Home_History div.image span.stylyzed_border{height: 480px;}
-    section#latestNews article{ min-height: 320px; }
-    section#latestNews article div.image{ min-height: 300px; }
-    section#latestNews article div.content{ min-height: 300px; }
+    section#latestNews article, section#Home_History article{ min-height: 320px; }
+    section#latestNews article div.image, section#Home_History article div.image{ min-height: 300px; }
+    section#latestNews article div.content, section#Home_History article div.content{ min-height: 300px; }
 
 }

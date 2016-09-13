@@ -15,5 +15,16 @@ body.on("scroll", function(e) {
   } else {
     $("nav").removeClass("active");
   }
-  
 });
+
+var map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map_container'), {
+    center: {lat: -33.8897663, lng: 151.27495640000006},
+    zoom: 17,
+    scrollwheel: false,
+    draggable: false,
+    navigationControl: false,
+    mapTypeControl: false
+  });
+}

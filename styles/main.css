@@ -328,12 +328,12 @@ footer ul.external_link{
         padding-top: 30px;
     }
         footer ul.external_link li{
-            width: 180px;
+            width: 240px;
             line-height: 20px;
             min-height: 30px;
             overflow: auto;
             text-align: center;
-            margin-left: calc(50% - 90px);
+            margin-left: calc(50% - 115px);
             height: auto;
         }
             footer ul.external_link li a{
@@ -462,9 +462,9 @@ nav{}
         margin: 0 calc(25% - 125px);
     }
     footer ul.external_link{
-        width: 200px;
+        width: 240px;
         float: left;
-        margin: 40px calc(25% - 100px);
+        margin: 40px calc(25% - 120px);
     }
 }
 
