@@ -72,6 +72,8 @@ section#products{}
                 background-color: #d7d2c8;
                 
             }
+                section#products ul.Three_column li.kids{ background-color: #c0db8f; }
+                section#products ul.Three_column li.seasonal{ background-color: #8574b2; }
                 section#products ul.Three_column li a{
                     width: 100%;
                     height: auto;
@@ -124,7 +126,7 @@ section#products{}
     }
     section#products div.filter span.arrow_button{display: none;}
     section#products ul.Three_column{
-        width: 60%;
+        width: 110%;
         max-width: 1000px;
         margin: 0 auto;
         transform: translateX(35%);

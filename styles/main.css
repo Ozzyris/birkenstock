@@ -94,6 +94,12 @@ input:focus, textarea:focus {
 }
 input{border-radius: 0;}
 
+.m-scrollable-filter{
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 /*
     MOBILE VERSION
 */
