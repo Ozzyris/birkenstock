@@ -7,15 +7,15 @@
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	  <meta name="format-detection" content="telephone=no">
 	  <!-- LINK -->
-	  <link rel="shortcut icon" href="../../images/favicon.png">
-	  <link rel="stylesheet" href="../../styles/main.css">
-	  <link rel="stylesheet" href="../../styles/ui_componantes.css">
-	  <link rel="stylesheet" href="../../styles/product_details.css">
+	  <link rel="shortcut icon" href="../../../images/favicon.png">
+	  <link rel="stylesheet" href="../../../styles/main.css">
+	  <link rel="stylesheet" href="../../../styles/ui_componantes.css">
+	  <link rel="stylesheet" href="../../../styles/product_details.css">
 	</head>
 	<body>
 	
 	<header class="Global_Header">
-		<img src="../../images/LOGO_logocolour.svg" alt="logo birkenstock">
+		<img src="../../../images/LOGO_logocolour.svg" alt="logo birkenstock">
 	</header>
 
 	<!-- NAVIGATION -->
@@ -25,14 +25,14 @@
 			<span class="line line-2"></span>
 			<span class="line line-3"></span>
 		</a>
-		<a class="image_logo" href="../../index.html"><img class="logo" src="../../images/LOGO_logomenu.svg" alt="Birkenstock"></a>
+		<a class="image_logo" href="../../../index.html"><img class="logo" src="../../../images/LOGO_logomenu.svg" alt="Birkenstock"></a>
 		<div class="left_menu" id="left_menu">
 			<ul>
-				<li><a href="../../index.html">Home</a></li>
-				<li class="active"><a href="../products.html">Product</a></li>
-				<li><a href="../products.html">Seasonal</a></li>
-				<li><a href="../about.html">About Us</a></li>
-				<li><a href="../contact.html">Contact Us</a></li>
+				<li><a href="../../../index.html">Home</a></li>
+				<li class="active"><a href="../../products.html">Product</a></li>
+				<li><a href="../../products.html">Seasonal</a></li>
+				<li><a href="../../about.html">About Us</a></li>
+				<li><a href="../../contact.html">Contact Us</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -44,32 +44,28 @@
 		<ul class="dot">
 			<!-- Javacript dot insertion here -->
 		</ul>
-		<span class="arrow left" onclick="slide_image( 'left' )"><img src="../../images/ELEM_Arrow.svg" alt=""></span>
-		<span class="arrow right" onclick="slide_image( 'right' )"><img src="../../images/ELEM_Arrow.svg" alt=""></span>
+		<span class="arrow left" onclick="slide_image( 'left' )"><img src="../../../images/ELEM_Arrow.svg" alt=""></span>
+		<span class="arrow right" onclick="slide_image( 'right' )"><img src="../../../images/ELEM_Arrow.svg" alt=""></span>
 	</section>
 
 	<section id="product_information">
 		<h1 class="title">ARIZONA</h1>
 		<p>The two-strap items from BIRKENSTOCK are the most popular sandals worldwide. These versatile classics are as suitable at work as they are for leisure time. The cork-latex footbed is made of natural materials and provides a high level of stability. They are available in a variety of materials and colors, making them popular with customers young and old.</p>
-		<ul class="tag">
-			<li><img src="../../images/BADGE_eva.svg" alt=""></li>
-			<li><img src="../../images/BADGE_leather.svg" alt=""></li>
-			<li><img src="../../images/BADGE_narrowfit.svg" alt=""></li>
-			<li><img src="../../images/BADGE_regularfit.svg" alt=""></li>
-			<li><img src="../../images/BADGE_softfooted.svg" alt=""></li>
-		</ul>
-		<a href="#"><h3>CONTACT US</h3></a>
+    <ul class="tag"></ul>
+      <p class="size"></p>
+      <p class="color"></p>
+    <a onclick="modal_contact(); return false;" href="#"><h3>CONTACT US</h3></a>
 	</section>
 
 	<!-- FOOTER -->
 	<footer>
-		<form class="newsletter">
-			<p>Be the first to receive information on upcoming promotions, sales, in store events and more..</p>
-			<div class="input_group">
-				<input type="text" placeholder="Suscribe">
-				<a href="#"></a>
-			</div>
-		</form>
+    <form id="form_newsletter" class="newsletter">
+      <p>Be the first to receive information on upcoming promotions, sales, in store events and more..</p>
+      <div class="input_group">
+        <input id="input_newsletter" type="text" placeholder="Suscribe">
+        <a onclick="newsletter_verification(); return false;" href="#"></a>
+      </div>
+    </form>
 		<ul class="external_link">
     	  <li><a href="https://www.facebook.com/Birkenstock-Bondi-Beach-952774751471213/" target="_blank"><span>&#xf09a;</span><p>/Bondi Birkenstock</p></a></li>
     	  <li><a href="https://www.instagram.com/birkenstock_bondi_beach/" target="_blank"><span>&#xf16d;</span><P>/Bondi Birkenstock</p></a></li>
@@ -83,27 +79,123 @@
 	</body>
 
 	<!-- SCRIPT -->
-	<script src="../../plugins/jquery.js"></script>
-	<script src="../../scripts/main.js"></script>
+	<script src="../../../plugins/jquery.js"></script>
+	<script src="../../../scripts/main.js"></script>
 	<script>
 		var gallery_content = [
-  			{
+  			{ //BLACK PATENT
   				picture: 'SHOES_arizona_1',
-  				tag: ['eva', 'leather']
+  				tag: ['seasonal', 'birkoflor', 'sandal20plus', 'narrowfit'],
+  				size: [35, 36, 37, 38, 39, 40, 41],
+  				gender: ['women'], 
+  				color: 'Black Patent'
    			},
-  			{
-  				picture: 'SHOES_arizona_3',
-  				tag: ['narrowfit', 'regularfit']
-   			},
-  			{
-  				picture: 'SHOES_arizona_4',
-  				tag: ['regularfit']
-   			},
-  			{
+  			{ //Black Patent Gold Studs
   				picture: 'SHOES_arizona_1',
-  				tag: ['softfooted', 'leather']
+  				tag: ['seasonal', 'birkoflor', 'regularfit', 'narrowfit'],
+  				size: [36, 37, 38, 39, 40, 41],
+  				gender: ['women'], 
+  				color: 'Black Patent Gold Studs'
    			},
+  			{ //White Patent Gold Studs
+  				picture: 'SHOES_arizona_1',
+  				tag: ['seasonal', 'birkoflor', 'regularfit', 'narrowfit'],
+  				size: [36, 37, 38, 39, 40, 41],
+  				gender: ['women'], 
+  				color: 'White Patent Gold Studs'
+   			},
+  			{ //Copper Metallic
+  				picture: 'SHOES_arizona_1',
+  				tag: ['seasonal', 'leather', 'softfootbed', 'regularfit', 'narrowfit'],
+  				size: [35, 36, 37, 38, 39, 40, 41, 42],
+  				gender: ['women'], 
+  				color: 'Copper Metallic'
+   			},
+  			{ //Silver Metallic
+  				picture: 'SHOES_arizona_1',
+  				tag: ['seasonal', 'leather', 'softfootbed', 'regularfit', 'narrowfit'],
+  				size: [35, 36, 37, 38, 39, 40, 41],
+  				gender: ['women'], 
+  				color: 'Silver Metallic'
+   			},
+  			{ //Blue
+  				picture: 'SHOES_arizona_1',
+  				tag: ['seasonal', 'leather', 'softfootbed', 'regularfit', 'narrowfit'],
+  				size: [36, 37, 38, 39, 40, 41],
+  				gender: ['women'], 
+  				color: 'Blue'
+   			},
+  			{ //Blue
+  				picture: 'SHOES_arizona_1',
+  				tag: ['seasonal', 'eva', 'narrowfit'],
+  				size: [36, 37, 38, 39, 40, 41],
+  				gender: ['women'], 
+  				color: 'Blue'
+   			},
+  			{ //Python brown
+  				picture: 'SHOES_arizona_1',
+  				tag: ['seasonal', 'leather', 'narrowfit'],
+  				size: [35, 36, 37, 38, 39, 40, 41],
+  				gender: ['women'], 
+  				color: 'Python brown'
+   			},
+  			{ //Khaki
+  				picture: 'SHOES_arizona_1',
+  				tag: ['seasonal', 'eva', 'narrowfit'],
+  				size: [36, 37, 38, 39, 40, 41],
+  				gender: ['men', 'women'], 
+  				color: 'Khaki'
+   			},
+  			{ //Pink
+  				picture: 'SHOES_arizona_1',
+  				tag: ['seasonal', 'eva', 'narrowfit'],
+  				size: [36, 37, 38, 39, 40, 41],
+  				gender: ['women'], 
+  				color: 'Pink'
+   			},
+  			{ //Orange
+  				picture: 'SHOES_arizona_1',
+  				tag: ['seasonal', 'eva', 'narrowfit'],
+  				size: [35, 36, 37, 38, 39, 40, 41, 42, 43],
+  				gender: ['men', 'women'], 
+  				color: 'Orange'
+   			},
+  			{ //Yellow
+  				picture: 'SHOES_arizona_1',
+  				tag: ['seasonal', 'eva', 'narrowfit'],
+  				size: [36, 37, 38, 39, 40, 41],
+  				gender: ['men', 'women'], 
+  				color: 'Yellow'
+   			},
+  			{ //Green
+  				picture: 'SHOES_arizona_1',
+  				tag: ['seasonal', 'eva', 'narrowfit'],
+  				size: [ 36, 37, 38, 39, 40, 41],
+  				gender: ['men', 'women'], 
+  				color: 'Green'
+   			},
+  			{ //Red
+  				picture: 'SHOES_arizona_1',
+  				tag: ['seasonal', 'eva', 'narrowfit'],
+  				size: [36, 37, 38, 39, 40, 41],
+  				gender: ['men', 'women'], 
+  				color: 'Red'
+   			},
+  			{ //Blue
+  				picture: 'SHOES_arizona_1',
+  				tag: ['seasonal', 'eva', 'narrowfit'],
+  				size: [36, 37, 38, 39, 40, 41],
+  				gender: ['men', 'women'], 
+  				color: 'Blue'
+   			},
+  			{ //Patent Neon Yellow
+  				picture: 'SHOES_arizona_1',
+  				tag: ['seasonal', 'birkoflor', 'regularfit'],
+  				size: [36, 37, 38, 39, 40, 41],
+  				gender: ['women'], 
+  				color: 'Patent Neon Yellow'
+   			}
 		];
-		</script>
-	<script src="../../scripts/product_details.js"></script>
+	</script>
+	<script src="../../../scripts/product_details.js"></script>
 </html>

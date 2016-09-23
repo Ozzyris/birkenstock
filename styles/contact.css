@@ -71,7 +71,13 @@ section#map{
                     border: none;
                     margin-bottom: 30px;
                     border-bottom: 1px solid black;
+                    transition: border 0.56s cubic-bezier(0.4, 0, 0.2, 1) 0s;
                 }
+                section#get_in_touch form div.inputs_group input:focus{border-bottom: 1px solid #ffc776;}
+                section#get_in_touch form div.inputs_group input.wrong{border-bottom: 1px solid #f27e72;}
+                section#get_in_touch form div.inputs_group textarea:focus{border: 1px solid #ffc776;}
+                section#get_in_touch form div.inputs_group textarea.wrong{border: 1px solid #f27e72;}
+
                 section#get_in_touch form div.inputs_group textarea{
                     font-size: 1.6rem;
                     width: calc(100% - 32px);
@@ -84,6 +90,7 @@ section#map{
                     border: 1px solid black;
                     height: 100px;
                     resize: none;
+                    transition: border 0.56s cubic-bezier(0.4, 0, 0.2, 1) 0s;
                 }
             section#get_in_touch form span.button{
                 cursor: pointer;

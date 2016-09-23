@@ -13,10 +13,10 @@ function slide_image( next_position ){
 				
 				$('section#product_information ul.tag').html('');
 				gallery_content[(actual_position+1)].tag.forEach(function(item, index){
-					$('section#product_information ul.tag').prepend('<li><img src="../../../images/BADGE_' + item + '.svg" alt=""></li>');
+					$('section#product_information ul.tag').append('<li><img src="../../../images/BADGE_' + item + '.svg" alt=""></li>');
 				});
-				$('section#product_information p.color').text(gallery_content[actual_position].color);
-				$('section#product_information p.size').text(sizes[actual_position]);
+				$('section#product_information p.color').text(gallery_content[(actual_position+1)].color);
+				$('section#product_information p.size').text(sizes[(actual_position+1)]);
 
 				actual_position = (actual_position + 1);
 			}
@@ -27,10 +27,10 @@ function slide_image( next_position ){
 
 				$('section#product_information ul.tag').html('');
 				gallery_content[(actual_position-1)].tag.forEach(function(item, index){
-					$('section#product_information ul.tag').prepend('<li><img src="../../../images/BADGE_' + item + '.svg" alt=""></li>');
+					$('section#product_information ul.tag').append('<li><img src="../../../images/BADGE_' + item + '.svg" alt=""></li>');
 				});
-				$('section#product_information p.color').text(gallery_content[actual_position].color);
-				$('section#product_information p.size').text(sizes[actual_position]);
+				$('section#product_information p.color').text(gallery_content[(actual_position-1)].color);
+				$('section#product_information p.size').text(sizes[(actual_position-1)]);
 
 				actual_position = (actual_position - 1);
 			}
@@ -60,11 +60,12 @@ function init_gallery(){
 		sizes.push(size)
 	}
 	gallery_content[0].tag.forEach(function(item, index){
-		$('section#product_information ul.tag').prepend('<li><img src="../../../images/BADGE_' + item + '.svg" alt=""></li>');
+		$('section#product_information ul.tag').append('<li><img src="../../../images/BADGE_' + item + '.svg" alt=""></li>');
 	});
 
 	$('section#product_information p.color').text(gallery_content[0].color);
 	$('section#product_information p.size').text(sizes[0]);
+	console.log(sizes);
 
 
 }
@@ -74,4 +75,23 @@ init_gallery();
 //On resize of the screen
 function resize(){
 
+}
+
+function modal_contact( action ){
+	var scroll = $(window).scrollTop();
+
+
+	switch( action ){
+		case 'close':
+			$('div.modal_darkfilter, div.modal').removeClass('active');
+    	  	setTimeout(function(){
+    	  		$('div.modal_darkfilter, div.modal').remove();
+    	    }, 310);
+    	  	break;
+    	default:
+    		$('body').prepend('<div onclick="modal_contact(\'close\');" class="modal_darkfilter"></div><div class="modal"><button onclick="modal_contact(\'close\')" class="modal_buton">X</button><h2 class="title">Contact Us</h2><p style="text-align:center;"><strong>Phone:</strong>  0242 356 378</p><br><p style="text-align:center;"><strong>Mail:</strong>  birkenstockbondi@gmail.com</p></div>');
+    		$('div.modal_darkfilter, div.modal').addClass('active');
+    	  	break;
+   	}
+   	$('div.modal').css('top', scroll);
 }

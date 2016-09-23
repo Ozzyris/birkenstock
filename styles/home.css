@@ -190,6 +190,7 @@ section#collection{}
                 }
 /* MAP */
 section#map{
+    height: 400px
 }
     section#map h2.title{
         width: 100%;

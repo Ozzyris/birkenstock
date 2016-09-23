@@ -54,6 +54,54 @@ p{
 .button.blue:hover{ background-color: #9ad2e8; }
 
 
+/* MODAL */
+div.modal_darkfilter{
+    display: block;
+    overflow: hidden;
+    z-index: 29;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 300ms;
+}
+div.modal_darkfilter.active{opacity: 1;}
+div.modal{
+    display: block;
+    position: absolute;
+    z-index: 30;
+    margin: 10% auto 0;
+    width: calc(80% - 10px);
+    max-width: 400px;
+    background-color: white;
+    height: auto;
+    padding: 20px 25px;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 300ms;
+}
+div.modal.active{opacity: 1;}
+
+         div.modal button.modal_buton{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            border: none;
+            color: #498098;
+            background-color: transparent;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: color 200ms;
+        }
+        div.modal button.modal_buton:hover{ color: #94c7e4; }
+        div.modal h2.title{
+            text-align: center !important;
+            padding: 0 0 30px 0;
+        }
+
+
 
 /*
     TABLET VERSION

@@ -7,15 +7,15 @@
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	  <meta name="format-detection" content="telephone=no">
 	  <!-- LINK -->
-	  <link rel="shortcut icon" href="../../images/favicon.png">
-	  <link rel="stylesheet" href="../../styles/main.css">
-	  <link rel="stylesheet" href="../../styles/ui_componantes.css">
-	  <link rel="stylesheet" href="../../styles/product_details.css">
+	  <link rel="shortcut icon" href="../../../images/favicon.png">
+	  <link rel="stylesheet" href="../../../styles/main.css">
+	  <link rel="stylesheet" href="../../../styles/ui_componantes.css">
+	  <link rel="stylesheet" href="../../../styles/product_details.css">
 	</head>
 	<body>
 	
 	<header class="Global_Header">
-		<img src="../../images/LOGO_logocolour.svg" alt="logo birkenstock">
+		<img src="../../../images/LOGO_logocolour.svg" alt="logo birkenstock">
 	</header>
 
 	<!-- NAVIGATION -->
@@ -25,14 +25,14 @@
 			<span class="line line-2"></span>
 			<span class="line line-3"></span>
 		</a>
-		<a class="image_logo" href="../../index.html"><img class="logo" src="../../images/LOGO_logomenu.svg" alt="Birkenstock"></a>
+		<a class="image_logo" href="../../../index.html"><img class="logo" src="../../../images/LOGO_logomenu.svg" alt="Birkenstock"></a>
 		<div class="left_menu" id="left_menu">
 			<ul>
-				<li><a href="../../index.html">Home</a></li>
-				<li class="active"><a href="../products.html">Product</a></li>
-				<li><a href="../products.html">Seasonal</a></li>
-				<li><a href="../about.html">About Us</a></li>
-				<li><a href="../contact.html">Contact Us</a></li>
+				<li><a href="../../../index.html">Home</a></li>
+				<li class="active"><a href="../../products.html">Product</a></li>
+				<li><a href="../../products.html">Seasonal</a></li>
+				<li><a href="../../about.html">About Us</a></li>
+				<li><a href="../../contact.html">Contact Us</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -44,27 +44,26 @@
 		<ul class="dot">
 			<!-- Javacript dot insertion here -->
 		</ul>
-		<span class="arrow left" onclick="slide_image( 'left' )"><img src="../../images/ELEM_Arrow.svg" alt=""></span>
-		<span class="arrow right" onclick="slide_image( 'right' )"><img src="../../images/ELEM_Arrow.svg" alt=""></span>
+		<span class="arrow left" onclick="slide_image( 'left' )"><img src="../../../images/ELEM_Arrow.svg" alt=""></span>
+		<span class="arrow right" onclick="slide_image( 'right' )"><img src="../../../images/ELEM_Arrow.svg" alt=""></span>
 	</section>
 
 	<section id="product_information">
 		<h1 class="title">SCARVA</h1>
 		<p>No Description</p>
-		<ul class="tag">
-			<li><img src="../../images/BADGE_leather.svg" alt=""></li>
-			<li><img src="../../images/BADGE_regularfit.svg" alt=""></li>
-		</ul>
-		<a href="#"><h3>CONTACT US</h3></a>
+		<ul class="tag"></ul>
+    	<p class="size"></p>
+    	<p class="color"></p>
+		<a onclick="modal_contact(); return false;" href="#"><h3>CONTACT US</h3></a>
 	</section>
 
 	<!-- FOOTER -->
 	<footer>
-		<form class="newsletter">
+		<form id="form_newsletter" class="newsletter">
 			<p>Be the first to receive information on upcoming promotions, sales, in store events and more..</p>
 			<div class="input_group">
-				<input type="text" placeholder="Suscribe">
-				<a href="#"></a>
+				<input id="input_newsletter" type="text" placeholder="Suscribe">
+				<a onclick="newsletter_verification(); return false;" href="#"></a>
 			</div>
 		</form>
 		<ul class="external_link">
@@ -80,8 +79,18 @@
 	</body>
 
 	<!-- SCRIPT -->
-	<script src="../../plugins/jquery.js"></script>
-	<script src="../../scripts/main.js"></script>
-	<script>var gallery_picture = ['SHOES_arizona_1', 'SHOES_arizona_3', 'SHOES_arizona_4', 'SHOES_arizona_1']</script>
-	<script src="../../scripts/product_details.js"></script>
+	<script src="../../../plugins/jquery.js"></script>
+	<script src="../../../scripts/main.js"></script>
+	<script>
+		var gallery_content = [
+  			{ //Brown
+  				picture: 'SHOES_scarba_1',
+  				tag: ['seasonal', 'leather', 'regularfit'],
+  				size: [36, 37, 38, 39, 40, 41, 42],
+  				gender: ['women'], 
+  				color: 'Brown'
+   			}
+		];
+	</script>
+	<script src="../../../scripts/product_details.js"></script>
 </html>

@@ -54,18 +54,18 @@
 		<ul class="tag"></ul>
     <p class="size"></p>
     <p class="color"></p>
-		<a href="#"><h3>CONTACT US</h3></a>
+		<a onclick="modal_contact(); return false;" href="#"><h3>CONTACT US</h3></a>
 	</section>
 
 	<!-- FOOTER -->
 	<footer>
-		<form class="newsletter">
-			<p>Be the first to receive information on upcoming promotions, sales, in store events and more..</p>
-			<div class="input_group">
-				<input type="text" placeholder="Suscribe">
-				<a href="#"></a>
-			</div>
-		</form>
+    <form id="form_newsletter" class="newsletter">
+      <p>Be the first to receive information on upcoming promotions, sales, in store events and more..</p>
+      <div class="input_group">
+        <input id="input_newsletter" type="text" placeholder="Suscribe">
+        <a onclick="newsletter_verification(); return false;" href="#"></a>
+      </div>
+    </form>
 		<ul class="external_link">
     	  <li><a href="https://www.facebook.com/Birkenstock-Bondi-Beach-952774751471213/" target="_blank"><span>&#xf09a;</span><p>/Bondi Birkenstock</p></a></li>
     	  <li><a href="https://www.instagram.com/birkenstock_bondi_beach/" target="_blank"><span>&#xf16d;</span><P>/Bondi Birkenstock</p></a></li>
@@ -88,21 +88,21 @@
   				tag: ['leather', 'regularfit', 'narrowfit'],
   				size: [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48],
   				gender: ['men', 'women'], 
-  				color: 'Black'
+  				color: 'Black1'
    			},
   			{ //BLACK #2
   				picture: 'SHOES_arizona_3',
   				tag: ['birkoflor', 'regularfit', 'narrowfit'],
   				size: [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48],
   				gender: ['men', 'women'], 
-  				color: 'Black'
+  				color: 'Black2'
    			},
   			{ //BLACK #3
   				picture: 'SHOES_arizona_4',
   				tag: ['eva', 'narrowfit'],
   				size: [36, 37, 38, 39, 40, 41],
   				gender: ['men', 'women'], 
-  				color: 'Black'
+  				color: 'Black3'
    			},
   			{ //WHITE #1
   				picture: 'SHOES_arizona_1',

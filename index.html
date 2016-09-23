@@ -37,42 +37,6 @@
 		</div>
 	</nav>
 
-	<div class="quick_contact" class="m-scrollable-filter">
-		<a class="quick_contact_button" onclick="launch_detail_information();" href="#"><img src="images/ICON_mail.svg" alt=""><img style="display: none;" src="images/ICON_cross.svg" alt=""></a>
-		<div class="content" style="display:none;">
-			<h4>Birkenstock<br>7/178 Campbell Parade, Sydney NSW</h4>
-			<div class="open_hours">
-				<h5 class="open">Open Now</h5>
-				<div class="line_containter">
-					<div class="days_container">Monday - Friday</div>
-					<div class="hours_container">10am -8pm</div>
-				</div>
-				<div class="line_containter">
-					<div class="days_container">Saturday</div>
-					<div class="hours_container">9am - 9pm</div>
-				</div>
-				<div class="line_containter">
-					<div class="days_container">Monday - Friday</div>
-					<div class="hours_container">11am - 10pm</div>
-				</div>
-			</div>
-			<div class="external_link">
-				<a href="">
-					<i><img src="images/ICON_location.svg" alt=""></i>
-					<p>Get Direction</p>
-				</a>
-				<a href="">
-					<i><img src="images/ICON_phone.svg" alt=""></i>
-					<p>Call Us</p>
-				</a>
-				<a href="">
-					<i><img src="images/ICON_arobase.svg" alt=""></i>
-					<p>Email Us</p>
-				</a>
-			</div>
-		</div>
-	</div>
-
 	<section id="collection" class="m-scrollable-filter">
 		<h2 class="title">Collection</h2>
 		<ul class="Two_column">
@@ -254,11 +218,11 @@
 	</section>
 
 	<footer class="m-scrollable-filter"> 
-		<form class="newsletter">
+		<form id="form_newsletter" class="newsletter">
 			<p>Be the first to receive information on upcoming promotions, sales, in store events and more..</p>
 			<div class="input_group">
-				<input type="text" placeholder="Suscribe">
-				<a href="#"></a>
+				<input id="input_newsletter" type="text" placeholder="Suscribe">
+				<a onclick="newsletter_verification(); return false;" href="#"></a>
 			</div>
 		</form>
 		<ul class="external_link">
@@ -276,7 +240,7 @@
 	<script src="plugins/jquery.js"></script>
 	<script src="scripts/main.js"></script>
 	<script src="scripts/home.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAd1bz-ck7zyEXYPF4dfGYKG_p3b9Km0bs&callback=initMap"
-    async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAd1bz-ck7zyEXYPF4dfGYKG_p3b9Km0bs&callback=initMap" async defer></script>
+
 </body>
 </html>

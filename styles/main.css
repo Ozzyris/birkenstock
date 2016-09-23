@@ -401,11 +401,10 @@ footer ul.external_link{
                 font-size: 18px;
                 position: absolute;
                 top: 14px;
-                right: 25px;
+                right: 5px;
             }
-        footer form.newsletter div.input_group input:focus{ border-bottom: 1px solid #2196F3; }
-        footer form.newsletter div.input_group input.active{ border-bottom: 1px solid #76bf3d; }
-        footer form.newsletter div.input_group input.wrong{ border-bottom: 1px solid #ffac33; }
+        footer form.newsletter div.input_group input:focus{ border-bottom: 1px solid #ffc776; }
+        footer form.newsletter div.input_group input.wrong{ border-bottom: 1px solid #f27e72; }
 
     p.copyright{
         position: absolute;
