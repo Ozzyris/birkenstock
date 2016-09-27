@@ -242,8 +242,8 @@ div.quick_contact div.content{
             font-size: 2rem;
             margin-bottom: 10px;
         }
-        div.quick_contact div.content div.open_hours h5.open{ color: #b6bf6f; }
-        div.quick_contact div.content div.open_hours h5.close{ color: #e86a64; }
+        div.quick_contact div.content div.open_hours h5.Open{ color: #b6bf6f; }
+        div.quick_contact div.content div.open_hours h5.Close{ color: #e86a64; }
         div.quick_contact div.content div.open_hours div.line_containter{
             width: 100%;
             height: 21px;

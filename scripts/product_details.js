@@ -49,11 +49,11 @@ function init_gallery(){
 	number_of_picture = gallery_content.length;
 	slide_distance_percentage = (100 / gallery_content.length);
 	$('section#product_image ul.gallery').css('width', number_of_picture + '00%');
-	$('section#product_image ul.dot').css('width', number_of_picture*17 + 'px');
+	$('section#product_image ul.dot').css('width', number_of_picture*40 + 'px');
 
 	for(var i=0;  i < number_of_picture; i++) {
 		$('section#product_image ul.gallery').prepend('<li style="width: ' + slide_distance_percentage + '%;"><img src="../../../images/products/' + gallery_content[i].picture + '.png" alt="">');
-		if(i == number_of_picture-1){$('section#product_image ul.dot').prepend('<li class="active"><a onclick="slide_image(' + ((number_of_picture-1)-i) + ')" href="#"></a></li>');}else{$('section#product_image ul.dot').prepend('<li><a onclick="slide_image(' + i + ')" href="#"></a></li>');}
+		if(i == number_of_picture-1){$('section#product_image ul.dot').prepend('<li class="active"><a onclick="slide_image(' + ((number_of_picture-1)-i) + ')" href="#" style="background-image: url(http://localhost/birkenstock/images/products/' + gallery_content[i].picture + '.png)"></a></li>');}else{$('section#product_image ul.dot').append('<li><a onclick="slide_image(' + (i+1) + ')" style="background-image: url(http://localhost/birkenstock/images/products/' + gallery_content[i].picture + '.png)" href="#"></a></li>');}
 
 		var size_length = gallery_content[i].size.length;
 		var size =  gallery_content[i].size[0] + ' - ' + gallery_content[i].size[(size_length-1)];
@@ -65,17 +65,9 @@ function init_gallery(){
 
 	$('section#product_information p.color').text(gallery_content[0].color);
 	$('section#product_information p.size').text(sizes[0]);
-	console.log(sizes);
-
 
 }
 init_gallery();
-
-
-//On resize of the screen
-function resize(){
-
-}
 
 function modal_contact( action ){
 	var scroll = $(window).scrollTop();
@@ -95,3 +87,12 @@ function modal_contact( action ){
    	}
    	$('div.modal').css('top', scroll);
 }
+
+function init_likend_collections(){
+	console.log(liked_collection.name + ' ' + liked_collection.collection[0] + ' ' + liked_collection.collection[1]);
+	liked_collection.collection.forEach(function(item, index){
+		console.log(item + ' ' + index);
+	});
+
+}
+init_likend_collections();

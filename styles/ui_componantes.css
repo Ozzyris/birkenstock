@@ -103,6 +103,25 @@ div.modal.active{opacity: 1;}
 
 
 
+div#map_content{
+    max-width: 400px;
+}
+    div#map_content h1.firstHeading{
+        color: #498098;
+        font-size: 2.2rem;
+        font-weight: 600;
+        text-align: center;
+    }
+    div#map_content h5{
+        font-size: 2rem;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    div#map_content h5.Open{ color: #b6bf6f; }
+    div#map_content h5.Close{ color: #e86a64; }
+
+
+
 /*
     TABLET VERSION
 */
