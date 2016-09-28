@@ -18,49 +18,137 @@ section#products{}
 
         section#products div.filter div.filter_group{
             width: 100%;
-            height: 40px;
-            overflow: auto;
+            height: 66px;
             margin: 10px 0;
+            position: relative;
         }
                 section#products div.filter div.filter_group h4.name{
                     width: calc(70% - 20px);
                     font-size: 600;
-                    line-height: 40px;
+                    line-height: 66px;
                     font-size: 2rem;
-                    float: left;
+                    position: absolute;
+                    top: 0;
+                    left: 20px;
                     color: #5d5d5d;
                     display: block;
-                    padding-left: 20px;
+                    z-index: 1;
                 }
-                section#products div.filter div.filter_group a{
+                section#products div.filter div.filter_group p.choice{
+                    display: block;
+                    width: calc(100% - 20px);
+                    font-size: 600;
+                    line-height: 66px;
+                    font-size: 2rem;
+                    position: absolute;
+                    right: 20px;
+                    top: 0;
+                    color: #498098;
+                    text-align: right;
+                    margin: 0; 
+                }
+                section#products div.filter div.filter_group a.main{
                     display: block;
                     width: calc(30% - 20px);
                     font-size: 600;
-                    line-height: 40px;
+                    line-height: 66px;
+                    height: 66px;
                     font-size: 2rem;
-                    float: left;
                     color: #498098;
-                    float: right;
                     text-align: right;
+                    float: right;
                     padding-right: 20px;
                 }
+
+        section#products div.filter div.filter_group div.dropdown_content{
+            display: block;
+            padding: 0px 10px;
+            width: calc(100% - 24px);
+            margin: 5px auto;
+            position: relative;
+            cursor: pointer;
+            border-right: 4px solid #739cda;
+            background: #fff;
+            font-size: 1.55em;
+            color: #656565;
+            font-weight: normal;
+            -webkit-transition: all 0.15s linear;
+            -moz-transition: all 0.15s linear;
+            -ms-transition: all 0.15s linear;
+            -o-transition: all 0.15s linear;
+            transition: all 0.15s linear;
+            height: 100%;
+        }
+        section#products div.filter div.filter_group div.dropdown_content:hover{
+            -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        section#products div.filter div.filter_group.active div.dropdown_content{
+            background: #5a90e0;
+            color: #fff;
+            border-left-color: #6c6d70;
+        }
+        section#products div.filter div.filter_group.active div.dropdown_content p.choice, section#products div.filter div.filter_group.active h4.name{ color: white; }
+            section#products div.filter div.filter_group div.dropdown_content p.choice{}
+            section#products div.filter div.filter_group div.dropdown_content ul.dropdown{
+                position: absolute;
+                top: 100%;
+                left: -4px;
+                width: 100%;
+                padding: 5px 0px;
+                display: none;
+                border-left: 4px solid #8e9196;
+                background: #fff;
+                -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+                -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+                box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+                z-index: 10;
+            }
+                section#products div.filter div.filter_group div.dropdown_content ul.dropdown li{
+                    font-size: 1.6rem;
+                    overflow: auto;
+                }
+                    section#products div.filter div.filter_group div.dropdown_content ul.dropdown li a{
+                        display: block;
+                        color: #447dd3;
+                        padding: 0px 15px;
+                        text-align: right;
+                        float: right;
+                        height: 66px;
+                        line-height: 66px;
+                        font-size: 2rem;
+                        color: #498098;
+                        width: calc(100% - 30px);
+                    }
+                    section#products div.filter div.filter_group div.dropdown_content ul.dropdown li a:hover{
+                        color: #6fa0e9;
+                        background: #e7f0f7;
+                    }
+
+
+
+
+
+
+
         section#products div.filter span.arrow_button{
             display: block;
             position: absolute;
-            top: 20px;
+            top: 200px;
             right: -40px;
             width: 40px;
             height: 40px;
-            background-color: white;
+            background-color: #94c7e4;
             text-align: center;
             font-size: 3rem;
             line-height: 40px;
-            color: #5d5d5d;
+            color: white;
             cursor: pointer;
-            transform: translateX(0%);
-            transition: transform 600ms;
+            transform: rotate(0deg);
+            transition: transform 300ms;
         }
-        section#products div.filter span.arrow_button.active{transform: translateX(101%);}
+        section#products div.filter span.arrow_button.active{transform: rotate(180deg);}
         section#products ul.Three_column{}
             section#products ul.Three_column li{
                 width: calc(100% - 40px);
