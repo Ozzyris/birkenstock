@@ -27,13 +27,13 @@
 		</a>
 		<a class="image_logo" href="../../../index.html"><img class="logo" src="../../../images/LOGO_logomenu.svg" alt="Birkenstock"></a>
 		<div class="left_menu" id="left_menu">
-			<ul>
-				<li><a href="../../../index.html">Home</a></li>
-				<li class="active"><a href="../../products.html">Product</a></li>
-				<li><a href="../../products.html">Seasonal</a></li>
-				<li><a href="../../about.html">About Us</a></li>
-				<li><a href="../../contact.html">Contact Us</a></li>
-			</ul>
+      <ul>
+        <li><a href="http://localhost/birkenstock/index.html">Home</a></li>
+        <li><a href="http://localhost/birkenstock/views/products.html?collection=all">Product</a></li>
+        <li class="active"><a href="http://localhost/birkenstock/views/products.html?collection=seasonal">Seasonal</a></li>
+        <li><a href="http://localhost/birkenstock/views/about.html">About Us</a></li>
+        <li><a href="http://localhost/birkenstock/views/contact.html">Contact Us</a></li>
+      </ul>
 		</div>
 	</nav>
 
@@ -50,7 +50,7 @@
 
 	<section id="product_information">
 		<h1 class="title">ILLINOIS</h1>
-		<p>No Description</p>
+		<p>Less is more! The consciously clean design of the BIRKENSTOCK Illinois sneakers impresses on account of its dynamic and understated lines. Ultra soft napa leather that has been tested for harmful substances (or a mix of mesh and suede) makes this lace-up low shoe your feet’s best friend.</p>
 		<ul class="tag"></ul>
     	<p class="size"></p>
     	<p class="color"></p>
@@ -83,20 +83,22 @@
 	<script src="../../../scripts/main.js"></script>
 	<script>
 		var gallery_content = [
-  			{ //Grey
-  				picture: 'SHOES_illinois_1',
-  				tag: ['seasonal', 'textile', 'regularfit'],
-  				size: [40, 41, 42, 43, 44, 45, 46],
-  				gender: ['men'], 
-  				color: 'Grey'
-   			},
-  			{ //Royal Blue
-  				picture: 'SHOES_illinois_1',
-  				tag: ['seasonal', 'textile', 'regularfit'],
-  				size: [40, 41, 42, 43, 44, 45, 46],
-  				gender: ['men'], 
-  				color: 'Royal Blue'
-   			}
+        	{ //ILLINOIS SEASONAL Grey
+        	  name: 'illinois',
+        	  picture: 'illinois_textile_grey',
+        	  tag: ['textile', 'regularfit', 'seasonal'],
+        	  size: [40, 41, 42, 43, 44, 45, 46],
+        	  gender: ['men'], 
+        	  color: 'Grey'
+        	},
+        	{ //ILLINOIS SEASONAL Royal Blue
+        	  name: 'illinois',
+        	  picture: 'illinois_textile_royalblue',
+        	  tag: ['textile', 'regularfit', 'seasonal'],
+        	  size: [40, 41, 42, 43, 44, 45, 46],
+        	  gender: ['men'], 
+        	  color: 'Royal Blue'
+        	}
 		];
 	</script>
 	<script src="../../../scripts/product_details.js"></script>

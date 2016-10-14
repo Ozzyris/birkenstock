@@ -28,11 +28,11 @@
 		<a class="image_logo" href="../../../index.html"><img class="logo" src="../../../images/LOGO_logomenu.svg" alt="Birkenstock"></a>
 		<div class="left_menu" id="left_menu">
 			<ul>
-				<li><a href="../../../index.html">Home</a></li>
-				<li class="active"><a href="../../products.html">Product</a></li>
-				<li><a href="../../products.html">Seasonal</a></li>
-				<li><a href="../../about.html">About Us</a></li>
-				<li><a href="../../contact.html">Contact Us</a></li>
+				<li><a href="http://localhost/birkenstock/index.html">Home</a></li>
+				<li class="active"><a href="http://localhost/birkenstock/views/products.html?collection=all">Product</a></li>
+				<li><a href="http://localhost/birkenstock/views/products.html?collection=seasonal">Seasonal</a></li>
+				<li><a href="http://localhost/birkenstock/views/about.html">About Us</a></li>
+				<li><a href="http://localhost/birkenstock/views/contact.html">Contact Us</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -50,7 +50,7 @@
 
 	<section id="product_information">
 		<h1 class="title">ROMA</h1>
-		<p>No Description</p>
+		<p>The BIRKENSTOCK Roma, a classic model that has been a firm favorite of active, health- conscious individuals since the 1970s, has now been given a stylish, child-friendly twist. The closed form, which is raised slightly at the sides, offers even small children with a strong urge to move sufficient protection and enhanced grip, even when things get boisterous</p>
 		<ul class="tag"></ul>
     	<p class="size"></p>
     	<p class="color"></p>
@@ -83,20 +83,22 @@
 	<script src="../../../scripts/main.js"></script>
 	<script>
 		var gallery_content = [
-  			{ // NAVY
-  				picture: 'SHOES_arizona_1',
-  				tag: ['birkoflor', 'narrowfit'],
-  				size: [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34],
-  				gender: ['kids'], 
-  				color: 'Navy'
-   			},
-   			{ // MOCCA
-  				picture: 'SHOES_arizona_1',
-  				tag: ['birkoflor', 'narrowfit'],
-  				size: [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34],
-  				gender: ['kids'], 
-  				color: 'Mocca'
-   			}
+  			{ // ROMA KIDS NAVY
+        	  name: 'roma',
+        	  picture: 'roma_birkoflor_navy',
+        	  tag: ['birkoflor', 'narrowfit'],
+        	  size: [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34],
+        	  gender: ['kids'], 
+        	  color: 'Navy'
+        	},
+        	{ // ROMA KIDS MOCCA
+        	  name: 'roma',
+        	  picture: 'roma_birkoflor_mocca',
+        	  tag: ['birkoflor', 'narrowfit'],
+        	  size: [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34],
+        	  gender: ['kids'], 
+        	  color: 'Mocca'
+        	}
 		];
 	</script>
 	<script src="../../../scripts/product_details.js"></script>

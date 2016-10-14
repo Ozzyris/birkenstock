@@ -27,13 +27,13 @@
 		</a>
 		<a class="image_logo" href="../../../index.html"><img class="logo" src="../../../images/LOGO_logomenu.svg" alt="Birkenstock"></a>
 		<div class="left_menu" id="left_menu">
-			<ul>
-				<li><a href="../../../index.html">Home</a></li>
-				<li class="active"><a href="../../products.html">Product</a></li>
-				<li><a href="../../products.html">Seasonal</a></li>
-				<li><a href="../../about.html">About Us</a></li>
-				<li><a href="../../contact.html">Contact Us</a></li>
-			</ul>
+      <ul>
+        <li><a href="http://localhost/birkenstock/index.html">Home</a></li>
+        <li class="active"><a href="http://localhost/birkenstock/views/products.html?collection=all">Product</a></li>
+        <li><a href="http://localhost/birkenstock/views/products.html?collection=seasonal">Seasonal</a></li>
+        <li><a href="http://localhost/birkenstock/views/about.html">About Us</a></li>
+        <li><a href="http://localhost/birkenstock/views/contact.html">Contact Us</a></li>
+      </ul>
 		</div>
 	</nav>
 
@@ -100,80 +100,91 @@
 	<script src="../../../scripts/main.js"></script>
 	<script>
 		var gallery_content = [
-  			{ //BLACK #1
-  				picture: 'SHOES_arizona_1',
-  				tag: ['leather', 'regularfit', 'narrowfit'],
-  				size: [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48],
-  				gender: ['men', 'women'], 
-  				color: 'Black1'
-   			},
-  			{ //BLACK #2
-  				picture: 'SHOES_arizona_3',
-  				tag: ['birkoflor', 'regularfit', 'narrowfit'],
-  				size: [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48],
-  				gender: ['men', 'women'], 
-  				color: 'Black2'
-   			},
-  			{ //BLACK #3
-  				picture: 'SHOES_arizona_4',
-  				tag: ['eva', 'narrowfit'],
-  				size: [36, 37, 38, 39, 40, 41],
-  				gender: ['men', 'women'], 
-  				color: 'Black3'
-   			},
-  			{ //WHITE #1
-  				picture: 'SHOES_arizona_1',
-  				tag: ['birkoflor', 'regularfit', 'narrowfit'],
-  				size: [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-  				gender: ['men', 'women'], 
-  				color: 'White'
-   			},
-  			{ //WHITE #2
-  				picture: 'SHOES_arizona_1',
-  				tag: ['eva', 'narrowfit'],
-  				size: [36, 37, 38, 39, 40, 41],
-  				gender: ['men', 'women'], 
-  				color: 'White'
-   			},
-  			{ //BASALTE
-  				picture: 'SHOES_arizona_1',
-  				tag: ['birkoflor', 'regularfit', 'narrowfit'],
-  				size: [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-  				gender: ['men', 'women'], 
-  				color: 'Basalte'
-   			},
-  			{ //STONE
-  				picture: 'SHOES_arizona_1',
-  				tag: ['birkoflor', 'regularfit', 'narrowfit'],
-  				size: [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-  				gender: ['men', 'women'], 
-  				color: 'Stone'
-   			},
-  			{ //HABANA
-  				picture: 'SHOES_arizona_1',
-  				tag: ['leather', 'regularfit', 'narrowfit'],
-  				size: [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-  				gender: ['men', 'women'], 
-  				color: 'Habana'
-   			},
-  			{ //ANTIQUE BROWN
-  				picture: 'SHOES_arizona_1',
-  				tag: ['leather', 'regularfit', 'narrowfit'],
-  				size: [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-  				gender: ['men', 'women'], 
-  				color: 'Antique Brown'
-   			},
-  			{ //TAUPE #1
-  				picture: 'SHOES_arizona_1',
-  				tag: ['leather', 'regularfit', 'narrowfit'],
-  				size: [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-  				gender: ['men', 'women'], 
-  				color: 'Taupe'
-   			}
+  		{ //ARIZONA CLASSIC BLACK #1
+        name: 'arizona',
+        picture: 'arizona_leather_black',
+        tag: ['leather', 'regularfit', 'narrowfit'],
+        size: [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48],
+        gender: ['men', 'women'], 
+        color: 'Black'
+      },
+      { //ARIZONA CLASSIC BLACK #2
+        name: 'arizona',
+        picture: 'arizona_birkoflor_black',
+        tag: ['birkoflor', 'regularfit', 'narrowfit'],
+        size: [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48],
+        gender: ['men', 'women'], 
+        color: 'Black'
+      },
+      { //ARIZONA CLASSIC BLACK #3
+        name: 'arizona',
+        picture: 'arizona_eva_black',
+        tag: ['eva', 'narrowfit'],
+        size: [36, 37, 38, 39, 40, 41],
+        gender: ['men', 'women'], 
+        color: 'Black'
+      },
+      { //ARIZONA CLASSIC WHITE #1
+        name: 'arizona',
+        picture: 'arizona_birkoflor_white',
+        tag: ['birkoflor', 'regularfit', 'narrowfit'],
+        size: [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
+        gender: ['men', 'women'], 
+        color: 'White'
+      },
+      { //ARIZONA CLASSIC WHITE #2
+        name: 'arizona',
+        picture: 'arizona_eva_white',
+        tag: ['eva', 'narrowfit'],
+        size: [36, 37, 38, 39, 40, 41],
+        gender: ['men', 'women'], 
+        color: 'White'
+      },
+      { //ARIZONA CLASSIC BASALTE
+        name: 'arizona',
+        picture: 'arizona_birkoflor_basalte',
+        tag: ['birkoflor', 'regularfit', 'narrowfit'],
+        size: [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
+        gender: ['men', 'women'], 
+        color: 'Basalt'
+      },
+      { //ARIZONA CLASSIC STONE
+        name: 'arizona',
+        picture: 'arizona_birkoflor_stone',
+        tag: ['birkoflor', 'regularfit', 'narrowfit'],
+        size: [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
+        gender: ['men', 'women'], 
+        color: 'Stone'
+      },
+      { //ARIZONA CLASSIC HABANA
+        name: 'arizona',
+        picture: 'arizona_leather_habana',
+        tag: ['leather', 'regularfit', 'narrowfit'],
+        size: [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
+        gender: ['men', 'women'], 
+        color: 'Habana'
+      },
+      { //ARIZONA CLASSIC ANTIQUE BROWN
+        name: 'arizona',
+        picture: 'arizona_leather_antiquebrown',
+        tag: ['leather', 'regularfit', 'narrowfit'],
+        size: [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
+        gender: ['men', 'women'], 
+        color: 'Antique Brown'
+      },
+      { //ARIZONA CLASSIC TAUPE #1
+        name: 'arizona',
+        picture: 'arizona_leather_taupe',
+        tag: ['leather', 'regularfit', 'narrowfit'],
+        size: [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
+        gender: ['men', 'women'], 
+        color: 'Taupe'
+      }
 		];
     var liked_collection = {
       name: 'arizona',
-      collection: ['seasonal', 'kids']
+      collection: ['seasonal', 'kids'],
+      images: ['arizona_birkoflor_blackpatent', 'arizona_birkoflor_mocca']
     };
 	</script>
 	<script src="../../../scripts/product_details.js"></script>

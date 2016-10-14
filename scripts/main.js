@@ -8,13 +8,14 @@ function sidemenu(){
 }
 
 var body = $("body, html");
-
+var header_size = $("header").outerHeight();
 body.on("scroll", function(e) {
-  if(this.scrollTop > (window.innerHeight-50)) {
+  if(this.scrollTop > (header_size-50)) {
     $("nav").addClass("active");
   } else {
     $("nav").removeClass("active");
   }
+ 
 });
 
 function newsletter_verification(){
@@ -120,5 +121,17 @@ function launch_detail_information(){
     $('a.quick_contact_button img:nth-child(2)').hide(0);
     $('div.quick_contact div.content').hide(0);
     toogle_detail_information = true;
+  }
+}
+
+
+
+function $_GET(param){
+  var vars = {};
+  window.location.href.replace( location.hash, '' ).replace(/[?&]+([^=&]+)=?([^&]*)?/gi, function( m, key, value ) {
+      vars[key] = value !== undefined ? value : '';
+  });
+  if( param ){
+    return vars[param] ? vars[param] : null;  
   }
 }

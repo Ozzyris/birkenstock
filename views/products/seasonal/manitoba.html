@@ -27,13 +27,13 @@
 		</a>
 		<a class="image_logo" href="../../../index.html"><img class="logo" src="../../../images/LOGO_logomenu.svg" alt="Birkenstock"></a>
 		<div class="left_menu" id="left_menu">
-			<ul>
-				<li><a href="../../../index.html">Home</a></li>
-				<li class="active"><a href="../../products.html">Product</a></li>
-				<li><a href="../../products.html">Seasonal</a></li>
-				<li><a href="../../about.html">About Us</a></li>
-				<li><a href="../../contact.html">Contact Us</a></li>
-			</ul>
+      <ul>
+        <li><a href="http://localhost/birkenstock/index.html">Home</a></li>
+        <li><a href="http://localhost/birkenstock/views/products.html?collection=all">Product</a></li>
+        <li class="active"><a href="http://localhost/birkenstock/views/products.html?collection=seasonal">Seasonal</a></li>
+        <li><a href="http://localhost/birkenstock/views/about.html">About Us</a></li>
+        <li><a href="http://localhost/birkenstock/views/contact.html">Contact Us</a></li>
+      </ul>
 		</div>
 	</nav>
 
@@ -50,7 +50,7 @@
 
 	<section id="product_information">
 		<h1 class="title">MANITOBA</h1>
-		<p>No Description</p>
+		<p>Less is more! Design and functionality are in no way mutually exclusive on the sporty Manitoba lace-up low shoe – in fact, they come together in style. The consciously clean design of these BIRKENSTOCK sneakers will go over well with purists on account of its dynamic and understated lines.</p>
 		<ul class="tag"></ul>
     	<p class="size"></p>
     	<p class="color"></p>
@@ -83,20 +83,22 @@
 	<script src="../../../scripts/main.js"></script>
 	<script>
 		var gallery_content = [
-  			{ //Lavender Grey
-  				picture: 'SHOES_manibota_1',
-  				tag: ['seasonal', 'textile', 'regularfit'],
-  				size: [36, 37, 38, 39, 40, 41],
-  				gender: ['women'], 
-  				color: 'Lavender Grey'
-   			},
-  			{ //Cappucino Luna
-  				picture: 'SHOES_manibota_1',
-  				tag: ['seasonal', 'leather', 'regularfit'],
-  				size: [36, 37, 38, 39, 40, 41],
-  				gender: ['women'], 
-  				color: 'Cappucino Luna'
-   			}
+        	{ //MANIBOTA SEASONAL Lavender Grey
+        	  name: 'manitoba',
+        	  picture: 'manitoba_textile_lavendergrey',
+        	  tag: ['textile', 'regularfit', 'seasonal'],
+        	  size: [36, 37, 38, 39, 40, 41],
+        	  gender: ['women'], 
+        	  color: 'Lavender Grey'
+        	},
+        	{ //MANIBOTA SEASONAL Cappucino Luna
+        	  name: 'manitoba',
+        	  picture: 'manitoba_leather_cappucinoluna',
+        	  tag: ['leather', 'regularfit', 'seasonal'],
+        	  size: [36, 37, 38, 39, 40, 41],
+        	  gender: ['women'], 
+        	  color: 'Cappucino Luna'
+        	}
 		];
 	</script>
 	<script src="../../../scripts/product_details.js"></script>

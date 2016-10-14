@@ -27,13 +27,13 @@
 		</a>
 		<a class="image_logo" href="../../../index.html"><img class="logo" src="../../../images/LOGO_logomenu.svg" alt="Birkenstock"></a>
 		<div class="left_menu" id="left_menu">
-			<ul>
-				<li><a href="../../../index.html">Home</a></li>
-				<li class="active"><a href="../../products.html">Product</a></li>
-				<li><a href="../../products.html">Seasonal</a></li>
-				<li><a href="../../about.html">About Us</a></li>
-				<li><a href="../../contact.html">Contact Us</a></li>
-			</ul>
+      <ul>
+        <li><a href="http://localhost/birkenstock/index.html">Home</a></li>
+        <li><a href="http://localhost/birkenstock/views/products.html?collection=all">Product</a></li>
+        <li class="active"><a href="http://localhost/birkenstock/views/products.html?collection=seasonal">Seasonal</a></li>
+        <li><a href="http://localhost/birkenstock/views/about.html">About Us</a></li>
+        <li><a href="http://localhost/birkenstock/views/contact.html">Contact Us</a></li>
+      </ul>
 		</div>
 	</nav>
 
@@ -50,7 +50,7 @@
 
 	<section id="product_information">
 		<h1 class="title">CHARLIZE</h1>
-		<p>No Description</p>
+		<p>These stylish Papillio mules with a cork footbed are clean, minimalist and exceptionally glamorous. The seamless upper on the Charlize model features an open selvedge finish and is made from a single piece of leather. It wraps around the footbed in the heel section, where it is stitched. The high-quality, soft smooth leather has been given a fashionable metallic coating.</p>
 		<ul class="tag"></ul>
     	<p class="size"></p>
     	<p class="color"></p>
@@ -83,20 +83,22 @@
 	<script src="../../../scripts/main.js"></script>
 	<script>
 		var gallery_content = [
-  			{ //Black Metallic
-  				picture: 'SHOES_charlize_1',
-  				tag: ['seasonal', 'leather', 'narrowfit'],
-  				size: [36, 37, 38, 39, 40, 41, 42],
-  				gender: ['women'], 
-  				color: 'Black metallic'
-   			},
-  			{ //Copper metallic
-  				picture: 'SHOES_charlize_1',
-  				tag: ['seasonal', 'leather', 'narrowfit'],
-  				size: [36, 37, 38, 39, 40, 41, 42],
-  				gender: ['women'], 
-  				color: 'Copper metallic'
-   			}
+        	{ //CHARLIZE SEASONAL Black Metallic
+        	  name: 'charlize',
+        	  picture: 'charlize_leather_blackmetallic',
+        	  tag: ['leather', 'narrowfit', 'seasonal'],
+        	  size: [36, 37, 38, 39, 40, 41, 42],
+        	  gender: ['women'], 
+        	  color: 'Black metallic'
+        	},
+        	{ //CHARLIZE SEASONAL Copper metallic
+        	  name: 'charlize',
+        	  picture: 'charlize_seasonal_coppermetallic',
+        	  tag: ['leather', 'narrowfit', 'seasonal'],
+        	  size: [36, 37, 38, 39, 40, 41, 42],
+        	  gender: ['women'], 
+        	  color: 'Copper metallic'
+        	}
 		];
 	</script>
 	<script src="../../../scripts/product_details.js"></script>

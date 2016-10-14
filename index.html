@@ -14,8 +14,21 @@
 	</head>
 	<body>
 	
-	<header>
-		<img src="images/LOGO_logocolour.svg" alt="logo birkenstock">
+	<header id="slider">
+		<ul class="slider_wrapper">
+			<li class="current_slide">
+				<div class="caption">
+					<img src="http://localhost/birkenstock/images/LOGO_logocolour.svg" alt="logo birkenstock">
+				</div>
+				<div class="image" style="background-image: url('http://localhost/birkenstock/images/BG_Intro.jpg');"></div>
+			</li>
+			<li>
+				<div class="caption">
+				</div>
+				<div class="image" style="background-image: url('http://localhost/birkenstock/images/BG_Intro2.jpg');"></div>
+			</li>
+		</ul>
+		<ul id="control-buttons" class="control-buttons"></ul>
 	</header>
 
 	<!-- NAVIGATION -->
@@ -28,11 +41,11 @@
 		<a class="image_logo" href="#"><img class="logo" src="images/LOGO_logomenu.svg" alt="Birkenstock"></a>
 		<div class="left_menu" id="left_menu">
 			<ul>
-				<li class="active"><a href="#">Home</a></li>
-				<li><a href="views/products.html">Products</a></li>
-				<li><a href="#">Seasonal</a></li>
-				<li><a href="views/about.html">About Us</a></li>
-				<li><a href="views/contact.html">Contact Us</a></li>
+				<li class="active"><a href="http://localhost/birkenstock/index.html">Home</a></li>
+				<li><a href="http://localhost/birkenstock/views/products.html?collection=all">Product</a></li>
+				<li><a href="http://localhost/birkenstock/views/products.html?collection=seasonal">Seasonal</a></li>
+				<li><a href="http://localhost/birkenstock/views/about.html">About Us</a></li>
+				<li><a href="http://localhost/birkenstock/views/contact.html">Contact Us</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -41,29 +54,29 @@
 		<h2 class="title">Collection</h2>
 		<ul class="Two_column">
 			<li class="image_link" style="background-image: url(images/THUMB_sesonal.jpg)" >
-				<a href="views/products.html">
+				<a href="views/products.html?collection=seasonal">
 					<h3>Seasonal</h3>
 				</a>
 			</li>
 			<li class="image_link" style="background-image: url(images/THUMB_allcollections.jpg)" >
-				<a href="views/products.html">
+				<a href="views/products.html?collection=all">
 					<h3>All Collections</h3>
 				</a>
 			</li>
 		</ul>
 		<ul class="Three_column">
 			<li class="image_link" style="background-image: url(images/THUMB_women.jpg)" >
-				<a href="#">
+				<a href="views/products.html?collection=women">
 					<h3>Women</h3>
 				</a>
 			</li>
 			<li class="image_link" style="background-image: url(images/THUMB_men.jpg)" >
-				<a href="#">
+				<a href="views/products.html?collection=men">
 					<h3>Men</h3>
 				</a>
 			</li>
 			<li class="image_link" style="background-image: url(images/THUMB_kids.jpg)" >
-				<a href="#">
+				<a href="views/products.html?collection=kids">
 					<h3>Kids</h3>
 				</a>
 			</li>
@@ -75,93 +88,63 @@
 		<ul class="Three_column">
 			<li>
 				<a href="views/products/classical/arizona.html">
-					<img src="images/products/SHOES_arizona_1.png" alt="Arizona">
+					<img src="http://localhost/birkenstock/images/products/classical/arizona_leather_black.png" alt="Arizona">
 					<h3>ARIZONA</h3>
 				</a>
 			</li>
 			<li>
 				<a href="views/products/classical/mayari.html">
-					<img src="images/products/SHOES_mayari_1.png" alt="MAYARI">
+					<img src="http://localhost/birkenstock/images/products/classical/mayari_birkoflor_mocca.png" alt="MAYARI">
 					<h3>MAYARI</h3>
 				</a>
 			</li>
 			<li>
 				<a href="views/products/classical/gizeh.html">
-					<img src="images/products/SHOES_gizeh_1.png" alt="GIZEH">
+					<img src="http://localhost/birkenstock/images/products/classical/gizeh_birkoflor_silver.png" alt="GIZEH">
 					<h3>GIZEH</h3>
 				</a>
 			</li>
-			<!-- <li>
-				<a href="views/products/kids/rio.html">
-					<img src="images/products/SHOES_rio_1.png" alt="RIO">
-					<h3>RIO</h3>
-				</a>
-			</li> -->
 			<li>
 				<a href="views/products/classical/boston.html">
-					<img src="images/products/SHOES_boston_1.png" alt="BOSTON">
+					<img src="http://localhost/birkenstock/images/products/classical/boston_leather_habana.png" alt="BOSTON">
 					<h3>BOSTON</h3>
 				</a>
 			</li>
 			<li>
 				<a href="views/products/classical/madrid.html">
-					<img src="images/products/SHOES_madrid_1.png" alt="MADRID">
+					<img src="http://localhost/birkenstock/images/products/classical/madrid_birkoflor_black.png" alt="MADRID">
 					<h3>MADRID</h3>
 				</a>
 			</li>
 			<li>
 				<a href="views/products/classical/milano.html">
-					<img src="images/products/SHOES_milano_1.png" alt="MILANO">
+					<img src="http://localhost/birkenstock/images/products/classical/milano_birkoflor_mocca.png" alt="MILANO">
 					<h3>MILANO</h3>
 				</a>
 			</li>
 			<li>
 				<a href="views/products/classical/florida.html">
-					<img src="images/products/SHOES_florida_1.png" alt="FLORIDA">
+					<img src="http://localhost/birkenstock/images/products/classical/florida_birkoflor_onyx.png" alt="FLORIDA">
 					<h3>FLORIDA</h3>
 				</a>
 			</li>
 			<li>
 				<a href="views/products/classical/salina.html">
-					<img src="images/products/SHOES_salina_1.png" alt="SALINA">
+					<img src="http://localhost/birkenstock/images/products/classical/salina_birkoflor_black.png" alt="SALINA">
 					<h3>SALINA</h3>
 				</a>
 			</li>
-			<!-- <li>
-				<a href="views/products/kids/roma.html">
-					<img src="images/products/SHOES_roma_1.png" alt="ROMA">
-					<h3>ROMA</h3>
-				</a>
-			</li> -->
 			<li>
 				<a href="views/products/classical/yara.html">
-					<img src="images/products/SHOES_yara_1.png" alt="YARA">
+					<img src="http://localhost/birkenstock/images/products/classical/yara_leather_antiquebrown.png" alt="YARA">
 					<h3>YARA</h3>
 				</a>
 			</li>
-			<!-- <li>
-				<a href="views/products/classical/profibirki.html">
-					<img src="images/products/SHOES_profibirki_1.png" alt="PROFI BIRKI">
-					<h3 style="font-size: 2.8rem; bottom: -4px;">PROFI BIRKI</h3>
-				</a>
-			</li> -->
-			<!-- <li>
-				<a href="views/products/seasonal/arran.html">
-					<img src="images/products/SHOES_arran_1.png" alt="ARRAN">
-					<h3>ARRAN</h3>
-				</a>
-			</li> -->
 		</ul>
 	</section>
 
 	<section id="Home_History" class="m-scrollable-filter">
 		<h2 class="title">Birkenstock Bondi Beach - History</h2>
-		<!--<div class="image"><span class="stylyzed_border"></span></div>
-		<div class="content">
-			<p>Birkenstock Bondi Beach is an independently owned, all Birkenstock retail shop that first opened it’s doors in Bondi Beach on 15th October 2015. It began as a ‘Pop-Up’ store and has since become a one stop, all season, retailer featuring one of the widest range of Birkenstock brand footwear in Sydney.</p>
-			<a href="#" class="button blue">See More</a>
-		</div> -->
-
 		<article>
 			<div class="image" style="background-image: url(images/BG_history.jpg);"></div>
 			<div class="content">
@@ -175,24 +158,13 @@
 
 	<section id="latestNews" class="m-scrollable-filter">
 		<h2 class="title">Our last news</h2>
-		<!-- <article>
-			<div class="image" style="background-image: url(images/THUMB_news1.jpg);"></div>
-			<div class="content">
-				<h3>The new seasonal collection is out</h3>
-				<time>Monday 16 August</time>
-				<p>2016 spring is all NEON in classic Arizona, Madrid and Gizeh styles, as well as the beach happy, waterproof EVA neons in selected styles for adults and kids. Neon pink, orange, yellow and green are our limited edition colours, so be quick and don’t say I didn’t tell you so ;)</p>
-				<a class="button blue" href="#">Read More</a>
-				<span class="colorbackground"></span>
-				<span class="colorborder"></span>
-			</div>
-		</article> -->
+
 		<article>
 			<div class="image" style="background-image: url(images/THUMB_news2.jpg);"></div>
 			<div class="content">
 				<h3>Neon style for our classics.</h3>
 				<time>Friday 15 September</time>
 				<p>2016 spring is all NEON in classic Arizona, Madrid and Gizeh styles, as well as the beach happy, waterproof EVA neons in selected styles for adults and kids. Neon pink, orange, yellow and green are our limited edition colours, so be quick and don’t say I didn’t tell you so ;)</p>
-				<!-- <a class="button blue" href="#">Read More</a> -->
 				<span class="colorbackground"></span>
 				<span class="colorborder"></span>
 			</div>
@@ -203,7 +175,6 @@
 				<h3>New kids range instore</h3>
 				<time>Tuesday 06 September</time>
 				<p>Birkenstock kids range is also in-store now, sizes starting at 24 up to small adults 34/35. Prices start at $51 for the waterproof light weight sandals, and go up to $105 for the classic cork footbed sandals. Galaxy pink and flower rose prints are the pretty seasonal specials, while the two tone Milano blue and Arizona Spiderman comic complete the street look.</p>
-				<!-- <a class="button blue" href="#">Read More</a> -->
 				<span class="colorbackground"></span>
 				<span class="colorborder"></span>
 			</div>
@@ -218,10 +189,12 @@
 	</section>
 
 	<footer class="m-scrollable-filter"> 
-		<form id="form_newsletter" class="newsletter">
+		<form id="form_newsletter" class="newsletter" action="//birkenstockbondibeach.us14.list-manage.com/subscribe/post?u=b1c61f30dcc67e681ab1afc31&amp;id=3eb48a33e0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
 			<p>Be the first to receive information on upcoming promotions, sales, in store events and more..</p>
 			<div class="input_group">
-				<input id="input_newsletter" type="text" placeholder="Suscribe">
+				<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    			<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_b1c61f30dcc67e681ab1afc31_3eb48a33e0" tabindex="-1" value=""></div>
+				<input id="input_newsletter" type="text" name="EMAIL" placeholder="Suscribe">
 				<a onclick="newsletter_verification(); return false;" href="#"></a>
 			</div>
 		</form>
@@ -235,9 +208,11 @@
     	<p class="copyright">Copyright - Bondi Birkenstock 2016</p>
 	</footer>
 
-	<!-- AIzaSyAd1bz-ck7zyEXYPF4dfGYKG_p3b9Km0bs  -->
 	<!-- SCRIPT -->
 	<script src="plugins/jquery.js"></script>
+	<script>
+		var home;
+	</script>
 	<script src="scripts/main.js"></script>
 	<script src="scripts/home.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAd1bz-ck7zyEXYPF4dfGYKG_p3b9Km0bs&callback=initMap" async defer></script>

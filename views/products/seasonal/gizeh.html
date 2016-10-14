@@ -27,13 +27,13 @@
 		</a>
 		<a class="image_logo" href="../../../index.html"><img class="logo" src="../../../images/LOGO_logomenu.svg" alt="Birkenstock"></a>
 		<div class="left_menu" id="left_menu">
-			<ul>
-				<li><a href="../../../index.html">Home</a></li>
-				<li class="active"><a href="../../products.html">Product</a></li>
-				<li><a href="../../products.html">Seasonal</a></li>
-				<li><a href="../../about.html">About Us</a></li>
-				<li><a href="../../contact.html">Contact Us</a></li>
-			</ul>
+      <ul>
+        <li><a href="http://localhost/birkenstock/index.html">Home</a></li>
+        <li><a href="http://localhost/birkenstock/views/products.html?collection=all">Product</a></li>
+        <li class="active"><a href="http://localhost/birkenstock/views/products.html?collection=seasonal">Seasonal</a></li>
+        <li><a href="http://localhost/birkenstock/views/about.html">About Us</a></li>
+        <li><a href="http://localhost/birkenstock/views/contact.html">Contact Us</a></li>
+      </ul>
 		</div>
 	</nav>
 
@@ -83,20 +83,22 @@
 	<script src="../../../scripts/main.js"></script>
 	<script>
 		var gallery_content = [
-  			{ //Hazel
-  				picture: 'SHOES_gizeh_1',
-  				tag: ['seasonal', 'birkoflor', 'regularfit'],
-  				size: [35, 36, 37, 38, 39, 40, 41],
-  				gender: ['women'], 
-  				color: 'Hazel'
-   			},
-  			{ //Copper
-  				picture: 'SHOES_gizeh_1',
-  				tag: ['seasonal', 'leather', 'softfootbed', 'regularfit'],
-  				size: [35, 36, 37, 38, 39, 40, 41, 42],
-  				gender: ['women'], 
-  				color: 'Copper'
-   			}
+        	{ //GIZEH SEASONAL Hazel
+        	  name: 'gizeh',
+        	  picture: 'gizeh_seasonal_hazel',
+        	  tag: ['birkoflor', 'regularfit', 'seasonal'],
+        	  size: [35, 36, 37, 38, 39, 40, 41],
+        	  gender: ['women'], 
+        	  color: 'Hazel'
+        	},
+        	{ //GIZEH SEASONAL Copper
+        	  name: 'gizeh',
+        	  picture: 'gizeh_seasonal_copper',
+        	  tag: ['leather', 'softfootbed', 'regularfit', 'seasonal'],
+        	  size: [35, 36, 37, 38, 39, 40, 41, 42],
+        	  gender: ['women'], 
+        	  color: 'Copper'
+        	}
 		];
 	</script>
 	<script src="../../../scripts/product_details.js"></script>

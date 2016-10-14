@@ -21,23 +21,21 @@ function validation(){
 function initMap() {
   var map;
   google.maps.event.addDomListener(window, 'resize', function() {
-    map.setCenter({lat: -33.89007, lng: 151.274787});
+    map.setCenter({lat: -33.889881, lng: 151.274921});
   });
   
   map = new google.maps.Map(document.getElementById('map_container'), {
-    center: {lat: -33.89007, lng: 151.274787}, 
-    zoom: 16,
+    center: {lat: -33.889881, lng: 151.274921}, 
+    zoom: 18,
     disableDefaultUI: true,
     scrollwheel: false,
     navigationControl: false,
     mapTypeControl: false,
-    scaleControl: false,
-    draggable: false
   });
   
   
   var contentString  = '<div id="map_content">';
-        contentString += '  <h1 class="firstHeading">Birkenstock,<br> 7/178 Campbell Parade, Sydney NSW </h1><br />';
+        contentString += '  <h1 class="firstHeading">Birkenstock Bondi Beach,<br> 7/178 Campbell Pde. Bondi Beach 2026</h1><br />';
         contentString += '  <h5 class="' + isOpen() + '">' + isOpen() + ' Now</h5>';
         contentString += '</div>';
 
@@ -46,7 +44,7 @@ function initMap() {
   
   //MARKER
   var marker = new google.maps.Marker({
-    position: {lat: -33.89007, lng: 151.274787},
+    position: {lat: -33.889881, lng: 151.274921},
     map: map,
     title: 'Bondi birkenstock'
   });

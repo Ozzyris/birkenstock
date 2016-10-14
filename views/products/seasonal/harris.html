@@ -27,13 +27,13 @@
 		</a>
 		<a class="image_logo" href="../../../index.html"><img class="logo" src="../../../images/LOGO_logomenu.svg" alt="Birkenstock"></a>
 		<div class="left_menu" id="left_menu">
-			<ul>
-				<li><a href="../../../index.html">Home</a></li>
-				<li class="active"><a href="../../products.html">Product</a></li>
-				<li><a href="../../products.html">Seasonal</a></li>
-				<li><a href="../../about.html">About Us</a></li>
-				<li><a href="../../contact.html">Contact Us</a></li>
-			</ul>
+      <ul>
+        <li><a href="http://localhost/birkenstock/index.html">Home</a></li>
+        <li><a href="http://localhost/birkenstock/views/products.html?collection=all">Product</a></li>
+        <li class="active"><a href="http://localhost/birkenstock/views/products.html?collection=seasonal">Seasonal</a></li>
+        <li><a href="http://localhost/birkenstock/views/about.html">About Us</a></li>
+        <li><a href="http://localhost/birkenstock/views/contact.html">Contact Us</a></li>
+      </ul>
 		</div>
 	</nav>
 
@@ -50,7 +50,7 @@
 
 	<section id="product_information">
 		<h1 class="title">HARRIS</h1>
-		<p>No Description</p>
+		<p>These boots are made for walking. The sporty Harris lace-up boot from BIRKENSTOCK is made from ultra soft, hard-wearing suede, is truly versatile and can be paired with a vast array of outfits. Whether with jeans or a suit, this ankle-high desert boot with a two-hole/-eyelet lacing section and a leather tab on the back of the shaft exudes casual flair and, thanks to elaborate craftsmanship, offers exceptional comfort.</p>
 		<ul class="tag"></ul>
     	<p class="size"></p>
     	<p class="color"></p>
@@ -83,20 +83,22 @@
 	<script src="../../../scripts/main.js"></script>
 	<script>
 		var gallery_content = [
-  			{ //Black
-  				picture: 'SHOES_harris_1',
-  				tag: ['seasonal', 'leather', 'regularfit'],
-  				size: [40, 41, 42, 43, 44, 45, 46],
-  				gender: ['men'], 
-  				color: 'Black'
-   			},
-  			{ //Brown
-  				picture: 'SHOES_harris_1',
-  				tag: ['seasonal', 'leather', 'regularfit'],
-  				size: [40, 41, 42, 43, 44, 45, 46],
-  				gender: ['men'], 
-  				color: 'Brown'
-   			}
+        	{ //HARRIS SEASONAL Black
+        	  name: 'harris',
+        	  picture: 'harris_leather_black',
+        	  tag: ['leather', 'regularfit', 'seasonal'],
+        	  size: [40, 41, 42, 43, 44, 45, 46],
+        	  gender: ['men'], 
+        	  color: 'Black'
+        	},
+        	{ //HARRIS SEASONAL Brown
+        	  name: 'harris',
+        	  picture: 'harris_leather_brown',
+        	  tag: ['leather', 'regularfit', 'seasonal'],
+        	  size: [40, 41, 42, 43, 44, 45, 46],
+        	  gender: ['men'], 
+        	  color: 'Brown'
+        	}
 		];
 	</script>
 	<script src="../../../scripts/product_details.js"></script>

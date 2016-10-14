@@ -27,13 +27,13 @@
 		</a>
 		<a class="image_logo" href="../../../index.html"><img class="logo" src="../../../images/LOGO_logomenu.svg" alt="Birkenstock"></a>
 		<div class="left_menu" id="left_menu">
-			<ul>
-				<li><a href="../../../index.html">Home</a></li>
-				<li class="active"><a href="../../products.html">Product</a></li>
-				<li><a href="../../products.html">Seasonal</a></li>
-				<li><a href="../../about.html">About Us</a></li>
-				<li><a href="../../contact.html">Contact Us</a></li>
-			</ul>
+      <ul>
+        <li><a href="http://localhost/birkenstock/index.html">Home</a></li>
+        <li><a href="http://localhost/birkenstock/views/products.html?collection=all">Product</a></li>
+        <li class="active"><a href="http://localhost/birkenstock/views/products.html?collection=seasonal">Seasonal</a></li>
+        <li><a href="http://localhost/birkenstock/views/about.html">About Us</a></li>
+        <li><a href="http://localhost/birkenstock/views/contact.html">Contact Us</a></li>
+      </ul>
 		</div>
 	</nav>
 
@@ -50,7 +50,7 @@
 
 	<section id="product_information">
 		<h1 class="title">ARRAN</h1>
-		<p>No Description</p>
+		<p>Less is more! This is the motto behind the cool, no-frills BIRKENSTOCK Arran sneaker. This sporty lace-up model in a monochrome, retro tennis style doesn’t just look sophisticated, but also offers outstanding comfort. This casual and versatile sneaker is made of soft, ultra high-quality natural leather, with the slightly asymmetrical last adapted to the natural form of the foot.</p>
 		<ul class="tag"></ul>
     	<p class="size"></p>
     	<p class="color"></p>
@@ -83,20 +83,22 @@
 	<script src="../../../scripts/main.js"></script>
 	<script>
 		var gallery_content = [
-  			{ //White
-  				picture: 'SHOES_arran_1',
-  				tag: ['seasonal', 'leather', 'narrowfit'],
-  				size: [35, 36, 37, 38, 39, 40, 41],
-  				gender: ['women'], 
-  				color: 'White'
-   			},
-  			{ //Black
-  				picture: 'SHOES_arran_1',
-  				tag: ['seasonal', 'textile', 'regularfit'],
-  				size: [36, 37, 38, 39, 40, 41],
-  				gender: ['men', 'women'], 
-  				color: 'Black'
-   			}
+        	{ //ARRAN SEASONAL White
+        	  name: 'arran',
+        	  picture: 'arran_leather_white',
+        	  tag: ['leather', 'narrowfit', 'seasonal'],
+        	  size: [35, 36, 37, 38, 39, 40, 41],
+        	  gender: ['women'], 
+        	  color: 'White'
+        	},
+        	{ //ARRAN SEASONAL Black
+        	  name: 'arran',
+        	  picture: 'arran_textile_black',
+        	  tag: ['textile', 'regularfit', 'seasonal'],
+        	  size: [36, 37, 38, 39, 40, 41],
+        	  gender: ['men', 'women'], 
+        	  color: 'Black'
+        	}
 		];
 	</script>	<script src="../../../scripts/product_details.js"></script>
 </html>

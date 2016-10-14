@@ -28,11 +28,11 @@
 		<a class="image_logo" href="../../../index.html"><img class="logo" src="../../../images/LOGO_logomenu.svg" alt="Birkenstock"></a>
 		<div class="left_menu" id="left_menu">
 			<ul>
-				<li><a href="../../../index.html">Home</a></li>
-				<li class="active"><a href="../../products.html">Product</a></li>
-				<li><a href="../../products.html">Seasonal</a></li>
-				<li><a href="../../about.html">About Us</a></li>
-				<li><a href="../../contact.html">Contact Us</a></li>
+				<li><a href="http://localhost/birkenstock/index.html">Home</a></li>
+				<li class="active"><a href="http://localhost/birkenstock/views/products.html?collection=all">Product</a></li>
+				<li><a href="http://localhost/birkenstock/views/products.html?collection=seasonal">Seasonal</a></li>
+				<li><a href="http://localhost/birkenstock/views/about.html">About Us</a></li>
+				<li><a href="http://localhost/birkenstock/views/contact.html">Contact Us</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -82,36 +82,40 @@
 	<script src="../../../plugins/jquery.js"></script>
 	<script src="../../../scripts/main.js"></script>
 	<script>
-		var gallery_content = [
-  			{ //BLACK
-  				picture: 'SHOES_madrid_1',
-  				tag: ['birkoflor', 'regularfit', 'narrowfit'],
-  				size: [35, 36, 37, 38, 39, 40, 41, 42, 43],
-  				gender: ['men', 'women'], 
-  				color: 'Black'
-   			},
-  			{ //WHITE
-  				picture: 'SHOES_madrid_2',
-  				tag: ['birkoflor', 'regularfit', 'narrowfit'],
-  				size: [35, 36, 37, 38, 39, 40, 41],
-  				gender: ['men', 'women'], 
-  				color: 'White'
-   			},
-  			{ //MOCCA
-  				picture: 'SHOES_madrid_3',
-  				tag: ['birkoflor', 'regularfit', 'narrowfit'],
-  				size: [36, 37, 38, 39, 40, 41, 42, 43],
-  				gender: ['men', 'women'], 
-  				color: 'Mocca'
-   			},
-  			{ //BLUE
-  				picture: 'SHOES_madrid_1',
-  				tag: ['birkoflor', 'regularfit'],
-  				size: [35, 36, 37, 38, 39, 40, 41],
-  				gender: ['men', 'women'], 
-  				color: 'Blue'
-   			}
-		];
+	var gallery_content = [
+        { //MADRID CLASSIC BLACK
+          name: 'madrid',
+          picture: 'madrid_birkoflor_black',
+          tag: ['birkoflor', 'regularfit', 'narrowfit'],
+          size: [35, 36, 37, 38, 39, 40, 41, 42, 43],
+          gender: ['men', 'women'], 
+          color: 'Black'
+        },
+        { //MADRID CLASSIC WHITE
+          name: 'madrid',
+          picture: 'madrid_birkoflor_white',
+          tag: ['birkoflor', 'regularfit', 'narrowfit'],
+          size: [35, 36, 37, 38, 39, 40, 41],
+          gender: ['men', 'women'], 
+          color: 'White'
+        },
+        { //MADRID CLASSIC MOCCA
+          name: 'madrid',
+          picture: 'madrid_birkoflor_mocca',
+          tag: ['birkoflor', 'regularfit', 'narrowfit'],
+          size: [36, 37, 38, 39, 40, 41, 42, 43],
+          gender: ['men', 'women'], 
+          color: 'Mocca'
+        },
+        { //MADRID CLASSIC BLUE
+          name: 'madrid',
+          picture: 'madrid_birkoflor_blue',
+          tag: ['birkoflor', 'regularfit'],
+          size: [35, 36, 37, 38, 39, 40, 41],
+          gender: ['men', 'women'], 
+          color: 'Navy'
+        }
+	];
 	</script>
 	<script src="../../../scripts/product_details.js"></script>
 </html>

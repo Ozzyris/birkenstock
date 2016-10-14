@@ -69,7 +69,10 @@ body, html{
     font-family: 'Dinnext';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
+    
+    overflow-y: scroll;
+overflow-x: hidden; 
+-webkit-overflow-scrolling: touch;
 }
 section{
     width: 80%;
@@ -93,12 +96,6 @@ input:focus, textarea:focus {
     outline: none;
 }
 input{border-radius: 0;}
-
-.m-scrollable-filter{
-  overflow-x: hidden;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-}
 
 /*
     MOBILE VERSION
@@ -200,7 +197,7 @@ div.quick_contact{
     position: fixed;
     bottom: 16%;
     right: 10%;
-    z-index: 10;
+    z-index: 21;
     max-width: 480px;
 }
     div.quick_contact a.quick_contact_button{
@@ -347,7 +344,7 @@ footer ul.external_link{
                 width: 100%;
             }
                 footer ul.external_link li a span{
-                    font-family: 'FontAwesome';
+                    font-family: 'Fontawsome';
                     font-size: 20px;
                     width: 20px;
                     float: left;
@@ -396,7 +393,7 @@ footer ul.external_link{
                 transition: border 0.56s cubic-bezier(0.4, 0, 0.2, 1) 0s;
             }
             footer form.newsletter div.input_group a{
-                font-family: 'FontAwesome';
+                font-family: 'Fontawsome';
                 color: white;
                 font-size: 18px;
                 position: absolute;

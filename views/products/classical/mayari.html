@@ -28,11 +28,11 @@
 		<a class="image_logo" href="../../../index.html"><img class="logo" src="../../../images/LOGO_logomenu.svg" alt="Birkenstock"></a>
 		<div class="left_menu" id="left_menu">
 			<ul>
-				<li><a href="../../../index.html">Home</a></li>
-				<li class="active"><a href="../../products.html">Product</a></li>
-				<li><a href="../../products.html">Seasonal</a></li>
-				<li><a href="../../about.html">About Us</a></li>
-				<li><a href="../../contact.html">Contact Us</a></li>
+				<li><a href="http://localhost/birkenstock/index.html">Home</a></li>
+				<li class="active"><a href="http://localhost/birkenstock/views/products.html?collection=all">Product</a></li>
+				<li><a href="http://localhost/birkenstock/views/products.html?collection=seasonal">Seasonal</a></li>
+				<li><a href="http://localhost/birkenstock/views/about.html">About Us</a></li>
+				<li><a href="http://localhost/birkenstock/views/contact.html">Contact Us</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -50,7 +50,7 @@
 
 	<section id="product_information">
 		<h1 class="title">MAYARI</h1>
-		<p>No Description</p>
+		<p>The BIRKENSTOCK Mayari sandal accompanies active, fashion-conscious women for elegance and comfort all summer long. This fine and seemingly see-through model with an anatomically formed original BIRKENSTOCK cork-latex footbed and velvety soft suede lining melds design and comfort to great effect. Thanks to individually adjustable metal buckles, two slender straps above the instep and the toe section ensure that the sandal is a perfect fit for every foot.</p>
 		<ul class="tag"></ul>
     	<p class="size"></p>
     	<p class="color"></p>
@@ -82,29 +82,32 @@
 	<script src="../../../plugins/jquery.js"></script>
 	<script src="../../../scripts/main.js"></script>
 	<script>
-		var gallery_content = [
-  			{ //BLACK
-  				picture: 'SHOES_mayari_1',
-  				tag: ['birkoflor', 'regularfit', 'narrowfit'],
-  				size: [35, 36, 37, 38, 39, 40, 41, 42, 43],
-  				gender: ['men', 'women'], 
-  				color: 'Black'
-   			},
-  			{ //MOCCA
-  				picture: 'SHOES_mayari_2',
-  				tag: ['birkoflor', 'regularfit', 'narrowfit'],
-  				size: [35, 36, 37, 38, 39, 40, 41, 42, 43],
-  				gender: ['men', 'women'], 
-  				color: 'Mocca'
-   			},
-  			{ //SILVER
-  				picture: 'SHOES_mayari_1',
-  				tag: ['birkoflor', 'regularfit', 'narrowfit'],
-  				size: [36, 37, 38, 39, 40, 41],
-  				gender: ['women'], 
-  				color: 'Silver'
-   			}
-		];
+	var gallery_content = [
+        { //MAYARI CLASSIC BLACK
+          name: 'mayari',
+          picture: 'mayari_birkoflor_black',
+          tag: ['birkoflor', 'regularfit', 'narrowfit'],
+          size: [35, 36, 37, 38, 39, 40, 41, 42, 43],
+          gender: ['men', 'women'], 
+          color: 'Black'
+        },
+        { //MAYARI CLASSIC MOCCA
+          name: 'mayari',
+          picture: 'mayari_birkoflor_mocca',
+          tag: ['birkoflor', 'regularfit', 'narrowfit'],
+          size: [35, 36, 37, 38, 39, 40, 41, 42, 43],
+          gender: ['men', 'women'], 
+          color: 'Mocca'
+        },
+        { //MAYARI CLASSIC SILVER
+          name: 'mayari',
+          picture: 'mayari_birkoflor_silver',
+          tag: ['birkoflor', 'regularfit', 'narrowfit'],
+          size: [36, 37, 38, 39, 40, 41],
+          gender: ['women'], 
+          color: 'Silver'
+        }
+	];
 	</script>
 	<script src="../../../scripts/product_details.js"></script>
 </html>

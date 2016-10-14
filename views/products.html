@@ -28,11 +28,11 @@
 		<a class="image_logo" href="../index.html"><img class="logo" src="../images/LOGO_logomenu.svg" alt="Birkenstock"></a>
 		<div class="left_menu" id="left_menu">
 			<ul>
-				<li><a href="../index.html">Home</a></li>
-				<li class="active"><a href="#">Product</a></li>
-				<li><a href="#">Seasonal</a></li>
-				<li><a href="about.html">About Us</a></li>
-				<li><a href="contact.html">Contact Us</a></li>
+				<li><a href="http://localhost/birkenstock/index.html">Home</a></li>
+				<li class="active"><a href="http://localhost/birkenstock/views/products.html?collection=all">Product</a></li>
+				<li><a href="http://localhost/birkenstock/views/products.html?collection=seasonal">Seasonal</a></li>
+				<li><a href="http://localhost/birkenstock/views/about.html">About Us</a></li>
+				<li><a href="http://localhost/birkenstock/views/contact.html">Contact Us</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -40,35 +40,39 @@
 	<section id="products">
 		<div class="filter">
 			<div class="filter_group">
-				<h4 class="name">Collection :</h4>
+				<h4 data-type="collection" class="name">Collection :</h4>
 				<div class="dropdown_content">
      				<p class="choice">All</p>
 					<ul class="dropdown">
         				<li><a href="#">All</a></li>
         				<li><a href="#">Seasonal</a></li>
+        				<li><a href="#">Classic</a></li>
+      				</ul>
+      			</div>
+			</div>
+			<div class="filter_group">
+				<h4 data-type="gender" class="name">For :</h4>
+				<div class="dropdown_content">
+     				<p class="choice">All</p>
+					<ul class="dropdown">
+        				<li><a href="#">All</a></li>
+        				<li><a href="#">Men</a></li>
+        				<li><a href="#">Women</a></li>
         				<li><a href="#">Kids</a></li>
       				</ul>
       			</div>
 			</div>
 			<div class="filter_group">
-				<h4 class="name">For :</h4>
-				<div class="dropdown_content">
-     				<p class="choice">Men</p>
-					<ul class="dropdown">
-        				<li><a href="#">Men</a></li>
-        				<li><a href="#">Women</a></li>
-      				</ul>
-      			</div>
-			</div>
-			<div class="filter_group">
-				<h4 class="name">Size :</h4>
+				<h4 data-type="size" class="name">Size :</h4>
 				<a class="main" href="#">All</a>
+				<input type="range" name="points" min="32" max="48" id="points" class="rangeMaterial">
 			</div>
-			<div class="filter_group">
-				<h4 class="name">Color :</h4>
+			<div class="filter_group" style="margin-top: 20px;">
+				<h4 data-type="color" class="name">Color :</h4>
 				<div class="dropdown_content">
-     				<p class="choice">Black</p>
+     				<p class="choice">All</p>
 					<ul class="dropdown">
+        				<li><a href="#">All</a></li>
         				<li><a href="#">Brown</a></li>
         				<li><a href="#">Blue</a></li>
         				<li><a href="#">Orange</a></li>
@@ -76,10 +80,12 @@
       			</div>
 			</div>
 			<div class="filter_group">
-				<h4 class="name">Texture :</h4>
+				<h4 data-type="texture" class="name">Texture :</h4>
 				<div class="dropdown_content">
-     				<p class="choice">Leather</p>
+     				<p class="choice">All</p>
 					<ul class="dropdown">
+        				<li><a href="#">All</a></li>
+        				<li><a href="#">Leather</a></li>
         				<li><a href="#">Birkoflor</a></li>
         				<li><a href="#">EVA</a></li>
         				<li><a href="#">Textile</a></li>
@@ -88,157 +94,11 @@
 			</div>
 			<span onclick="filter_menu();" class="arrow_button">></span>
 		</div>
-		<ul class="Three_column">			<li>
-				<a href="products/classical/arizona.html">
-					<img src="../images/products/SHOES_arizona_1.png" alt="Arizona">
-					<h3>ARIZONA</h3>
-				</a>
-			</li>
-			<li>
-				<a href="products/classical/mayari.html">
-					<img src="../images/products/SHOES_mayari_1.png" alt="MAYARI">
-					<h3>MAYARI</h3>
-				</a>
-			</li>
-			<li>
-				<a href="products/classical/gizeh.html">
-					<img src="../images/products/SHOES_gizeh_1.png" alt="GIZEH">
-					<h3>GIZEH</h3>
-				</a>
-			</li>
-			<li>
-				<a href="products/classical/boston.html">
-					<img src="../images/products/SHOES_boston_1.png" alt="BOSTON">
-					<h3>BOSTON</h3>
-				</a>
-			</li>
-			<li>
-				<a href="products/classical/madrid.html">
-					<img src="../images/products/SHOES_madrid_1.png" alt="MADRID">
-					<h3>MADRID</h3>
-				</a>
-			</li>
-			<li>
-				<a href="products/classical/milano.html">
-					<img src="../images/products/SHOES_milano_1.png" alt="MILANO">
-					<h3>MILANO</h3>
-				</a>
-			</li>
-			<li>
-				<a href="products/classical/florida.html">
-					<img src="../images/products/SHOES_florida_1.png" alt="FLORIDA">
-					<h3>FLORIDA</h3>
-				</a>
-			</li>
-			<li>
-				<a href="products/classical/salina.html">
-					<img src="../images/products/SHOES_salina_1.png" alt="SALINA">
-					<h3>SALINA</h3>
-				</a>
-			</li>
-			<li>
-				<a href="products/classical/yara.html">
-					<img src="../images/products/SHOES_yara_1.png" alt="YARA">
-					<h3>YARA</h3>
-				</a>
-			</li>
-			<li>
-				<a href="products/classical/profibirki.html">
-					<img src="../images/products/SHOES_profibirki_1.png" alt="PROFI BIRKI">
-					<h3 style="font-size: 2.8rem; bottom: -4px;">PROFI BIRKI</h3>
-				</a>
-			</li>
-			<li class="kids">
-				<a href="products/kids/roma.html">
-					<img src="../images/products/SHOES_roma_1.png" alt="ROMA">
-					<h3>ROMA</h3>
-				</a>
-			</li>
-			<li class="kids">
-				<a href="products/kids/rio.html">
-					<img src="../images/products/SHOES_rio_1.png" alt="RIO">
-					<h3>RIO</h3>
-				</a>
-			</li>
-			<li class="kids">
-				<a href="products/kids/milano.html">
-					<img src="../images/products/SHOES_milano_1.png" alt="MILANO">
-					<h3>MILANO</h3>
-				</a>
-			</li>
-			<li class="kids">
-				<a href="products/kids/gizeh.html">
-					<img src="../images/products/SHOES_gizeh_1.png" alt="GIZEH">
-					<h3>GIZEH</h3>
-				</a>
-			</li>
-			<li class="kids">
-				<a href="products/kids/arizona.html">
-					<img src="../images/products/SHOES_arizona_1.png" alt="ARIZONA">
-					<h3>ARIZONA</h3>
-				</a>
-			</li>
-			<li class="seasonal">
-				<a href="products/seasonal/arran.html">
-					<img src="../images/products/SHOES_arran_1.png" alt="ARRAN">
-					<h3>ARRAN</h3>
-				</a>
-			</li>
-			<li class="seasonal">
-				<a href="products/seasonal/arizona.html">
-					<img src="../images/products/SHOES_arizona_1.png" alt="ARIZONA">
-					<h3>ARIZONA</h3>
-				</a>
-			</li>
-			<li class="seasonal">
-				<a href="products/seasonal/charlize.html">
-					<img src="../images/products/SHOES_charlize_1.png" alt="CHARLIZE">
-					<h3>CHARLIZE</h3>
-				</a>
-			</li>
-			<li class="seasonal">
-				<a href="products/seasonal/gizeh.html">
-					<img src="../images/products/SHOES_gizeh_1.png" alt="GIZEH">
-					<h3>GIZEH</h3>
-				</a>
-			</li>
-			<li class="seasonal">
-				<a href="products/seasonal/harris.html">
-					<img src="../images/products/SHOES_harris_1.png" alt="HARRIS">
-					<h3>HARRIS</h3>
-				</a>
-			</li>
-			<li class="seasonal">
-				<a href="products/seasonal/illinois.html">
-					<img src="../images/products/SHOES_illinois_1.png" alt="ILLINOIS">
-					<h3>ILLINOIS</h3>
-				</a>
-			</li>
-			<li class="seasonal">
-				<a href="products/seasonal/madrid.html">
-					<img src="../images/products/SHOES_madrid_1.png" alt="MADRID">
-					<h3>MADRID</h3>
-				</a>
-			</li>
-			<li class="seasonal">
-				<a href="products/seasonal/manibota.html">
-					<img src="../images/products/SHOES_manibota_1.png" alt="MANIBOTA">
-					<h3>MANIBOTA</h3>
-				</a>
-			</li>
-			<li class="seasonal">
-				<a href="products/seasonal/scarba.html">
-					<img src="../images/products/SHOES_scarba_1.png" alt="SCARBA">
-					<h3>SCARBA</h3>
-				</a>
-			</li>
-			<li class="seasonal">
-				<a href="products/seasonal/sydney.html">
-					<img src="../images/products/SHOES_sydney_1.png" alt="SYDNEY">
-					<h3>SYDNEY</h3>
-				</a>
-			</li>
-		</ul>
+		<div class="product_container">
+			<ul id="products_wrapper" class="Three_column">
+			</ul>
+		</div>
+		
 	</section>
 
 	<!-- FOOTER -->
@@ -265,5 +125,6 @@
 	<!-- SCRIPT -->
 	<script src="../plugins/jquery.js"></script>
 	<script src="../scripts/main.js"></script>
+	<script src="../scripts/datas.js"></script>
 	<script src="../scripts/products.js"></script>
 </html>
