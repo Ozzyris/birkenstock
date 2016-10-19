@@ -73,7 +73,7 @@ section#map{
                     padding: 5px 15px;
                     border: none;
                     margin-bottom: 30px;
-                    border-bottom: 1px solid black;
+                    border-bottom: 1px solid #94c7e4;
                     transition: border 0.56s cubic-bezier(0.4, 0, 0.2, 1) 0s;
                 }
                 section#get_in_touch form div.inputs_group input:focus{border-bottom: 1px solid #ffc776;}
@@ -90,7 +90,7 @@ section#map{
                     padding: 15px;
                     border: none;
                     margin-bottom: 30px;
-                    border: 1px solid black;
+                    border: 1px solid #94c7e4;
                     height: 100px;
                     resize: none;
                     transition: border 0.56s cubic-bezier(0.4, 0, 0.2, 1) 0s;

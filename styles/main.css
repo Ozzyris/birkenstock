@@ -405,7 +405,7 @@ footer ul.external_link{
 
     p.copyright{
         position: absolute;
-        width: 200px;
+        width: 220px;
         bottom: 50px;
         left: calc(50% - 100px);
         font-weight: 400;
@@ -414,6 +414,30 @@ footer ul.external_link{
         height: 21px;
         margin: 0;
         font-size: 12px;
+    }
+
+
+    div.alert{
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 80%;
+        max-width: 300px;
+        z-index: 70;
+        border-radius: 5px;
+        transform: translateX(110%);
+        transition: transform 500ms;
+    }
+    div.alert.active{ transform: translateX( 0% );}
+    div.alert.success{
+        background-color: #9CE29A;
+        border: 1px solid #6B9B6A;
+    }
+    div.alert p{
+        color: white;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0; 
     }
 
 
@@ -520,6 +544,8 @@ nav{}
                 nav div.left_menu ul li a{ color: #498098; }
                 nav div.left_menu ul li:hover a{ color: #94c7e4; }
 }
+
+
 
 
 /*

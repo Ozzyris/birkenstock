@@ -23,125 +23,79 @@ $("section#products div.filter div.filter_group div.dropdown_content ul.dropdown
 
 
 var filters = [];
-var colors = [];  // colors for filters
-var texture = []; // texture for filters
 var sizes = [];   // sizes for filters
 var min_slider = '32';
 
 
 function filtering( type, filter ){
-  if(type != 'initial'){
-    filter = filter.toLowerCase();
-    console.log(type + ' | ' + filter);
-    filters[""+type+""] = filter;
-  }
-
-  var provisory_product = [];
+  $('div.loaders').show(0);
+  var provisory_product_collection = [];
+  var provisory_product_gender = [];
+  var provisory_product_size = [];
+  $('section#products div.noResult').hide(0);
+  if(type != 'initial'){ filter = filter.toLowerCase(); filters[""+type+""] = filter; }
 
   // COLLECTION FILTER
   if(filters.collection != 'all'){
     for (i=0; i<products.length; i++){
-
-        var nb_of_tags = (products[i].tag.length)-1;;
-
-        if ( filters.collection == 'seasonal'){
-          if ( products[i].tag[nb_of_tags] == filters.collection ){
-            provisory_product.push(products[i]);
-          }
-        }else{
-           if ( products[i].tag[nb_of_tags] != 'seasonal' ){
-            provisory_product.push(products[i]);
-          }
+      var nb_of_tags = ((products[i].tag.length)-1);
+      if ( filters.collection == 'seasonal' ){
+        if( products[i].tag[nb_of_tags] == filters.collection ){
+          provisory_product_collection.push(products[i]);
         }
+      }else if( filters.collection == 'classic' ){
+        if( products[i].tag[nb_of_tags] != 'seasonal' ){
+          provisory_product_collection.push(products[i]);
+        }
+      }
     }
-  }
+  }else{ provisory_product_collection = products; }
+  console.log( 'Stage 1: ' + provisory_product_collection.length );
 
   // GENDER FILTER
   if(filters.gender != 'all'){
-    if(provisory_product == ''){
-      for (i=0; i<products.length; i++){
-        products[i].gender.forEach(function(item, index){
-          if( item === filters.gender){
-            provisory_product.push(products[i]);
-          }
-        });
-      }
-    }else{
-      console.log('data from the provisory product');
+    for (i=0; i<provisory_product_collection.length; i++){
+
+      provisory_product_collection[i].gender.forEach(function(item, index){
+        if( item == filters.gender){
+          provisory_product_gender.push(provisory_product_collection[i]);
+        }
+      });
     }
-  }
+  }else{ provisory_product_gender = provisory_product_collection; }
+  console.log( 'Stage 2: ' + provisory_product_gender.length );
 
   // SIZE FILTER
-  if(filters.size != 'all'){
-    if(provisory_product == ''){
-      for (i=0; i<products.length; i++){
-        products[i].size.forEach(function(item, index){
-          //console.log(item + ' | ' + filters.size);
-          if ( item == filters.size ){
-            provisory_product.push(products[i]);
+    if(filters.size != 'all'){
+      for (i=0; i<provisory_product_gender.length; i++){
+        provisory_product_gender[i].size.forEach(function(item, index){
+          if( item == filters.size ){
+            provisory_product_size.push(provisory_product_gender[i]);
           }
         });
       }
-    }else{
-      console.log('data from the provisory product');
-    }
-  }
+    }else{ provisory_product_size = provisory_product_gender; }
+  console.log( 'Stage 3: ' + provisory_product_size.length );
 
-  // COLOR FILTER
-  if(filters.color != 'all'){
-    if(provisory_product == ''){
-      for (i=0; i<products.length; i++){
-        var product = products[i].color.toLowerCase();
-        //console.log(product + ' | ' + filters.color);
-        if ( product === filters.color){
-            provisory_product.push(products[i]);
-        }
-      }
-    }else{
-      console.log('data from the provisory product');
-    }
-  }
 
-  // TEXTURE FILTER
-  if(filters.texture != 'all'){
-    if(provisory_product == ''){
-      for (i=0; i<products.length; i++){
-        products[i].tag.forEach(function(item, index){
-          //console.log(item + ' | ' + filters.texture);
-          if ( item == filters.texture ){
-            provisory_product.push(products[i]);
-          }
-        });
-      }
-    }else{
-      console.log('data from the provisory product');
-    }
-  }
-
-  if(provisory_product == ''){ provisory_product = products; } // IF NO FILTER APPLY
-  
-  console.log(provisory_product);
+  if(provisory_product_size.length == 0){ $('section#products div.noResult').show(0); }
+  $('div.loaders').hide(0);
   $('section#products ul#products_wrapper li').hide(0);
-  provisory_product.forEach(function(item, index){
-    $('section#products ul#products_wrapper li:nth-child(' + (index+1) + ')').show(0);
+  provisory_product_size.forEach(function(item_second, index_second){
+    $('section#products ul#products_wrapper li#' + item_second.id).css('display', 'inline-block');
   });
 }
 
 
 function initalisation( filter ){
+  var provisory_product = [];
+  $('section#products div.noResult').hide(0);
+
   if(filter){
     filters = filter;
   }else{
-    filters = {
-      collection: 'all',
-      gender: 'all',
-      size: 'all',
-      color: 'all',
-      texture: 'all'
-    }
+    filters = { collection: 'all', gender: 'all', size: 'all' }
   }
-
-  var provisory_product = [];
 
   if(filter.collection ==  'all' && filter.gender ==  'all' ){
     provisory_product = products;
@@ -175,22 +129,24 @@ function initalisation( filter ){
     var class_element = '';
     var style_long_text = '';
     var address = 'products/'; 
+    var addressforimage = 'thumb/'; 
     item.gender.forEach(function(itemBis, indexBis){
       if(itemBis == 'kids'){
         address += 'kids/';
+        addressforimage += 'kids/';
         class_element += ' kids';
       }
     });
     item.tag.forEach(function(itemBis, indexBis){
       if(itemBis == 'seasonal'){
         address += 'seasonal/';
+        addressforimage += 'seasonal/';
         class_element += ' seasonal';
       }
     });
-    if(address == 'products/'){
-      address += 'classical/';
-    }
-    var address_image = address + image_name + '.png';
+    if(address == 'products/'){ address += 'classical/'; }
+    if(addressforimage == 'thumb/'){ addressforimage += 'classical/'; }
+    var address_image = addressforimage + image_name + '.png';
     var name = item.name;
     var address_href = address + name.replace(/\s+/g, '') + '.html';
     name = item.name.toUpperCase();
@@ -198,8 +154,8 @@ function initalisation( filter ){
 
 
     var html = ' <li id="' + item.id + '">';
-        html += ' <a href="http://localhost/birkenstock/views/' + address_href + '?id=' + product_id + '">';
-        html += '   <img src="http://localhost/birkenstock/images/' + address_image + '" alt="' + name + '">';
+        html += ' <a href="http://birkenstockbondibeach.com.au/views/' + address_href + '?id=' + product_id + '">';
+        html += '   <img src="http://birkenstockbondibeach.com.au/images/' + address_image + '" alt="' + name + '">';
         html += '   <h3 ' + style_long_text + '>' + name + '</h3>';
         html += ' </a>';
         html += '</li>';
@@ -208,16 +164,15 @@ function initalisation( filter ){
 
 
   $('section#products ul#products_wrapper li').hide(0);
-  console.log(provisory_product.length);
+  $('div.loaders').hide(0);
   provisory_product.forEach(function(item_second, index_second){
-    console.log(item_second.picture);
-    $('section#products ul#products_wrapper li#' + item_second.id).show(0);
+    $('section#products ul#products_wrapper li#' + item_second.id).css('display', 'inline-block');
   });
-  resize_image();
+  setTimeout(function(){ resize_image(); }, 300);
 }
 
 function resize_image(){
-  var width = $('section#products ul.Three_column li a').width();
+  var width = $('section#products ul.Three_column li a').outerWidth();
   $('section#products ul.Three_column li a').css('height', width-20);
 }
 
@@ -234,33 +189,33 @@ function GET(){
   if(collection != null){
     collection = collection.replace('#', '');
     switch(collection){
-      case 'all':
-        initalisation( filters = { collection: 'all', gender: 'all', size: 'all', color: 'all', texture: 'all' });
+      case 'all':filters
+        initalisation( filters = { collection: 'all', gender: 'all', size: 'all'});
         break;
       case 'seasonal':
-        initalisation( filters = { collection: 'seasonal', gender: 'all', size: 'all', color: 'all', texture: 'all' });
+        initalisation( filters = { collection: 'seasonal', gender: 'all', size: 'all'});
           $('section#products div.filter div.filter_group:nth-child(1) div.dropdown_content p.choice').text('Seasonal');
         break;
       case 'kids':
-          initalisation( filters = { collection: 'all', gender: 'kids', size: 'all', color: 'all', texture: 'all' });
+          initalisation( filters = { collection: 'all', gender: 'kids', size: 'all'});
           $('section#products div.filter div.filter_group:nth-child(2) div.dropdown_content p.choice').text('Kids');
         break;
       case 'men':
-          initalisation( filters = { collection: 'all', gender: 'men', size: 'all', color: 'all', texture: 'all' });
+          initalisation( filters = { collection: 'all', gender: 'men', size: 'all'});
           $('section#products div.filter div.filter_group:nth-child(2) div.dropdown_content p.choice').text('Men');
         break;
       case 'women':
-          initalisation( filters = { collection: 'all', gender: 'women', size: 'all', color: 'all', texture: 'all' });
+          initalisation( filters = { collection: 'all', gender: 'women', size: 'all'});
           $('section#products div.filter div.filter_group:nth-child(2) div.dropdown_content p.choice').text('Women');
         break;
         default:
+          initalisation( filters = { collection: 'all', gender: 'all', size: 'all'});
           break;
     }
   }else{
-    initalisation( filters = { collection: 'all', gender: 'all', size: 'all', color: 'all', texture: 'all' });
+    initalisation( filters = { collection: 'all', gender: 'all', size: 'all'});
   }
 }
 GET();
 
 $( window ).resize(function() { resize_image() });
-

@@ -70,9 +70,9 @@ function isOpen(){
 
 function quickcontact(){
   var html = '<div class="quick_contact" class="m-scrollable-filter">';
-      html += '<a class="quick_contact_button" onclick="launch_detail_information();" href="#"><img src="http://localhost/birkenstock/images/ICON_mail.svg" alt=""><img style="display: none;" src="http://localhost/birkenstock/images/ICON_cross.svg" alt=""></a>';
+      html += '<a class="quick_contact_button" onclick="launch_detail_information();" href="#"><img src="http://birkenstockbondibeach.com.au/images/ICON_mail.svg" alt=""><img style="display: none;" src="http://birkenstockbondibeach.com.au/images/ICON_cross.svg" alt=""></a>';
       html += '  <div class="content" style="display:none;">';
-      html += '    <h4>Birkenstock<br>7/178 Campbell Parade, Sydney NSW</h4>';
+      html += '    <h4>Birkenstock Bondi Beach<br>7/178 Campbell Pde. Bondi Beach 2026</h4>';
       html += '    <div class="open_hours">';
       html += '      <h5 class="' + isOpen() + '">' + isOpen() + ' Now</h5>';
       html += '      <div class="line_containter">';
@@ -89,16 +89,16 @@ function quickcontact(){
       html += '      </div>';
       html += '    </div>';
       html += '    <div class="external_link">';
-      html += '      <a href="">',
-      html += '        <i><img src="http://localhost/birkenstock/images/ICON_location.svg" alt=""></i>';
+      html += '      <a href="https://goo.gl/maps/vG6YjBuWVbk" target="_blank">',
+      html += '        <i><img src="http://birkenstockbondibeach.com.au/images/ICON_location.svg" alt=""></i>';
       html += '        <p>Get Direction</p>';
       html += '      </a>';
-      html += '      <a href="">';
-      html += '        <i><img src="http://localhost/birkenstock/images/ICON_phone.svg" alt=""></i>';
+      html += '      <a href="tel:0291304607">';
+      html += '        <i><img src="http://birkenstockbondibeach.com.au/images/ICON_phone.svg" alt=""></i>';
       html += '        <p>Call Us</p>';
       html += '      </a>';
-      html += '      <a href="">';
-      html += '        <i><img src="http://localhost/birkenstock/images/ICON_arobase.svg" alt=""></i>';
+      html += '      <a href="mailto:birkenstockbondi@gmail.com">';
+      html += '        <i><img src="http://birkenstockbondibeach.com.au/images/ICON_arobase.svg" alt=""></i>';
       html += '        <p>Email Us</p>';
       html += '      </a>';
       html += '    </div>';

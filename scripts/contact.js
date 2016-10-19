@@ -17,6 +17,29 @@ function validation(){
   if(open_gate){ $("form#contact_form").submit(); }
 }
 
+// FUNCTION GET DATA FROM URL
+function GET(){
+  var answer = $_GET('answer');
+  if(answer == 'send'){
+    var html  = '<div class="alert success">'
+        html += '<p>Your mail Has been sent</p>'
+        html += '</div>'
+
+    $('body').append(html);
+    setTimeout(function(){ 
+        $('div.alert').addClass('active');
+      }, 100);
+
+     setTimeout(function(){ 
+      $('div.alert').removeClass('active');
+      setTimeout(function(){ 
+        $('div.alert').remove();
+      }, 1000);
+     }, 5000);
+  }
+}
+GET();
+
 
 function initMap() {
   var map;

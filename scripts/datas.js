@@ -224,6 +224,15 @@
           gender: ['kids'], 
           color: 'Spiderman Comic'
         },
+        { //ARIZONA SEASONAL TOURMALINE
+          id: 'arizona_28',
+          name: 'arizona',
+          picture: 'arizona_leather_tourmaline',
+          tag: ['leather','regularfit', 'narrowfit', 'seasonal'],
+          size: [35, 36, 37, 38, 40, 41, 42],
+          gender: ['women'], 
+          color: 'Tourmaline'
+        },
         { //GIZEH CLASSIC BLACK
           id: 'gizeh_01',
           name: 'gizeh',
@@ -462,7 +471,7 @@
           id: 'madrid_10',
           name: 'madrid',
           picture: 'madrid_birkoflor_patentneonblue',
-          tag: ['birkoflor', 'narrow', 'seasonal'],
+          tag: ['birkoflor', 'narrowfit', 'seasonal'],
           size: [35, 36, 37, 38, 39, 40, 41],
           gender: ['women'], 
           color: 'Patent Neon Blue'
@@ -597,7 +606,7 @@
           id: 'profibirki_01',
           name: 'profi birki',
           picture: 'profibirki_esdproduct_black',
-          tag: ['esdproduct', 'regularfit', 'steeltoe'],
+          tag: ['esdproduct', 'regularfit'],
           size: [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
           gender: ['men', 'women'], 
           color: 'Black'
