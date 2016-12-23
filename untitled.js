@@ -1,80 +1,103 @@
-// COLLECTION FILTER
-  if(filters.collection != 'all'){
-    if(inception_product.length == products.length){
-      console.log('alfsd');
-      for (i=0; i<products.length; i++){
-        var nb_of_tags = ((products[i].tag.length)-1);
-        if ( filters.collection == 'seasonal' ){
-          if( products[i].tag[nb_of_tags] == filters.collection ){
-              provisory_product.push(products[i]);
-          }
-        }else if( filters.collection == 'classic' ){
-          if( products[i].tag[nb_of_tags] != 'seasonal' ){
-            products[i].gender.forEach(function(item, index){
-              if( item != 'kids'){
-                console.log('alex');
-                provisory_product.push(products[i]);
-              }
-            });
-          }
-        }
-      }
-    }else{
-      for (i=0; i<inception_product.length; i++){
-        var nb_of_tags = ((inception_product[i].tag.length)-1);
-        if ( filters.collection == 'seasonal' ){
-          if( inception_product[i].tag[nb_of_tags] == filters.collection ){
-            provisory_product.push(inception_product[i]);
-          }
-        }else if( filters.collection == 'classic' ){
-          if( inception_product[i].tag[nb_of_tags] != 'seasonal' ){
-            inception_product[i].gender.forEach(function(item, index){
-              if( item != 'kids'){
-                console.log('alex');
-                provisory_product.push(inception_product[i]);
-              }
-            });
-          }
-        }
-      }
-    }
-  }
+$(function () {
+	var inputFile = $('input[name=file]');
+	var uploadURI = $('#form-upload').attr('action');
+	var progressBar = $('#progress-bar');
 
-  // GENDER FILTER
-  if(filters.gender != 'all'){
-    if(inception_product.length == products.length){
-      for (i=0; i<products.length; i++){
-        products[i].gender.forEach(function(item, index){
-          if( item == filters.gender){
-            provisory_product.push(products[i]);
-          }
-        });
-      }
-    }else{
-      for (i=0; i<products.length; i++){
-        products[i].gender.forEach(function(item, index){
-          if( item == filters.gender){
-            provisory_product.push(products[i]);
-          }
-        });
-      }
-    }
-  }
+	// listFilesOnServer();
 
-  // SIZE FILTER
-  if(filters.size != 'all'){
-    if(inception_product.length == products.length){
-      for (i=0; i<products.length; i++){
-        products[i].size.forEach(function(item, index){
-          //console.log(item + ' | ' + filters.size);
-          if ( item == filters.size ){
-            provisory_product.push(products[i]);
-          }
-        });
-      }
-    }else{
-      console.log('data from the provisory product');
-    }
-  }
+	$('input[type="file"]').on('change', function() {
+		var fd = new FormData();
 
-  if(provisory_product == ''){ provisory_product = products; } // IF NO FILTER APPLY
+		if(this.files[0].size > (4194304*10)){
+			console.log('No larger than 4MB.');
+			return false;
+		}
+		var file = this.files[0];
+		console.log(file);
+		fd.append('file', file);
+		var sendData = fd;
+		$.ajax({
+			url: uploadURI,
+			type: "POST",
+			data: sendData,
+			contentType: false,
+			processData: false,
+			xhr: function() {  // Custom XMLHttpRequest
+	            // var myXhr = $.ajaxSettings.xhr();
+	            // if(myXhr.upload){ // Check if upload property exists
+	            //     myXhr.upload.addEventListener('progress',progressHandlingFunction, false); // For handling the progress of the upload
+	            // }
+	            // return myXhr;
+	        },
+			success: function(data, text, xhr) {
+				console.log(data);
+				console.log(text);
+				console.log(xhr);
+			},
+			error: function(xhr, textStatus, error) {
+				console.log(xhr);
+				console.log(textStatus);
+				console.log(error);
+				// alert('Error contacting server. Please try again later..');
+			}
+		});
+
+		// if (fileToUpload != 'undefined') {
+		// 	var formData = new FormData();
+		// 	formData.append('file', fileToUpload);
+
+		// 	// now upload the file using $.ajax
+		// 	$.ajax({
+		// 		url: uploadURI,
+		// 		type: 'post',
+		// 		dataType: "json",
+		// 		data: formData,
+		// 		processData: false,
+		// 		contentType: false,
+		// 		success: function(data, text, xhr) {
+		// 			console.log(data);
+		// 			console.log(text);
+		// 			console.log(xhr);
+		// 		},
+		// 		error: function(xhr, textStatus, error) {
+		// 			console.log(xhr);
+		// 			console.log(textStatus);
+		// 			console.log(error);
+		// 			alert('Error contacting server. Please try again later..');
+		// 		}
+		// 	});
+		// }
+	});
+
+	// $('body').on('click', '.remove-file', function () {
+	// 	var me = $(this);
+
+	// 	$.ajax({
+	// 		url: uploadURI,
+	// 		type: 'post',
+	// 		data: {file_to_remove: me.attr('data-file')},
+	// 		success: function() {
+	// 			me.closest('li').remove();
+	// 		}
+	// 	});
+
+	// })
+
+	// function listFilesOnServer () {
+	// 	var items = [];
+	// 	console.log('alex');
+
+	// 	$.getJSON(uploadURI, function(data) {
+	// 		$.each(data, function(index, element) {
+	// 			items.push('<li class="list-group-item">' + element  + '<div class="pull-right"><a href="#" data-file="' + element + '" class="remove-file"><i class="glyphicon glyphicon-remove"></i></a></div></li>');
+	// 		});
+	// 		$('.list-group').html("").html(items.join(""));
+	// 	});
+	// }
+
+	// $('body').on('change.bs.fileinput', function(e) {
+	// 	$('.progress').hide();
+	// 	progressBar.text("0%");
+	// 	progressBar.css({width: "0%"});
+	// });
+});

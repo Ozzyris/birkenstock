@@ -1,0 +1,370 @@
+/*
+    MOBILE VERSION
+*/
+header{
+    width: 100vw;
+    height: calc(100vh - 50px);
+    background-image: url('../images/BG_Intro.jpg'); 
+    background-size: cover;
+    background-position: center center;
+}
+    header ul.slider_wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: #FFF;
+        overflow: hidden;
+    }
+    header ul.slider_wrapper li { display: none; }
+    header ul.slider_wrapper li.current_slide { display: block; }
+    header ul.slider_wrapper li div.image {
+        background-position: center center;
+        background-size: cover;
+        position: absolute;
+        max-width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;;
+    }
+    header ul.slider_wrapper div.caption{
+        margin-top: calc(40vh - 50px);
+        position: relative;
+        z-index: 1;
+    }
+        header ul.slider_wrapper div.caption img {
+            width: 80%;
+            max-height: 100px;
+            margin: 0 auto;
+            display: block;
+        }
+    
+    header ul.control-buttons {
+        margin-top: -20px;
+        text-align: center;
+        z-index: 10;
+        position: relative;
+    }
+    
+    header ul.control-buttons li {
+        cursor: pointer;
+        display: inline-block;
+        background: white;
+        text-indent: -99999px;
+        height: 12px;
+        width: 12px;
+        margin: 0 6px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+    }
+    
+    header ul.control-buttons li.active {
+        background: #424f66;
+    }
+
+
+
+
+section#collection{}
+    section#collection ul.Two_column{}
+        section#collection ul.Two_column li{
+            width: calc(100% - 40px);
+            min-width: 218px;
+            height: auto;
+            min-height: 218px;
+            padding: 20px;
+            margin: 0px 0 20px;
+            background-position: bottom center;
+            background-size: cover;
+            page-break-inside: avoid;
+        }
+            section#collection ul.Two_column li a{
+                width: 100%;
+                height: auto;
+                min-height: 216px;
+                border: .5px solid white;
+                text-align: center;
+                color: white;
+                font-weight: 600;
+            }
+            section#collection ul.Two_column li a h3{
+                vertical-align: middle;
+                font-size: 3.2rem;
+                margin: calc(50% - 14px) 0 0 0;
+                height: 28px;
+            }
+    section#collection ul.Three_column{}
+        section#collection ul.Three_column li{
+            width: calc(100% - 40px);
+            min-width: 150px;
+            height: auto;
+            min-height: 150px;
+            padding: 20px;
+            margin: 0 0 20px;
+            background-position: center center;
+            background-size: cover;
+            page-break-inside: avoid;
+        }
+        
+            section#collection ul.Three_column li a{
+                width: 100%;
+                height: auto;
+                min-height: 150px;
+                border: .5px solid white;
+                text-align: center;
+                font-size: 3.2rem;
+                color: white;
+                vertical-align: middle;
+                font-weight: 600;
+                position: relative;
+            }
+                section#collection ul.Three_column li a h3{
+                    position: relative;
+                    margin: calc(50% - 14px) 0 0 0;
+                    height: 28px;
+                    font-size: 3.2rem;
+                }
+
+    section#Featured_products{}
+        section#Featured_products h2{}
+        section#Featured_products ul.Three_column{}
+            section#Featured_products ul.Three_column li{
+                width: calc(100% - 40px);
+                min-width: 150px;
+                height: auto;
+                min-height: 150px;
+                padding: 20px;
+                margin: 0 0 20px;
+                background-color: #d7d2c8;
+                
+            }
+                section#Featured_products ul.Three_column li a{
+                    width: 100%;
+                    height: auto;
+                    min-height: 148px;
+                    border: .5px solid white;
+                    text-align: center;
+                    color: white;
+                    vertical-align: middle;
+                    font-weight: 600;
+                    position: relative;
+                }
+                    section#Featured_products ul.Three_column li a img{
+                        width: 90%;
+                        margin: 20px 0 0 0;
+                    }
+                    section#Featured_products ul.Three_column li a h3{
+                        position: absolute;
+                        height: 28px;
+                        left: -2px;
+                        bottom: 0;
+                        height: 28px;
+                        font-size: 3.2rem;
+                    }
+
+    section#Home_History{}
+        section#Home_History h2{}
+        section#Home_History div.image{
+            background-image: url('../images/BG_history.jpg');
+            background-size: cover;
+            background-position: center center;
+            display: block;
+            width: 100%;
+            height: 200px;
+
+        }
+            section#Home_History div.image span.stylyzed_border{
+                display: block;
+                width: 100%;
+                height: 200px;
+                transform: translate(20px, 40px);
+                border: 4px solid #ececec;
+                z-index: -1;
+            }
+        section#Home_History div.content{ width: 100; }
+            section#Home_History div.content p{}
+        section#Home_History div.content{}
+
+
+    section#latestNews, section#Home_History{}
+        section#latestNews h2{}
+        section#latestNews article, section#Home_History article{
+            width: 100%;
+        }
+            section#latestNews article div.image, section#Home_History article div.image{
+                background-size: cover;
+                background-position: center center;
+                display: block;
+                width: 100%;
+                height: 200px;
+            }
+            section#latestNews article div.content, section#Home_History article div.content{
+                margin-top: 20px;
+                width: 100%;
+                position: relative;
+                padding-bottom: 50px;
+            }
+                section#latestNews article div.content h3{
+                    color: #498098;
+                    font-weight: 200;
+                    font-size: 3.3rem;
+                }
+                section#latestNews article div.content time{
+                    color: #498098;
+                    font-weight: 800;
+                    font-size: 2rem;
+                }
+                section#latestNews article div.content p{}
+                section#latestNews article div.content a{}
+                section#latestNews article div.content span.colorbackground, section#Home_History article div.content span.colorbackground{
+                    width: 100%;
+                    height: 200px;
+                    transform: translate(20px, 40px);
+                    background-color: #ececec;
+                    display: block;
+                    position: absolute;
+                    z-index: -2;
+                    top: 0;
+                }
+                section#latestNews article div.content span.colorborder, section#Home_History article div.content span.colorborder{
+                    width: 100%;
+                    height: 200px;
+                    transform: translate(-20px, 0px);
+                    border: 2px solid #498098;
+                    display: block;
+                    position: absolute;
+                    z-index: -1;
+                    top: 0;
+                }
+/* MAP */
+section#home_map{
+    height: 400px;
+    width: 90%;
+    max-width: 800px;
+}
+    section#home_map h2.title{
+        width: 100%;
+    }
+    section#home_map div#map_container{
+        margin-top: 20px;
+        display: block;
+        width: 100%;
+        height: 330px;
+        background-color: #efefef;
+        position: relative;
+    }
+        section#home_map div#map_container span.borderwhite{
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px
+            bottom: 20px;
+            border: 1px solid white;
+            display: block;
+        }
+
+/*
+    TABLET VERSION
+*/
+@media screen and (min-width: 768px ){
+    /*header img{ padding-top: calc(60% - 50px); }*/
+    section#Featured_products ul.Three_column li a img{ margin: 20px 0 0 0; }
+
+    section#Home_History{
+        overflow: auto;
+        padding-bottom: 30px;
+    }
+        section#Home_History div.image{
+            height: 300px;
+            width: 45%;
+            float: left;
+        }
+        section#Home_History div.content{
+            width: 45%;
+            float: left;
+            margin-left: 10%;
+        }
+            section#Home_History div.image span.stylyzed_border{height: 280px;}
+
+        section#latestNews, section#Home_History{
+            overflow: auto;
+            min-height: 290px;
+        }
+        section#latestNews h2{}
+        section#latestNews article{}
+            section#latestNews article div.image, section#Home_History article div.image{
+                width: calc(50% - 20px);
+                float: left;
+                margin-right: 10px;
+                z-index: 0;
+            }
+            section#latestNews article div.content, section#Home_History article div.content{
+                margin: 0px;
+                width: 50%;
+                float: left;
+                padding-bottom: 0px;
+                margin-top: 10px;
+                z-index: 2;
+            }
+                section#latestNews article div.content h3{
+                    color: #498098;
+                    font-weight: 200;
+                    font-size: 3.3rem;
+                }
+                section#latestNews article div.content time{
+                    color: #498098;
+                    font-weight: 800;
+                    font-size: 2rem;
+                }
+                section#latestNews article div.content p{}
+                section#latestNews article div.content a{}
+                section#latestNews article div.content span.colorbackground, section#Home_History article div.content span.colorbackground{
+                    width: 95%;
+                }
+                section#latestNews article div.content span.colorborder{}
+}
+
+
+
+/*
+    SMALL SCREEN COMPUTER VERSION
+*/
+@media screen and (min-width: 992px ){
+    /*header img{ padding-top: calc(40% - 50px); }*/
+
+        section#Home_History div.image{ width: 55%; }
+        section#Home_History div.content{ width: 35%; }
+            section#Home_History div.image span.stylyzed_border{height: 280px;}
+}
+
+
+/*
+    LARGE SCREEN COMPUTER VERSION
+*/
+@media screen and (min-width: 1200px ){
+    /*header img{ padding-top: calc(30% - 50px); }*/
+    section#Home_History div.image{
+        height: 400px;
+        width: 65%;
+    }
+    section#Home_History div.content{ width: 25%; }
+            section#Home_History div.image span.stylyzed_border{height: 380px;}
+    section#latestNews article{ min-height: 280px; }
+
+}
+
+
+/*
+    SUPER LARGE SCREEN COMPUTER VERSION
+*/
+@media screen and (min-width: 1600px ){
+    /*header img{ padding-top: calc(40% - 50px); }*/
+    section#Home_History div.image{ height: 500px }
+            section#Home_History div.image span.stylyzed_border{height: 480px;}
+    section#latestNews article, section#Home_History article{ min-height: 320px; }
+    section#latestNews article div.image, section#Home_History article div.image{ min-height: 250px; }
+    section#latestNews article div.content, section#Home_History article div.content{ min-height: 300px; }
+
+}
