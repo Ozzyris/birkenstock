@@ -1,11 +1,3 @@
-<!-- OLD INCLUDES -->
-<!-- <?php include("processing/dashboard_treatment_news.php"); ?> -->
-<!-- <?php include("processing/dashboard_treatment_switch.php"); ?> -->
-<!-- <?php if($maintenance == 1){ echo 'Offline'; }else{ echo 'Online'; } ?> --> 
-<!-- <?php if($maintenance == 0){ echo 'checked'; } ?> -->
-<!-- <?php include("processing/dashboard_treatment_newsletter.php"); ?> -->
-
-
   <section id="content">
     <article id="card_update" class="card">
       <div class="header blue">
@@ -27,9 +19,8 @@
         <h1>Status of the website</h1>
       </div>
       <div class="body">
-        <div id="embed-api-auth-container"></div>
-        <div id="chart-container"></div>
-        <div id="view-selector-container"></div>
+        <img style="width: 150px; margin: 20px auto; display: block;" src="<?php echo base_url(); ?>assets/AlfredAtWork/images/ELEM_wip.svg" alt="Work In Progress">
+        <h3 style="font-size: 2rem; font-weight: 200; color: #303030; width: 100%; text-align: center;">WORK IN PROGRESS</h3>
       </div>
     </article>
   
@@ -54,17 +45,9 @@
   </section>
 
 
-<script>
-  (function(w,d,s,g,js,fs){
-    g=w.gapi||(w.gapi={});g.analytics={q:[],ready:function(f){this.q.push(f);}};
-    js=d.createElement(s);fs=d.getElementsByTagName(s)[0];
-    js.src='https://apis.google.com/js/platform.js';
-    fs.parentNode.insertBefore(js,fs);js.onload=function(){g.load('analytics');};
-  }(window,document,'script'));
-</script>
     <!-- Script -->
     <script src="<?php echo base_url(); ?>assets/AlfredAtWork/plugins/jQuery.js"></script>
-    <script src="<?php echo base_url(); ?>assets/alfredatwork/scripts/main.js"></script>
+    <script src="<?php echo base_url(); ?>assets/AlfredAtWork/scripts/main.js"></script>
     <script src="<?php echo base_url(); ?>assets/AlfredAtWork/scripts/dashboard.js"></script>
 </body>
 </html>

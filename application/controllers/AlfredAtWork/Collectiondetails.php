@@ -7,33 +7,34 @@ class Collectiondetails extends CI_Controller {
    		if (!$this->ion_auth->logged_in()){
 			  redirect('AlfredAtWork/login');
 		}
-		$this->load->model('AlfredAtWork/collectiondetailsModel');
+		$this->load->model('AlfredAtWork/Collection_Model');
+		$this->load->model('AlfredAtWork/dashboardModel');
   	}
-	public function index( $id ){
-		$data['collection_id'] = $id;
-		$data['collectiondetails_datas'] = $this->collectiondetailsModel->showData( $id );
+	public function index( $collection_id ){
+		$data['collection_id'] = $collection_id;
+		$data['collectiondetails_datas'] = $this->Collection_Model->showCollectionDetailsData( $collection_id );
 		$this->load->view('AlfredAtWork/includes/head.php');
 		$page_anchor = array();
 		$page_anchor['active'] = 'products';
+		$page_anchor['first_name'] = $this->dashboardModel->showNameData()->first_name;
 		$this->load->view('AlfredAtWork/includes/nav.php', $page_anchor);
 		$this->load->view('AlfredAtWork/collectiondetails.php', $data);
 	}
 
-	public function updateData( $type ){
-		switch ( $type ) {
-			case 'name':
-				if($this->collectiondetailsModel->update_name( $_POST['collection_id'], $_POST['name'] )){
-                	echo "Saved";
-            	}
-				break;
-			case 'description':
-				if($this->collectiondetailsModel->update_description( $_POST['collection_id'], $_POST['description'] )){
-                	echo "Saved";
-            	}
-            	break;
-			default:
-				break;
-		}
+	public function name_content( $collection_id ){
+        if($this->Collection_Model->name_content( $collection_id, $_POST['name'] )){
+            $data = array("status" => 'success', 'message' => 'Name Updated');    
+            header('Content-Type: application/json');
+            echo json_encode( $data );
+        }
+	}
+
+	public function description_content( $collection_id ){
+        if($this->Collection_Model->description_content( $collection_id, $_POST['description'] )){
+            $data = array("status" => 'success', 'message' => 'Description Updated');    
+            header('Content-Type: application/json');
+            echo json_encode( $data );
+        }
 	}
 
 }

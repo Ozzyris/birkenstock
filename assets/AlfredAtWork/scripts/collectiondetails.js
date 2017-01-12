@@ -1,53 +1,50 @@
 function main_verification( type ){
-  	$( document ).ready(function(){
-    	var open_gate = true;
-    	switch(type){
-      		case 'name':
-      			if($('article form div #collection_name').val() == ''){ $('article form div #collection_name').addClass('wrong');  Internal_notification_center('You cannot send this form with an empty field.', 'error', 5000); open_gate=false;}
-				
-      			if(open_gate){
-              var input_datas = "collection_id="+ $('article form div #collection_id').val();
-      				    input_datas += "&name="+ $('article form div #collection_name').val();
+  var open_gate = true,
+    url,
+    input_datas,
+    collection_id = $('input#collection_id').val();
 
-          			$.ajax({
-          			    url : BASEURL + "alfredatwork/collectiondetails/updatedata/" + type,
-          			    cache: false,
-          			    type : 'POST',
-          			    data : input_datas,
-          			    dataType : 'html',
-          			    success : function( data ){
-          			        Internal_notification_center(data, 'success', 2000);
-          			    },
-          			    	error : function(resultat, statut, erreur){
-            				Internal_notification_center( erreur , 'error', 5000);
-          			      }
-          			  });
-      			}
-      			break;
-      		case 'description':
-      			 if($('article form div #collection_description').val() == ''){ $('article form div #collection_description').addClass('wrong');  Internal_notification_center('You cannot send this form with an empty field.', 'error', 5000); open_gate=false;}
+  switch(type){
 
-      			if(open_gate){
-              var input_datas = "collection_id="+ $('article form div #collection_id').val();
-      				    input_datas += "&description="+ $('article form div #collection_description').val();
-          			$.ajax({
-          			    url : BASEURL + "alfredatwork/collectiondetails/updatedata/" + type,
-          			    cache: false,
-          			    type : 'POST',
-          			    data : input_datas,
-          			    dataType : 'html',
-          			    success : function( data ){
-          			        Internal_notification_center(data, 'success', 2000);
-          			    },
-          			    	error : function(resultat, statut, erreur){
-            				Internal_notification_center( erreur , 'error', 5000);
-          			      }
-          			  });
-      			}
-      			break;
-    		default:
-    			break;
-    	}
-   	});
+    case 'name':
+      url = BASEURL + "alfredatwork/collection-detail/name-content/" + collection_id;
+      if($( '#input_name' ).val() == ''){
+        Internal_notification_center('You cannot send a form with an empty field.', 'error', 5000);
+        open_gate = false;
+      }else{
+        input_datas = "name=" + $( '#input_name' ).val();
+      }
+      break;
+
+      case 'description':
+      url = BASEURL + "alfredatwork/collection-detail/description-content/" + collection_id;
+      if($( '#input_description' ).val() == ''){
+        Internal_notification_center('You cannot send a form with an empty field.', 'error', 5000);
+        open_gate = false;
+      }else{
+          input_datas = "description=" + $( '#input_description' ).val();
+      }
+      break;
+
+    default:
+      break;
+  }
+
+  if( open_gate == true ){
+    $.ajax({
+          url : url,
+          cache: false,
+          type : 'POST',
+          data : input_datas,
+          dataType : 'html',
+          success : function(data){
+          var json_data = JSON.parse(data);
+            Internal_notification_center( json_data.message , json_data.status, 5000);
+          },
+          error : function(resultat, statut, erreur){
+            Internal_notification_center(resultat, 'error', 5000);
+          }
+      });
+  }
+
 }
-

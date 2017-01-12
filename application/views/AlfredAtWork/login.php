@@ -1,7 +1,7 @@
     <link href="<?php echo base_url(); ?>assets/AlfredAtWork/styles/login.css" rel="stylesheet">
     <button class="button" onclick="login_tooltype();">Connexion</button>
     <span id="tooltype">
-      <form id="connexion_form" action="login/auth" method="POST">
+      <form id="connexion_form" action="<?php echo base_url(); ?>alfredatwork/login/auth" method="POST">
         <input id="input_email" name="email" type="text" placeholder="email" /><br />
         <input id="input_password" name="password" onKeyPress="if(event.keyCode == 13) login_verfification();" type="password" placeholder="password" />
         <a href="forgot-password" class="link">forgot password ?</a>

@@ -180,7 +180,10 @@ section#products{
         }
         section#products div.filter span.arrow_button.active{transform: rotate(180deg);}
 
-        section#products div.product_container div.noResult{ width: 100%; }
+        section#products div.product_container div.noResult{
+            width: 100%;
+            display: none;
+        }
         section#products div.product_container div.noResult h2{
             font-size: 4rem;
             font-weight: 200;

@@ -4,48 +4,77 @@
 
 	<section id="content">
 
-		<article id="card_email" class="card half">
-          <div class="header yellow">
-            <h1>Title - News</h1>
-          </div>
-          <form class="body" action="" method="post">
-            <div class="input_group active">
-              <label class="text_label" for="news_title">Title of the news</label>
-              <input type="text" name="news_title"  id="news_title" class="classic_input" value="<?php echo $newsdetails_datas->title;  ?>" onfocus="animation_label('focus', event);" onblur="animation_label('blur', event);"/>
-              <input type="hidden" name="product_id" id="product_id" value="<?php echo $product_id;  ?>"/>
-            </div>
-            <a href="#" onclick="main_verification( 'title' )" class="button blue">Save</a>
-            <a href="#" class="button orange">Cancel</a>
-          </form>
-        </article>
+    <input type="hidden" id="product_id" value="<?php echo $product_id;  ?>"/>
 
-	    <article id="card_newslettertext" class="card half">
-	      <div class="header yellow">
-	        <h1>Description - News</h1>
+    <article class="card">
+      <div class="header yellow">
+        <h1>Image - News <i>(600px x 400px)</i></h1>
+      </div>
+      <form class="body" enctype="multipart/form-data" accept-charset="utf-8" action="" method="post">
+        <label for="input_image" class="darganddrop" style="background-image: url(<?php echo base_url() . $newsdetails_datas->image; ?>); background-size: cover; background-position: center center;">
+          <p>Drop a file or click to select one</p>
+          <input id="input_image" class="file_input" type="file" multiple>
+        </label>
+        <a href="#" onclick="main_verification( 'image' ); return false;" class="button blue">Save</a>
+        <a onclick="location.reload();" class="button orange">Cancel</a>
+      </form>
+    </article>
+
+		<article class="card half">
+      <div class="header yellow">
+        <h1>Title - News</h1>
+      </div>
+      <div class="body">
+        <div class="input_group">
+          <label class="text_label" for="title_input">Title of the news</label>
+          <input type="text"  id="title_input" class="classic_input" value="<?php echo $newsdetails_datas->title;  ?>" />
+        </div>
+        <a href="#" onclick="main_verification( 'title' ); return false;" class="button blue">Save</a>
+        <a onclick="location.reload();" class="button orange">Cancel</a>
+      </div>
+    </article>
+
+    <article class="card half">
+      <div class="header yellow">
+        <h1>Data - News</h1>
+      </div>
+      <div class="body">
+        <div class="input_group">
+              <label class="text_label" for="time_input">Event Date (MM/DD/YYYY)</label>
+              <input type="text" id="time_input" class="classic_input" value="<?php echo date('m/d/Y', $newsdetails_datas->time); ?>">
+            </div> 
+            <a onclick="main_verification( 'time' ); return false;" class="button blue">Save</a>
+          <a onclick="location.reload();" class="button orange">Cancel</a>
+      </div>
+    </article>
+
+	  <article class="card half">
+	    <div class="header yellow">
+	      <h1>Description - News</h1>
+	    </div>
+	    <div class="body">
+	      <div class="input_group active">
+	        <label class="text_label" for="description_input">Description of the news</label>
+	        <textarea id="description_input" class="classic_input" ><?php echo $newsdetails_datas->description;  ?></textarea>
 	      </div>
-	      <form class="body" action="" method="post">
-	        <div class="input_group active">
-	          <label class="text_label" for="news_description">Description of the news</label>
-	          <textarea name="news_description" id="news_description" class="classic_input" onfocus="animation_label('focus', event);" onblur="animation_label('blur', event);"><?php echo $newsdetails_datas->description;  ?></textarea>
-	        </div>
-	        <a href="#" onclick="main_verification( 'description' )" class="button blue">Save</a>
-	        <a href="#" class="button orange">Cancel</a>
-	      </form>
-	    </article>
+        <a href="#" onclick="main_verification( 'description' ); return false;" class="button blue">Save</a>
+        <a onclick="location.reload();" class="button orange">Cancel</a>
+	    </div>
+	  </article>
 
-	    <article id="card_email" class="card half">
-          <div class="header yellow">
-            <h1>Link - Link</h1>
-          </div>
-          <form class="body" action="" method="post">
-            <div class="input_group active">
-              <label class="text_label" for="news_link">Link of the news (if none keep '#')</label>
-              <input type="text" name="news_link"  id="news_link" class="classic_input" value="<?php echo $newsdetails_datas->link;  ?>" onfocus="animation_label('focus', event);" onblur="animation_label('blur', event);"/>
-            </div>
-            <a href="#" onclick="main_verification( 'link' )" class="button blue">Save</a>
-            <a href="#" class="button orange">Cancel</a>
-          </form>
-        </article>
+	  <article class="card half">
+      <div class="header yellow">
+          <h1>Link - News</h1>
+      </div>
+      <div class="body">
+        <div class="input_group active">
+          <label class="text_label" for="link_input">Link of the news (if none keep '#')</label>
+          <input type="text"  id="link_input" class="classic_input" value="<?php echo $newsdetails_datas->link;  ?>" />
+        </div>
+        <a href="#" onclick="main_verification( 'link' ); return false;" class="button blue">Save</a>
+        <a onclick="location.reload();" class="button orange">Cancel</a>
+      </div>
+    </article>
 
 	</section>
 

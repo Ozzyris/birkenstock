@@ -14,21 +14,28 @@
 	</section> -->
 	<section id="get_in_touch">
 		<h2 class="title">Get in touch</h2>
-		<form id="contact_form" action="http://birkenstockbondibeach.com.au/views/mail_send1.php" method="POST">
+		<?php
+      		$attributes = array('id' => 'contact_form');
+      		echo form_open('/contact/submit', $attributes);
+      	?> 
+      	<div class="email_send <?php if( isset( $_SESSION['email_sent'] ) ){ echo 'active'; } ?>" >
+			<h2><?php if(isset($_SESSION['email_sent'])){ echo $_SESSION['email_sent']; }?></h2>
+		</div>
+
 			<div class="inputs_group">
 				<label for="input_name">YOUR NAME</label>
-      			<input name="name" id="input_name" type="text" placeholder="John Doe" />
+      			<input name="contact_name" id="input_name" type="text" placeholder="John Doe" />
       			<label for="input_email">YOUR EMAIL ADRESS</label>
-      			<input name="email" id="input_email" type="text" placeholder="john.doe@outlook.com"/>
+      			<input name="contact_email" id="input_email" type="text" placeholder="john.doe@outlook.com"/>
       			<label for="input_phone">YOUR PHONE NUMBER</label>
-      			<input name="phone" id="input_phone" type="text" placeholder="0456 985 568" />
+      			<input name="contact_phone" id="input_phone" type="text" placeholder="0456 985 568" />
       		</div>
       		<div class="inputs_group">
       			<label for="input_message">YOUR MESSAGE</label>
-      			<textarea name="message" id="input_message" placeholder="Hello,"></textarea>
+      			<textarea name="contact_message" id="input_message" placeholder="Hello,"></textarea>
       		</div>
       		<span onclick="validation(); return false;" class="button blue">send</span>
-		</form>
+		<?php echo form_close(); ?> 
 	</section>
 
 	<section id="map">

@@ -13,7 +13,7 @@ function slide_image( next_position ){
 			if(actual_position <= number_of_picture-2){
 				$('section#product_image ul.gallery').css('transform', 'translateX(' + -((actual_position+1)*slide_distance_percentage) + '%)');
 				
-				gallery_content[(number_of_picture - (actual_position+2))].tag.forEach(function(item, index){
+				gallery_content[(number_of_picture - (actual_position+2))].tags.forEach(function(item, index){
 					$('section#product_information ul.tag').append('<li><img src="http://birkenstockbondibeach.com.au/images/BADGE_' + item + '.svg" alt=""></li>');
 				});
 				$('section#product_information p.color').text(gallery_content[(number_of_picture - (actual_position+2))].color);
@@ -26,7 +26,7 @@ function slide_image( next_position ){
 			if(actual_position >= 1){
 				$('section#product_image ul.gallery').css('transform', 'translateX(' + -((actual_position-1)*slide_distance_percentage) + '%)');
 
-				gallery_content[(number_of_picture - actual_position)].tag.forEach(function(item, index){
+				gallery_content[(number_of_picture - actual_position)].tags.forEach(function(item, index){
 					$('section#product_information ul.tag').append('<li><img src="http://birkenstockbondibeach.com.au/images/BADGE_' + item + '.svg" alt=""></li>');
 				});
 				$('section#product_information p.color').text(gallery_content[(number_of_picture - actual_position)].color);
@@ -37,7 +37,7 @@ function slide_image( next_position ){
 			break;
 		default:
 			$('section#product_image ul.gallery').css('transform', 'translateX(' + -(next_position*slide_distance_percentage) + '%)');
-			gallery_content[(number_of_picture - (next_position+1))].tag.forEach(function(item, index){
+			gallery_content[(number_of_picture - (next_position+1))].tags.forEach(function(item, index){
 				$('section#product_information ul.tag').append('<li><img src="http://birkenstockbondibeach.com.au/images/BADGE_' + item + '.svg" alt=""></li>');
 			});
 			$('section#product_information p.color').text(gallery_content[(number_of_picture - (next_position+1))].color);
@@ -58,26 +58,17 @@ function init_gallery(){
 	$('section#product_image ul.gallery').css('width', number_of_picture + '00%');
 	$('section#product_image ul.dot').css('width', number_of_picture*40 + 'px');
 
-	var address = 'products/'; 
-    gallery_content[0].gender.forEach(function(item, index){
-    	if(item == 'kids'){ address += 'kids/'; }
-    });
-    gallery_content[0].tag.forEach(function(item, index){
-    	if(item == 'seasonal'){ address += 'seasonal/'; }
-    });
-    if(address == 'products/'){ address += 'classical/'; }
-
 	for(var i=0;  i < number_of_picture; i++) {
-    	var address_image = address + gallery_content[i].picture + '.png';
-		$('section#product_image ul.gallery').prepend('<li style="width: ' + slide_distance_percentage + '%;"><img src="http://birkenstockbondibeach.com.au/images/' + address_image + '" alt="">');
-		$('section#product_image ul.dot').prepend('<li><a onclick="slide_image(' + (number_of_picture - (i+1)) + ')" style="background-image: url(http://birkenstockbondibeach.com.au/images/' + address_image + ')" href="#"></a></li>');
+		$('section#product_image ul.gallery').prepend('<li style="width: ' + slide_distance_percentage + '%;"><img src="' + BASEURL + gallery_content[i].picture + '" alt="' + gallery_content[i].name + '">');
+		$('section#product_image ul.dot').prepend('<li><a onclick="slide_image(' + (number_of_picture - (i+1)) + ')" style="background-image: url(' + BASEURL + gallery_content[i].thumb + ')" href="#"></a></li>');
 		var size_length = gallery_content[i].size.length;
 		var size =  gallery_content[i].size[0] + ' - ' + gallery_content[i].size[(size_length-1)];
 		sizes.push(size)
 	}
+
 	$('section#product_image ul.dot li:first-child').addClass('active');
-	if(number_of_picture == 1){$('section#product_image span.arrow.left, section#product_image span.arrow.right').hide();}else{$('section#product_image span.arrow.left').hide();}
-	gallery_content[(number_of_picture-1)].tag.forEach(function(item, index){
+	if(number_of_picture == 1){ $('section#product_image span.arrow.left, section#product_image span.arrow.right').hide(); }else{ $('section#product_image span.arrow.left').hide(); }
+	gallery_content[(number_of_picture-1)].tags.forEach(function(item, index){
 		$('section#product_information ul.tag').append('<li><img src="' + BASEURL + '/assets/images/BADGE_' + item + '.svg" alt=""></li>');
 	});
 
@@ -106,18 +97,15 @@ function modal_contact( action ){
 
 // FUNCTION GET DATA FROM URL
 function GET(){
-	var id = $_GET('id');
-	if(id != null){
-		id = id.replace('#', '');
-		id = gallery_content[0].name + '_' + id;
+	if(GET_product != null){
 		for(var i=0;  i < number_of_picture; i++) {
-			if(id == gallery_content[i].picture){
+			if(GET_product == gallery_content[i].id){
 				$('section#product_information ul.tag').html('');
 				$('section#product_image ul.dot li:first-child').removeClass('active');
 				$('section#product_image ul.dot li:nth-child(' + (number_of_picture - i) + ')').addClass('active');
 				$('section#product_image ul.gallery').css('transform', 'translateX(' + -((number_of_picture - (i + 1))*slide_distance_percentage) + '%)');
-				gallery_content[i].tag.forEach(function(item, index){
-					$('section#product_information ul.tag').append('<li><img src="../../../images/BADGE_' + item + '.svg" alt=""></li>');
+				gallery_content[i].tags.forEach(function(item, index){
+					$('section#product_information ul.tag').append('<li><img src="' + BASEURL + '/assets/images/BADGE_' + item + '.svg" alt=""></li>');
 				});
 				$('section#product_information p.color').text(gallery_content[i].color);
 				$('section#product_information p.size').text(sizes[i]);

@@ -4,7 +4,7 @@
       <span class="line line-2"></span>
       <span class="line line-3"></span>
     </a>
-     <p>Hello ALEX, How are you today ?</p>
+     <p>Hello <?php echo $first_name; ?>, How are you today ?</p>
 </section>
 
 <nav id="left_navigation">

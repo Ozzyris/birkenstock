@@ -1,59 +1,114 @@
-function main_verification( type, id ){
-	$( document ).ready(function() {
-		var open_gate = true;
-		var form_id = id[0].split("_"); 
-		form_id = form_id[0];
-		var form_length = id.length;
-		var input_datas = "form_id="+ form_id +"&form_length="+ form_length;
+function main_verification( type ){
+	var open_gate = true,
+		url,
+		input_datas;
 
-		id.forEach(function(item, index){
-			$('article form div #' + item).removeClass('wrong');
-			var value = $('article form div #' + item).val();
-			switch(type[index]){
-				case 'text':
-					$(id).removeClass('wrong');
-					if(value == ''){
-						$('article form div #' + item).addClass('wrong');
-						Internal_notification_center('You cannot send a form with an empty field.', 'error', 5000);
-						open_gate = false;
-				}
-					break;
-				case 'url':
-					$(id).removeClass('wrong');
-					if(value == ''){
-						$('article form div #' + item).addClass('wrong');
-						Internal_notification_center('You cannot send a form with an empty field.', 'error', 5000);
-						open_gate = false;
-					}
-					if(value.indexOf('http') == -1){
-						$('article form div #' + item).addClass('wrong');
-						Internal_notification_center('An http:// is needed to save a link', 'error', 5000);
-						open_gate = false;
-				}
-					break;
-				default:
-					break;
+	switch(type){
+		case 'newsletter':
+			url = BASEURL + "alfredatwork/home/newsletter-content";
+			if($( '#input_newslettertext' ).val() == ''){
+				Internal_notification_center('You cannot send a form with an empty field.', 'error', 5000);
+				open_gate = false;
+			}else{
+				input_datas = "newsletter_text=" + $( '#input_newslettertext' ).val();
 			}
-			var input_id = id[index].split("_");
-			input_id = input_id[2];
-			input_datas = input_datas + "&type" + index + "=" + input_id + "&value" + index + "=" + value;
-		});
-		if(open_gate){
-			$.ajax({
-       			url : BASEURL + "alfredatwork/home/addhomecontent",
-       			cache: false,
-       			type : 'POST',
-       			data : input_datas,
-       			dataType : 'html',
-		       success : function(data){
-          			Internal_notification_center('Saved', 'success', 2000);
-          			console.log( data );
-      			},
-       			error : function(resultat, statut, erreur){
-       				Internal_notification_center(resultat, 'error', 5000);
-       				console.log(resultat + ' ' + erreur);
-       			}
-    		});
-		}
-	});
+			break;
+
+		case 'facebook':
+			url = BASEURL + "alfredatwork/home/facebook-content";
+			if($( '#input_facebooktext' ).val() == '' || $( '#input_facebooklink' ).val() == ''){
+				Internal_notification_center('You cannot send a form with an empty field.', 'error', 5000);
+				open_gate = false;
+			}else{
+				if($( '#input_facebooklink' ).val().indexOf('http') == -1){
+					Internal_notification_center('An http:// is needed to save a link', 'error', 5000);
+					open_gate = false;
+				}else{
+					input_datas = "facebook_text=" + $( '#input_facebooktext' ).val() + '&facebook_link=' + $( '#input_facebooklink' ).val();
+				}
+			}
+			break;
+
+		case 'instagram':
+			url = BASEURL + "alfredatwork/home/instagram-content";
+			if($( '#input_instagramtext' ).val() == '' || $( '#input_instagramlink' ).val() == ''){
+				Internal_notification_center('You cannot send a form with an empty field.', 'error', 5000);
+				open_gate = false;
+			}else{
+				if($( '#input_instagramlink' ).val().indexOf('http') == -1){
+					Internal_notification_center('An http:// is needed to save a link', 'error', 5000);
+					open_gate = false;
+				}else{
+					input_datas = "instagram_text=" + $( '#input_instagramtext' ).val() + '&instagram_link=' + $( '#input_instagramlink' ).val();
+				}
+			}
+			break;
+
+		case 'address':
+			url = BASEURL + "alfredatwork/home/address-content";
+			if($( '#input_addresstext' ).val() == '' || $( '#input_addresslink' ).val() == ''){
+				Internal_notification_center('You cannot send a form with an empty field.', 'error', 5000);
+				open_gate = false;
+			}else{
+				if($( '#input_addresslink' ).val().indexOf('http') == -1){
+					Internal_notification_center('An http:// is needed to save a link', 'error', 5000);
+					open_gate = false;
+				}else{
+					input_datas = "address_text=" + $( '#input_addresstext' ).val() + '&address_link=' + $( '#input_addresslink' ).val();
+				}
+			}
+			break;
+
+		case 'email':
+			url = BASEURL + "alfredatwork/home/email-content";
+			if($( '#input_emailtext' ).val() == '' || $( '#input_emaillink' ).val() == ''){
+				Internal_notification_center('You cannot send a form with an empty field.', 'error', 5000);
+				open_gate = false;
+			}else{
+				if($( '#input_emaillink' ).val().indexOf('mailto:') == -1){
+					Internal_notification_center('An mailto: is needed to save a link', 'error', 5000);
+					open_gate = false;
+				}else{
+					input_datas = "email_text=" + $( '#input_emailtext' ).val() + '&email_link=' + $( '#input_emaillink' ).val();
+				}
+			}
+			break;
+
+		case 'phone':
+			url = BASEURL + "alfredatwork/home/phone-content";
+			if($( '#input_phonetext' ).val() == '' || $( '#input_phonelink' ).val() == ''){
+				Internal_notification_center('You cannot send a form with an empty field.', 'error', 5000);
+				open_gate = false;
+			}else{
+				if($( '#input_phonelink' ).val().indexOf('tel:') == -1){
+					Internal_notification_center('An tel: is needed to save a link', 'error', 5000);
+					open_gate = false;
+				}else{
+					input_datas = "phone_text=" + $( '#input_phonetext' ).val() + '&phone_link=' + $( '#input_phonelink' ).val();
+				}
+			}
+			break;
+
+		default:
+			break;
+
+	}
+
+	if( open_gate == true ){
+		$.ajax({
+       		url : url,
+       		cache: false,
+       		type : 'POST',
+       		data : input_datas,
+       		dataType : 'html',
+		   success : function(data){
+		   		var json_data = JSON.parse(data);
+            	Internal_notification_center( json_data.message , json_data.status, 5000);
+      		},
+       		error : function(resultat, statut, erreur){
+       			Internal_notification_center(resultat, 'error', 5000);
+       		}
+    	});
+	}
+
 }

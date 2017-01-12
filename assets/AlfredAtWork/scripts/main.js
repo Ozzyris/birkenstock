@@ -67,7 +67,7 @@ function tooltype_factory(){
   var html = '<form class="tooltype">';
       html += '  <h4>Add</h4>';
       html += '  <input onKeyPress="if(event.keyCode == 13) verification_newproduct();" name="product_name" placeholder="Title" type="text">';
-      html += '  <a onclick="verification_newproduct();" class="input_button success">Send</a>';
+      html += '  <a onclick="verification_newproduct(); return false;" class="input_button success">Send</a>';
       html += '  <a class="input_button cancel">Cancel</a>';
       html += '</form>';
 
@@ -96,7 +96,7 @@ function simple_modal_factory( id, type, title, description ){
      html += '  </div>';
      html += '  <div class="body">';
      html += '    <p>' + description + '</p>';
-     html += '    <a href="#" onclick="add_delete_date(' + id + ');" class="button red">Delete</a>';
+     html += '    <a href="#" onclick="delete_element(' + id + ');" class="button red">Delete</a>';
      html += '    <a href="#" onclick="simple_modal_factory(\'close\');" class="button orange">Cancel</a>';
      html += '  </div>';
      html += '</div>';

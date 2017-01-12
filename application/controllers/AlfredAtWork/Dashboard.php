@@ -18,6 +18,7 @@ class Dashboard extends CI_Controller {
 		$this->load->view('AlfredAtWork/includes/head.php');
 		$page_anchor = array();
 		$page_anchor['active'] = 'dashboard';
+		$page_anchor['first_name'] = $this->dashboardModel->showNameData()->first_name;
 		$this->load->view('AlfredAtWork/includes/nav.php', $page_anchor);
 		$data['dashboard_datas'] = $this->dashboardModel->showData();
 		$this->load->view('AlfredAtWork/dashboard.php', $data);

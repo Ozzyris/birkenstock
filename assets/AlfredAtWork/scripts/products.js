@@ -28,22 +28,20 @@ function product_tooltype_factory( collection_id ){
 function verification_newelement( collection_id ){
 	var color = $('form.tooltype input#product_name').val();
 	if( color != '' ){
-	var input_datas = "color="+ color + "&collection_id="+ collection_id;
+	var input_datas = "color="+ color;
 	    $.ajax({
-	        url : BASEURL + "alfredatwork/products/insertdata/",
-	        cache: false,
-	        type : 'POST',
-	        data : input_datas,
-	        dataType : 'html',
-	       success : function(data){
-	            Internal_notification_center(data, 'success', 2000);
-	            tooltype_factory();
-              location.reload();
-	        },
-	        error : function(resultat, statut, erreur){
-	            Internal_notification_center( erreur , 'error', 5000);
-	            simple_modal_factory('close');
-	        }
+	      url : BASEURL + "alfredatwork/products/insert_element/" + collection_id,
+	      cache: false,
+	      type : 'POST',
+	      data : input_datas,
+	      dataType : 'html',
+	      success : function(data){
+          location.reload();
+	      },
+	      error : function(resultat, statut, erreur){
+	        Internal_notification_center( erreur , 'error', 5000);
+	        simple_modal_factory('close');
+	      }
 	    });
 	}else{
 		Internal_notification_center('You have to write a color.', 'error', 5000);
@@ -51,65 +49,45 @@ function verification_newelement( collection_id ){
 }
 
 function switch_archive( event, id ){
-    $.ajax({
-        url : BASEURL + "alfredatwork/products/switchactive/" + id,
-        cache: false,
-        type : 'POST',
-        dataType : 'html',
-       success : function(data){
-          if($(event.target).hasClass('active')){
-              $(event.target).removeClass('active');
-              $(event.target).parent('div').parent('div').parent('article').addClass('archive');
-          }else{
-              $(event.target).addClass('active');
-              $(event.target).parent('div').parent('div').parent('article').removeClass('archive');
-          }
-        },
-        error : function(resultat, statut, erreur){
-            Internal_notification_center( erreur , 'error', 5000);
-        }
-    });
+  $.ajax({
+    url : BASEURL + "alfredatwork/products/switch_element/" + id,
+    cache: false,
+    type : 'POST',
+    dataType : 'html',
+    success : function(data){
+      console.log(data);
+      var json_data = JSON.parse(data);
+      console.log(data, json_data);
+      Internal_notification_center( json_data.message , json_data.status, 5000);
+      if($(event.target).hasClass('active')){
+        $(event.target).removeClass('active');
+        $(event.target).parent('div').parent('div').parent('article').addClass('archive');
+      }else{
+        $(event.target).addClass('active');
+        $(event.target).parent('div').parent('div').parent('article').removeClass('archive');
+      }
+    },
+    error : function(resultat, statut, erreur){
+      Internal_notification_center( erreur , 'error', 5000);
+    }
+  });
 }
 
-function add_delete_date( id ){
+function delete_element( id ){
     $.ajax({
-        url : BASEURL + "alfredatwork/products/adddeletedate/" + id,
+        url : BASEURL + "alfredatwork/products/delete_element/" + id,
         cache: false,
         type : 'POST',
         dataType : 'html',
        success : function(data){
-            Internal_notification_center(data, 'success', 2000);
-            simple_modal_factory('close');
-            $('article#object_' + id).children('div.action').children('div.btn_container:nth-child(2)').hide();
-            $('article#object_' + id).children('div.action').children('div.btn_container:nth-child(1)').show();
-            if( $('article#object_' + id).hasClass('archive') ){}else{ $('article#object_' + id).addClass('archive'); }
-			$('article#object_' + id).children('div.content').children('div.switch_container').hide();
-			$('article#object_' + id).children('div.content').append('<div class="deletionTime"><p>30 days before deletion</p></div>');
+          var json_data = JSON.parse(data);
+          Internal_notification_center( json_data.message , json_data.status, 5000);
+          simple_modal_factory('close');
+          $('article#product_' + id).remove()
         },
         error : function(resultat, statut, erreur){
             Internal_notification_center( erreur , 'error', 5000);
             simple_modal_factory('close');
-        }
-    });
-}
-
-function undo_deletion( id, event ){
-    $.ajax({
-        url : BASEURL + "alfredatwork/products/undoarchivedata/" + id,
-        cache: false,
-        type : 'POST',
-        dataType : 'html',
-       success : function(data){
-            Internal_notification_center(data, 'success', 2000);
-            $('article#object_' + id).children('div.content').children('div.switch_container').show();
-            $('article#object_' + id).children('div.content').children('div.switch_container').children('span.switch').removeClass('active');
-            $('article#object_' + id).children('div.content').children('div.deletionTime').remove();
-            $('article#object_' + id).children('div.action').children('div.btn_container:nth-child(2)').show();
-            $('article#object_' + id).children('div.action').children('div.btn_container:nth-child(1)').hide();
-            $(event.target).parent('div.btn_container').hide();
-        },
-        error : function(resultat, statut, erreur){
-            Internal_notification_center( erreur , 'error', 5000);
         }
     });
 }

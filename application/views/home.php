@@ -23,90 +23,90 @@
 		<h2 class="title">Collection</h2>
 		<ul class="Two_column">
 			<li class="image_link" style="background-image: url('<?php echo base_url(); ?>assets/images/THUMB_sesonal.jpg')" >
-				<a href="products/Collection/Seasonal">
+				<a href="products/seasonal">
 					<h3>Seasonal</h3>
 				</a>
 			</li>
 			<li class="image_link" style="background-image: url('<?php echo base_url(); ?>assets/images/THUMB_allcollections.jpg')" >
-				<a href="products/Collection/All">
+				<a href="products/all">
 					<h3>All Collections</h3>
 				</a>
 			</li>
 		</ul>
 		<ul class="Three_column">
 			<li class="image_link" style="background-image: url('<?php echo base_url(); ?>assets/images/THUMB_women.jpg')" >
-				<a href="products/Collection/Women">
+				<a href="products/women">
 					<h3>Women</h3>
 				</a>
 			</li>
 			<li class="image_link" style="background-image: url('<?php echo base_url(); ?>assets/images/THUMB_men.jpg')" >
-				<a href="products/Collection/Men">
+				<a href="products/men">
 					<h3>Men</h3>
 				</a>
 			</li>
 			<li class="image_link" style="background-image: url('<?php echo base_url(); ?>assets/images/THUMB_kids.jpg')" >
-				<a href="products/Collection/Kids">
+				<a href="products/kids">
 					<h3>Kids</h3>
 				</a>
 			</li>
 		</ul>
 	</section>
 
-	<section id="Featured_products" class="m-scrollable-filter">
+	<section id="Featured_products">
 		<h2 class="title">Featured Products</h2>
 		<ul class="Three_column">
 			<li>
-				<a href="product_details/Collection/Classical/Arizona/leather_black">
-					<img src="<?php echo base_url(); ?>assets/images/products/classical/arizona_leather_black.png" alt="Arizona">
+				<a href="<?php echo base_url(); ?>product-details/Arizona/classic/10">
+					<img src="<?php echo base_url(); ?>assets/uploads/thumbnails/thumb_picture_10.png" alt="Arizona">
 					<h3>ARIZONA</h3>
 				</a>
 			</li>
 			<li>
-				<a href="product_details/Collection/Classical/Mayari/birkoflor_mocca">
-					<img src="<?php echo base_url(); ?>assets/images/products/classical/mayari_birkoflor_mocca.png" alt="MAYARI">
+				<a href="<?php echo base_url(); ?>product-details/Mayari/classic/10">
+					<img src="<?php echo base_url(); ?>assets/uploads/thumbnails/thumb_picture_59.png" alt="MAYARI">
 					<h3>MAYARI</h3>
 				</a>
 			</li>
 			<li>
-				<a href="product_details/Collection/Classical/Gizeh/birkoflor_silver">
-					<img src="<?php echo base_url(); ?>assets/images/products/classical/gizeh_birkoflor_silver.png" alt="GIZEH">
+				<a href="<?php echo base_url(); ?>product-details/Gizeh/classic/68">
+					<img src="<?php echo base_url(); ?>assets/uploads/thumbnails/thumb_picture_68.png" alt="GIZEH">
 					<h3>GIZEH</h3>
 				</a>
 			</li>
 			<li>
-				<a href="product_details/Collection/Classical/boston/leather_habana">
-					<img src="<?php echo base_url(); ?>assets/images/products/classical/boston_leather_habana.png" alt="BOSTON">
+				<a href="<?php echo base_url(); ?>product-details/Boston/classic/54">
+					<img src="<?php echo base_url(); ?>assets/uploads/thumbnails/thumb_picture_54.png" alt="BOSTON">
 					<h3>BOSTON</h3>
 				</a>
 			</li>
 			<li>
-				<a href="product_details/Collection/Classical/Madrid/birkoflor_black">
-					<img src="<?php echo base_url(); ?>assets/images/products/classical/madrid_birkoflor_black.png" alt="MADRID">
+				<a href="<?php echo base_url(); ?>product-details/Madrid/classic/44">
+					<img src="<?php echo base_url(); ?>assets/uploads/thumbnails/thumb_picture_44.png" alt="MADRID">
 					<h3>MADRID</h3>
 				</a>
 			</li>
 			<li>
-				<a href="product_details/Collection/Classical/Milano/birkoflor_mocca">
-					<img src="<?php echo base_url(); ?>assets/images/products/classical/milano_birkoflor_mocca.png" alt="MILANO">
+				<a href="<?php echo base_url(); ?>product-details/Milano/classic/79">
+					<img src="<?php echo base_url(); ?>assets/uploads/thumbnails/thumb_picture_79.png" alt="MILANO">
 					<h3>MILANO</h3>
 				</a>
 			</li>
 			<li>
-				<a href="product_details/Collection/Classical/Florida/birkoflor_onyx">
-					<img src="<?php echo base_url(); ?>assets/images/products/classical/florida_birkoflor_onyx.png" alt="FLORIDA">
+				<a href="<?php echo base_url(); ?>/product-details/Florida/classic/56">
+					<img src="<?php echo base_url(); ?>assets/uploads/thumbnails/thumb_picture_56.png" alt="FLORIDA">
 					<h3>FLORIDA</h3>
 				</a>
 			</li>
 			<li>
-				<a href="products/Collection/Classical/Salina/birkoflor_black">
-					<img src="<?php echo base_url(); ?>assets/images/products/classical/salina_birkoflor_black.png" alt="SALINA">
+				<a href="<?php echo base_url(); ?>product-details/Salina/classic/62">
+					<img src="<?php echo base_url(); ?>assets/uploads/thumbnails/thumb_picture_62.png" alt="SALINA">
 					<h3>SALINA</h3>
 				</a>
 			</li>
 			<li>
-				<a href="products/Collection/Classical/Yara/leather_antiquebrown">
-					<img src="<?php echo base_url(); ?>assets/images/products/classical/yara_leather_antiquebrown.png" alt="YARA">
-					<h3>YARA</h3>
+				<a href="<?php echo base_url(); ?>product-details/Rio/kids/100">
+					<img src="<?php echo base_url(); ?>assets/uploads/thumbnails/thumb_picture_100.png" alt="YARA">
+					<h3>RIO</h3>
 				</a>
 			</li>
 		</ul>
@@ -131,7 +131,7 @@
 		<?php  foreach ($news_datas as $datas): ?>
 
 			<article>
-				<div class="image" style="background-image: url('<?php echo base_url(); ?>assets/images/news/THUMB_news2.jpg');">	</div>
+				<div class="image" style="background-image: url('<?php echo base_url() . $datas->image; ?>');">	</div>
 				<div class="content">
 					<h3><?php echo $datas->title; ?></h3>
 					<time><?php  echo date('l jS \of F', $datas->time); ?></time>

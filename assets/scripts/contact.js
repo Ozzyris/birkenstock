@@ -11,9 +11,6 @@ function validation(){
   if(phone == ''){ $('input#input_phone').addClass('wrong'); open_gate = false; }
   if(message == ''){ $('textarea#input_message').addClass('wrong'); open_gate = false; }
 
-
-
-
   if(open_gate){ $("form#contact_form").submit(); }
 }
 

@@ -123,15 +123,3 @@ function launch_detail_information(){
     toogle_detail_information = true;
   }
 }
-
-
-
-function $_GET(param){
-  var vars = {};
-  window.location.href.replace( location.hash, '' ).replace(/[?&]+([^=&]+)=?([^&]*)?/gi, function( m, key, value ) {
-      vars[key] = value !== undefined ? value : '';
-  });
-  if( param ){
-    return vars[param] ? vars[param] : null;  
-  }
-}

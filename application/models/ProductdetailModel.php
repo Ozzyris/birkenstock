@@ -3,19 +3,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class productdetailModel extends CI_Model{
 	
-	public function showProductsDetails( $id ){
-		$sql_collection_id = $this->db->query("SELECT collection_id FROM products WHERE id = '$id' LIMIT 1");
-		$collection_id = $sql_collection_id->result()[0]->collection_id;
-
-		$sql = $this->db->query("SELECT * FROM products WHERE collection_id = '$collection_id'");
+	public function showProductsDetails( $collection_id, $category ){
+		$sql = $this->db->query("SELECT * FROM products WHERE collection_id = '$collection_id' AND category = '$category' AND active = '1'");
 		return $sql->result();
 	}
 
-	public function showCollectionDetails( $id ){
-		$sql_collection_id = $this->db->query("SELECT collection_id FROM products WHERE id = '$id' LIMIT 1");
-		$collection_id = $sql_collection_id->result()[0]->collection_id;
-
-		$sql = $this->db->query("SELECT * FROM collection WHERE id = '$collection_id' LIMIT 1");
+	public function showCollectionDetails( $collection ){
+		$sql = $this->db->query("SELECT * FROM collection WHERE name = '$collection' LIMIT 1");
 		return $sql->result()[0];
 	}
 

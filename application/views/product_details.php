@@ -17,13 +17,12 @@
 	</section>
 
 	<section id="product_information">
-		<h1 class="title"><?php echo $collection_datas->name ?></h1>
+		<h1 class="title"><?php echo str_replace('_', ' ', $collection_datas->name) ?></h1>
 		<p><?php echo $collection_datas->description ?></p>
 		<ul class="tag"></ul>
     	<p class="size"></p>
     	<p class="color"></p>
 	</section>
-  <!-- <?php echo $products_datas ?> -->
 	<!-- FOOTER -->
 	<?php $this->load->view('includes/footer.php'); ?>
 
@@ -31,79 +30,20 @@
 	<?php $this->load->view('includes/scripts.php'); ?>
 
 	<script>
+		var GET_product = '<?php echo $products_id; ?>';
 		var gallery_content = [
-  		{ //ARIZONA CLASSIC BLACK #1
-        name: 'arizona',
-        picture: 'arizona_leather_black',
-        tag: ['leather', 'regularfit', 'narrowfit'],
-        size: [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48],
-        gender: ['men', 'women'], 
-        color: 'Black'
+      <?php foreach ($products_datas as $datas):
+            $tags = explode(",", $datas->tag);
+      ?>
+      {
+        id: '<?php echo $datas->id; ?>',
+        color: '<?php echo $datas->color; ?>',
+        picture: '<?php echo $datas->picture; ?>',
+        thumb: '<?php echo $datas->thumb; ?>',
+        size: [<?php echo $datas->size; ?>],
+        tags: [<?php foreach($tags as $tags_datas){ echo '"' . $tags_datas . '", '; } ?>],
       },
-      { //ARIZONA CLASSIC BLACK #3
-        name: 'arizona',
-        picture: 'arizona_eva_black',
-        tag: ['eva', 'narrowfit'],
-        size: [36, 37, 38, 39, 40, 41],
-        gender: ['men', 'women'], 
-        color: 'Black'
-      },
-      { //ARIZONA CLASSIC WHITE #1
-        name: 'arizona',
-        picture: 'arizona_birkoflor_white',
-        tag: ['birkoflor', 'regularfit', 'narrowfit'],
-        size: [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-        gender: ['men', 'women'], 
-        color: 'White'
-      },
-      { //ARIZONA CLASSIC WHITE #2
-        name: 'arizona',
-        picture: 'arizona_eva_white',
-        tag: ['eva', 'narrowfit'],
-        size: [36, 37, 38, 39, 40, 41],
-        gender: ['men', 'women'], 
-        color: 'White'
-      },
-      { //ARIZONA CLASSIC BASALTE
-        name: 'arizona',
-        picture: 'arizona_birkoflor_basalt',
-        tag: ['birkoflor', 'regularfit', 'narrowfit'],
-        size: [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-        gender: ['men', 'women'], 
-        color: 'Basalt'
-      },
-      { //ARIZONA CLASSIC STONE
-        name: 'arizona',
-        picture: 'arizona_birkoflor_stone',
-        tag: ['birkoflor', 'regularfit', 'narrowfit'],
-        size: [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-        gender: ['men', 'women'], 
-        color: 'Stone'
-      },
-      { //ARIZONA CLASSIC HABANA
-        name: 'arizona',
-        picture: 'arizona_leather_habana',
-        tag: ['leather', 'regularfit', 'narrowfit'],
-        size: [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-        gender: ['men', 'women'], 
-        color: 'Habana'
-      },
-      { //ARIZONA CLASSIC ANTIQUE BROWN
-        name: 'arizona',
-        picture: 'arizona_leather_antiquebrown',
-        tag: ['leather', 'regularfit', 'narrowfit'],
-        size: [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-        gender: ['men', 'women'], 
-        color: 'Antique Brown'
-      },
-      { //ARIZONA CLASSIC TAUPE #1
-        name: 'arizona',
-        picture: 'arizona_leather_taupe',
-        tag: ['leather', 'regularfit', 'narrowfit'],
-        size: [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-        gender: ['men', 'women'], 
-        color: 'Taupe'
-      }
+      <?php  endforeach ?>
 	];
 	</script>
 	<script src="<?php echo base_url(); ?>assets/scripts/product_details.js"></script>

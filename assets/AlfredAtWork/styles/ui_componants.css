@@ -51,6 +51,10 @@ article.card.half{
 		right: 10px;
 		font-size: 1.5rem;
 	}
+	article.card div.body{
+		width: 90%;
+		margin: 20px auto;
+	}
 
 /* OBJECTS */
 article.object{
@@ -195,16 +199,15 @@ div.input_group{
     	pointer-events: none;
     	font-size: 1.6rem;
     	top: 5px;
-	}
-	div.input_group.active label.text_label{
-        -webkit-transform: translateY(-4px);
+    	-webkit-transform: translateY(-4px);
         transform: translateY(-4px);
         left: 2px;
         font-size: 1rem;
-    }
+	}
 	div.input_group input.classic_input{
 		display: block;
 		width: 100%;
+		font-family: 'Raleway';
 		box-sizing: border-box;
 		padding: 0px;
         margin: 10px auto 20px;
@@ -221,11 +224,12 @@ div.input_group{
 	div.input_group textarea.classic_input{
 		display: block;
 		width: 100%;
+		font-family: 'Raleway';
 		box-sizing: border-box;
 		padding: 0px;
         margin: 10px auto 20px;
         height: 80px;
-        resize: none;
+        resize: vertical;
         line-height: 1.5;
         border: none;
         border-bottom: 1px solid #303030;
@@ -556,7 +560,7 @@ label.darganddrop:active, label.darganddrop.active { border-color: rgb(253, 206,
     	width: 100%;
     	height: 30px;
     	line-height: 30px;
-    	margin: 15px 0 0px 0;
+    	margin: 60px 0 0px 0;
     	transition: color 300ms;
 	}
 	label.darganddrop:hover p{ color: rgb(95, 170, 239); }
@@ -661,7 +665,6 @@ div.body div.input_group{
 	width: 100%;
 }
 div.body div.input_group label{
-	font-size: 1.6rem;
 	display: block;
 	width: 100%;
 }
@@ -767,7 +770,7 @@ input::-moz-focus-outer {
 		width: calc(95% - 200px);
 		padding-left: 200px;
 		margin: 20px auto 0;
-		max-width: 800px;
+		max-width: 900px;
 	}
 	article.card.half{
 		width: calc(50% - 10px);

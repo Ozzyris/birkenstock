@@ -51,16 +51,19 @@
 	<!-- SCRIPT -->
 	<?php $this->load->view('includes/scripts.php'); ?>
 	<script>
+	var GET_filter = '<?php echo $products_filter; ?>';
 	var products = [
-		<?php  foreach ($products_datas as $datas): ?>
-  		{ //ARIZONA CLASSIC BLACK #1
+		<?php
+			foreach ($products_datas as $datas):
+				$gender = explode(",", $datas->gender);
+		?>
+  		{
           	id: '<?php echo $datas->id; ?>',
           	name: '<?php echo $datas->collection; ?>',
-  			picture: 'arizona_leather_black',
-  			tag: [<?php echo json_encode($datas->tag); ?>],
+  			thumb: '<?php echo $datas->thumb; ?>',
   			size: [<?php echo $datas->size; ?>],
-  			gender: [<?php echo json_encode($datas->gender); ?>], 
-  			color: '<?php echo $datas->color; ?>'
+  			gender: [<?php foreach($gender as $gender_datas){ echo '"' . $gender_datas . '", '; } ?>], 
+  			category: "<?php echo $datas->category; ?>", 
    		},
    		<?php  endforeach ?>
    	];
