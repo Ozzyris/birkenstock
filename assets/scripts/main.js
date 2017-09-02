@@ -18,13 +18,41 @@ body.on("scroll", function(e) {
  
 });
 
-function newsletter_verification(){
-  var open_gate = true;
-  var email = $('input#input_newsletter').val();
-  $('input#input_newsletter').removeClass('wrong');
-  if(email == ''){ $('input#input_newsletter').addClass('wrong'); open_gate = false; }else{ if ((email.indexOf("@")>=0)&&(email.indexOf(".")>=0)){}else{ $('input#input_newsletter').addClass('wrong'); open_gate = false;} }
+function save_email_to_mailchimp(){
+  var open_door = true;
+  var email = $('#newsletter_input').val();
 
-  if(open_gate){ $("form#form_newsletter").submit(); }
+  if( email == '' ){
+    open_door = false;
+    alert('The email is required.');
+    return false;
+  }
+
+  if( (email.indexOf("@")==0) && (email.indexOf(".")==0) ){
+    open_door = false;
+    alert('The email is incorrect.');
+    return false;
+  }
+
+  if( open_door ){
+    var input_datas = "email=" + encodeURIComponent( email );
+
+    $.ajax({
+      url : BASEURL + "contact/newsletter",
+      cache: false,
+      type : 'POST',
+      data : input_datas,
+      dataType : 'html',
+      success : function(reponse){
+        var json_reponse = JSON.parse(reponse);
+        alert( json_reponse.message );
+        $('#newsletter_input').val('');
+      },
+      error : function(resultat, statut, erreur){
+        console.log( resultat, statut, erreur );
+      }
+    });
+  }
 }
 
 var open_hours = [
@@ -72,7 +100,8 @@ function quickcontact(){
   var html = '<div class="quick_contact" class="m-scrollable-filter">';
       html += '<a class="quick_contact_button" onclick="launch_detail_information();" href="#"><img src="' + BASEURL + 'assets/images/ICON_mail.svg" alt=""><img style="display: none;" src="'+ BASEURL + '/assets/images/ICON_cross.svg" alt=""></a>';
       html += '  <div class="content" style="display:none;">';
-      html += '    <h4>Birkenstock Bondi Beach<br>7/178 Campbell Pde. Bondi Beach 2026</h4>';
+      // html += '    <h4>Birkenstock Bondi Beach<br>7/178 Campbell Pde. Bondi Beach 2026</h4>';
+      html += '    <h4>Birkenstock Bondi Beach</h4>';
       html += '    <div class="open_hours">';
       html += '      <h5 class="' + isOpen() + '">' + isOpen() + ' Now</h5>';
       html += '      <div class="line_containter">';
@@ -84,7 +113,7 @@ function quickcontact(){
       html += '        <div class="hours_container">10am - 6pm</div>';
       html += '      </div>';
       html += '      <div class="line_containter">';
-      html += '        <div class="days_container">Monday - Friday</div>';
+      html += '        <div class="days_container">Sunday</div>';
       html += '        <div class="hours_container">10am - 6pm</div>';
       html += '      </div>';
       html += '    </div>';

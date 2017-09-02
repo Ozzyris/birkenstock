@@ -82,8 +82,8 @@ $config['salt_prefix']    = version_compare(PHP_VERSION, '5.3.7', '<') ? '$2a$' 
  | The controller should check this function and act
  | appropriately. If this variable set to 0, there is no maximum.
  */
-$config['site_title']                 = "Birkenstockbondibeach.com.au";       // Site Title, example.com
-$config['admin_email']                = "no-replyl@birkenstockbondibeach.com.au"; // Admin Email, admin@example.com
+$config['site_title']                 = "alfred_at_work";       // Site Title, example.com
+$config['admin_email']                = "no-replyl@alfredatwork.com.au"; // Admin Email, admin@example.com
 $config['default_group']              = 'members';           // Default group, use name
 $config['admin_group']                = 'admin';             // Default administrators group, use name
 $config['identity']                   = 'email';             // You can use any unique column in your table as identity column. The values in this column, alongside password, will be used for login purposes
@@ -118,11 +118,10 @@ $config['identity_cookie_name'] = 'identity';
  | 	  'file' = Use the default CI config or use from a config file
  | 	  array  = Manually set your email config settings
  */
-$config['use_ci_email'] = FALSE; // Send Email using the builtin CI email class, if false it will return the code and the identity
+$config['use_ci_email'] = TRUE; // Send Email using the builtin CI email class, if false it will return the code and the identity
 $config['email_config'] = array(
 	'mailtype' => 'html',
 );
-
 /*
  | -------------------------------------------------------------------------
  | Email templates.

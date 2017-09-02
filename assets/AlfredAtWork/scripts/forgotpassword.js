@@ -15,8 +15,7 @@ function sendrecoveryemail(){
 	
   if(open_gate){
     var input_datas = "email="+ email;
-    console.log(email);
-
+    
   		$.ajax({
   		    url : BASEURL + "alfredatwork/forgot-password/recovery-mail",
   		    cache: false,
@@ -24,11 +23,13 @@ function sendrecoveryemail(){
   		    data : input_datas,
   		    dataType : 'html',
   		    success : function( data ){
+            console.log(data);
   		        Internal_notification_center(data, 'success', 2000);
   		    },
-  		    	error : function(resultat, statut, erreur){
-  				Internal_notification_center( erreur , 'error', 5000);
-  		      }
+  		    error : function(resultat, statut, erreur){
+            console.log(resultat, statut, erreur);
+  				  Internal_notification_center( erreur , 'error', 5000);
+  		    }
   		});
   }
 }

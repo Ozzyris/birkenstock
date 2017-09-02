@@ -22,7 +22,7 @@ class Home extends CI_Controller {
 	}
 
 	public function newsletter_content(){
-		if($this->Home_Model->newsletter_content( $_POST['newsletter_text'] )){
+		if($this->Home_Model->newsletter_content( addslashes($_POST['newsletter_text']) )){
 			$data = array("status" => 'success', 'message' => 'Newsletter Updated');    
 			header('Content-Type: application/json');
     		echo json_encode( $data );

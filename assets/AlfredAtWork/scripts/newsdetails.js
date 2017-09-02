@@ -11,7 +11,7 @@ function main_verification( type ){
         Internal_notification_center('You cannot send a form with an empty field.', 'error', 5000);
         open_gate = false;
       }else{
-        input_datas = "title=" + $( '#title_input' ).val();
+        input_datas = "title=" + encodeURIComponent($( '#title_input' ).val());
       }
       break;
 
@@ -21,7 +21,7 @@ function main_verification( type ){
         Internal_notification_center('You cannot send a form with an empty field.', 'error', 5000);
         open_gate = false;
       }else{
-        input_datas = "time=" + $( '#time_input' ).val();
+        input_datas = "time=" + encodeURIComponent($( '#time_input' ).val());
       }
       break;
 
@@ -31,7 +31,7 @@ function main_verification( type ){
         Internal_notification_center('You cannot send a form with an empty field.', 'error', 5000);
         open_gate = false;
       }else{
-        input_datas = "description=" + $( '#description_input' ).val();
+        input_datas = "description=" + encodeURIComponent($( '#description_input' ).val());
       }
       break;
 
@@ -41,7 +41,7 @@ function main_verification( type ){
         Internal_notification_center('You cannot send a form with an empty field.', 'error', 5000);
         open_gate = false;
       }else{
-        input_datas = "link=" + $( '#link_input' ).val();
+        input_datas = "link=" + encodeURIComponent($( '#link_input' ).val());
       }
       break;
 

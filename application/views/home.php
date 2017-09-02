@@ -112,7 +112,7 @@
 		</ul>
 	</section>
 
-	<section id="Home_History" class="m-scrollable-filter">
+<!-- 	<section id="Home_History" class="m-scrollable-filter">
 		<h2 class="title">Birkenstock Bondi Beach - History</h2>
 		<article>
 			<div class="image" style="background-image: url('<?php echo base_url(); ?>assets/images/BG_history.jpg');"></div>
@@ -123,7 +123,7 @@
 				<span class="colorborder"></span>
 			</div>
 		</article>
-	</section>
+	</section> -->
 
 	<section id="latestNews" class="m-scrollable-filter">
 		<h2 class="title">Our last news</h2>

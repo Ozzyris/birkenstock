@@ -14,6 +14,17 @@ class ForgotpasswordModel extends CI_Model{
         	die(json_encode(array('message' => 'ERROR', 'code' => 1337)));
 		}
 		
+	}	
+
+	public function get_user_id( $token ){
+		$sql = $this->db->query("SELECT id FROM users WHERE forgotten_password_code = '$token' LIMIT 1");
+
+		if( $sql->num_rows() != 0 ){
+			return $sql->result()[0];
+		}else{
+			return false;
+		}
+		
 	}
 	
 }

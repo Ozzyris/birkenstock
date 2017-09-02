@@ -14,29 +14,6 @@ function validation(){
   if(open_gate){ $("form#contact_form").submit(); }
 }
 
-// FUNCTION GET DATA FROM URL
-function GET(){
-  var answer = $_GET('answer');
-  if(answer == 'send'){
-    var html  = '<div class="alert success">'
-        html += '<p>Your mail Has been sent</p>'
-        html += '</div>'
-
-    $('body').append(html);
-    setTimeout(function(){ 
-        $('div.alert').addClass('active');
-      }, 100);
-
-     setTimeout(function(){ 
-      $('div.alert').removeClass('active');
-      setTimeout(function(){ 
-        $('div.alert').remove();
-      }, 1000);
-     }, 5000);
-  }
-}
-GET();
-
 
 function initMap() {
   var map;
@@ -55,7 +32,8 @@ function initMap() {
   
   
   var contentString  = '<div id="map_content">';
-        contentString += '  <h1 class="firstHeading">Birkenstock Bondi Beach,<br> 7/178 Campbell Pde. Bondi Beach 2026</h1><br />';
+        contentString += '  <h1 class="firstHeading">Birkenstock Bondi Beach,</h1><br />';
+        // contentString += '  <h1 class="firstHeading">Birkenstock Bondi Beach,<br> 7/178 Campbell Pde. Bondi Beach 2026</h1><br />';
         contentString += '  <h5 class="' + isOpen() + '">' + isOpen() + ' Now</h5>';
         contentString += '</div>';
 

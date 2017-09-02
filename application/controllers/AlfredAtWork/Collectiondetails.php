@@ -30,7 +30,7 @@ class Collectiondetails extends CI_Controller {
 	}
 
 	public function description_content( $collection_id ){
-        if($this->Collection_Model->description_content( $collection_id, $_POST['description'] )){
+        if($this->Collection_Model->description_content( $collection_id, addslashes($_POST['description'] ))){
             $data = array("status" => 'success', 'message' => 'Description Updated');    
             header('Content-Type: application/json');
             echo json_encode( $data );

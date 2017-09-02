@@ -14,7 +14,7 @@ function slide_image( next_position ){
 				$('section#product_image ul.gallery').css('transform', 'translateX(' + -((actual_position+1)*slide_distance_percentage) + '%)');
 				
 				gallery_content[(number_of_picture - (actual_position+2))].tags.forEach(function(item, index){
-					$('section#product_information ul.tag').append('<li><img src="http://birkenstockbondibeach.com.au/images/BADGE_' + item + '.svg" alt=""></li>');
+					$('section#product_information ul.tag').append('<li><img src="http://birkenstockbondibeach.com.au/assets/images/BADGE_' + item + '.svg" alt=""></li>');
 				});
 				$('section#product_information p.color').text(gallery_content[(number_of_picture - (actual_position+2))].color);
 				$('section#product_information p.size').text(sizes[(number_of_picture - (actual_position+2))]);
@@ -27,7 +27,7 @@ function slide_image( next_position ){
 				$('section#product_image ul.gallery').css('transform', 'translateX(' + -((actual_position-1)*slide_distance_percentage) + '%)');
 
 				gallery_content[(number_of_picture - actual_position)].tags.forEach(function(item, index){
-					$('section#product_information ul.tag').append('<li><img src="http://birkenstockbondibeach.com.au/images/BADGE_' + item + '.svg" alt=""></li>');
+					$('section#product_information ul.tag').append('<li><img src="http://birkenstockbondibeach.com.au/assets/images/BADGE_' + item + '.svg" alt=""></li>');
 				});
 				$('section#product_information p.color').text(gallery_content[(number_of_picture - actual_position)].color);
 				$('section#product_information p.size').text(sizes[(number_of_picture - actual_position)]);
@@ -38,7 +38,7 @@ function slide_image( next_position ){
 		default:
 			$('section#product_image ul.gallery').css('transform', 'translateX(' + -(next_position*slide_distance_percentage) + '%)');
 			gallery_content[(number_of_picture - (next_position+1))].tags.forEach(function(item, index){
-				$('section#product_information ul.tag').append('<li><img src="http://birkenstockbondibeach.com.au/images/BADGE_' + item + '.svg" alt=""></li>');
+				$('section#product_information ul.tag').append('<li><img src="http://birkenstockbondibeach.com.au/assets/images/BADGE_' + item + '.svg" alt=""></li>');
 			});
 			$('section#product_information p.color').text(gallery_content[(number_of_picture - (next_position+1))].color);
 			$('section#product_information p.size').text(sizes[(number_of_picture - (next_position+1))]);
@@ -105,7 +105,7 @@ function GET(){
 				$('section#product_image ul.dot li:nth-child(' + (number_of_picture - i) + ')').addClass('active');
 				$('section#product_image ul.gallery').css('transform', 'translateX(' + -((number_of_picture - (i + 1))*slide_distance_percentage) + '%)');
 				gallery_content[i].tags.forEach(function(item, index){
-					$('section#product_information ul.tag').append('<li><img src="' + BASEURL + '/assets/images/BADGE_' + item + '.svg" alt=""></li>');
+					$('section#product_information ul.tag').append('<li><img src="' + BASEURL + 'assets/images/BADGE_' + item + '.svg" alt=""></li>');
 				});
 				$('section#product_information p.color').text(gallery_content[i].color);
 				$('section#product_information p.size').text(sizes[i]);

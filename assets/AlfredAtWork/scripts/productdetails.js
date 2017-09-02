@@ -113,7 +113,7 @@ function main_verification( type ){
         Internal_notification_center('You cannot send a form with an empty field.', 'error', 5000);
         open_gate = false;
       }else{
-        input_datas = "color=" + $( '#color_input' ).val();
+        input_datas = "color=" + encodeURIComponent($( '#color_input' ).val());
       }
       break;
 

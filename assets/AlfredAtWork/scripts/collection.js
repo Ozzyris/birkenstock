@@ -2,7 +2,7 @@ function verification_newproduct(){
 	var value = $('form.tooltype input').val();
     value = value.split(' ').join('_');
 	if( value != '' ){
-		var input_datas = "title="+ value;
+		var input_datas = "title="+ encodeURIComponent(value);
           $.ajax({
                 url : BASEURL + "alfredatwork/collection/insert_element/",
                 cache: false,

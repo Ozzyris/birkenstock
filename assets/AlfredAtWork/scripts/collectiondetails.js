@@ -12,7 +12,7 @@ function main_verification( type ){
         Internal_notification_center('You cannot send a form with an empty field.', 'error', 5000);
         open_gate = false;
       }else{
-        input_datas = "name=" + $( '#input_name' ).val();
+        input_datas = "name=" + encodeURIComponent( $( '#input_name' ).val());
       }
       break;
 
@@ -22,7 +22,7 @@ function main_verification( type ){
         Internal_notification_center('You cannot send a form with an empty field.', 'error', 5000);
         open_gate = false;
       }else{
-          input_datas = "description=" + $( '#input_description' ).val();
+          input_datas = "description=" + encodeURIComponent($( '#input_description' ).val());
       }
       break;
 

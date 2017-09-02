@@ -2,7 +2,7 @@
 
     <span id="tooltype">
       <div id="connexion_form" action="">
-        <input id="revovery_email" name="email" type="text" placeholder="email" onKeyPress="if(event.keyCode == 13) sendrecoveryemail();" value="nemokervi@yahoo.fr"/><br />
+        <input id="revovery_email" name="email" type="text" placeholder="email" onKeyPress="if(event.keyCode == 13) sendrecoveryemail();" /><br />
         <br />
         <a href="#" onclick="sendrecoveryemail()" class="input_button active">Send recovery email</a>
         <a href="login" class="input_button">Cancel</a>

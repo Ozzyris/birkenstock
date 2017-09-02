@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	  <meta charset="utf-8">
+	  <title>Madrid - Birkenstock Bondi Beach</title>
+	  <!-- META -->
+	  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="description" content="Birkenstock Bondi Beach has the widest selection of Birkenstock footwear in Sydney, located on Campbell Pde. Bondi Beach. Features womens', mens' and kids comfort footwear for all seasons, including classic Arizona, Madrid and Gizeh styles in the latest metallic and neon colours.">
+		<meta name="REVISIT-AFTER" content="14 days">
+    	<meta name="audience" content="all">
+    	<meta name="Author" content="Alexandre Nicol">
+    	<meta name="robots" content="INDEX,FOLLOW">
+	  <!-- LINK -->
+	  <link rel="shortcut icon" href="../../../images/favicon.png">
+	  <link rel="stylesheet" href="../../../styles/main.css">
+	  <link rel="stylesheet" href="../../../styles/ui_componantes.css">
+	  <link rel="stylesheet" href="../../../styles/product_details.css">
+	</head>
+	<body>
+	
+	<header class="Global_Header">
+		<img src="../../../images/LOGO_logocolour.svg" alt="logo birkenstock">
+	</header>
+
+	<!-- NAVIGATION -->
+	<nav>
+		<a id="hamburger_icon" href="#" onclick="sidemenu()" title="Menu">
+			<span class="line line-1"></span>
+			<span class="line line-2"></span>
+			<span class="line line-3"></span>
+		</a>
+		<a class="image_logo" href="../../../index.html"><img class="logo" src="../../../images/LOGO_logomenu.svg" alt="Birkenstock"></a>
+		<div class="left_menu" id="left_menu">
+			<ul>
+				<li><a href="http://birkenstockbondibeach.com.au/index.html">Home</a></li>
+				<li class="active"><a href="http://birkenstockbondibeach.com.au/views/products.html?collection=all">Product</a></li>
+				<li><a href="http://birkenstockbondibeach.com.au/views/products.html?collection=seasonal">Seasonal</a></li>
+				<li><a href="http://birkenstockbondibeach.com.au/views/about.html">About Us</a></li>
+				<li><a href="http://birkenstockbondibeach.com.au/views/contact.html">Contact Us</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<section id="product_image">
+		<ul class="gallery">
+			<!-- Javacript gallery insertion here -->
+		</ul>
+		<ul class="dot">
+			<!-- Javacript dot insertion here -->
+		</ul>
+		<span class="arrow left" onclick="slide_image( 'left' )"><img src="../../../images/ELEM_Arrow.svg" alt=""></span>
+		<span class="arrow right" onclick="slide_image( 'right' )"><img src="../../../images/ELEM_Arrow.svg" alt=""></span>
+	</section>
+
+	<section id="product_information">
+		<h1 class="title">MADRID</h1>
+		<p>The BIRKENSTOCK item Madrid is the first sandal from BIRKENSTOCK, and its simplicity and functionality are peerless. The deep heel cup, which stabilizes the foot, allows steady walking and an upright stride. The strap helps the toes grip and promotes the natural rolling movement of the foot.</p>
+		<ul class="tag"></ul>
+    	<p class="size"></p>
+    	<p class="color"></p>
+		<a onclick="modal_contact(); return false;" href="#"><h3>CONTACT US</h3></a>
+	</section>
+
+	<!-- FOOTER -->
+	<footer class="m-scrollable-filter"> 
+		<form id="form_newsletter" class="newsletter" action="//birkenstockbondibeach.us14.list-manage.com/subscribe/post?u=b1c61f30dcc67e681ab1afc31&amp;id=3eb48a33e0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+			<p>Be the first to receive information on upcoming promotions, sales, in store events and more..</p>
+			<div class="input_group">
+				<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    			<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_b1c61f30dcc67e681ab1afc31_3eb48a33e0" tabindex="-1" value=""></div>
+				<input id="input_newsletter" type="text" name="EMAIL" placeholder="Suscribe">
+				<a onclick="newsletter_verification(); return false;" href="#"></a>
+			</div>
+		</form>
+		<ul class="external_link">
+    	  <li><a href="https://www.facebook.com/Birkenstock-Bondi-Beach-952774751471213/" target="_blank"><span>&#xf09a;</span><p>/Birkenstock Bondi Beach</p></a></li>
+    	  <li><a href="https://www.instagram.com/birkenstock_bondi_beach/" target="_blank"><span>&#xf16d;</span><P>/Birkenstock Bondi Beach</p></a></li>
+    	  <li><a href="https://goo.gl/maps/vG6YjBuWVbk" target="_blank"><span>&#xf041;</span><P>7/178 Campbell Pde.<br>Bondi Beach 2026</p></a></li>
+    	  <li><a href="mailto:birkenstockbondi@gmail.com"><span></span><P>birkenstockbondi@gmail.com</p></a></li>
+    	  <li><a href="tel:0291304607"><span>&#xf095;</span><P>02 9130 4607</p></a></li>
+    	</ul>
+    	<p class="copyright">Copyright - Birkenstock Bondi Beach 2016</p>
+	</footer>
+
+	</body>
+
+	<!-- SCRIPT -->
+	<script src="../../../plugins/jquery.js"></script>
+	<script src="../../../scripts/main.js"></script>
+	<script>
+	var gallery_content = [
+        { //MADRID CLASSIC BLACK
+          name: 'madrid',
+          picture: 'madrid_birkoflor_black',
+          tag: ['birkoflor', 'regularfit', 'narrowfit'],
+          size: [35, 36, 37, 38, 39, 40, 41, 42, 43],
+          gender: ['men', 'women'], 
+          color: 'Black'
+        },
+        { //MADRID CLASSIC WHITE
+          name: 'madrid',
+          picture: 'madrid_birkoflor_white',
+          tag: ['birkoflor', 'regularfit', 'narrowfit'],
+          size: [35, 36, 37, 38, 39, 40, 41],
+          gender: ['men', 'women'], 
+          color: 'White'
+        },
+        { //MADRID CLASSIC MOCCA
+          name: 'madrid',
+          picture: 'madrid_birkoflor_mocca',
+          tag: ['birkoflor', 'regularfit', 'narrowfit'],
+          size: [36, 37, 38, 39, 40, 41, 42, 43],
+          gender: ['men', 'women'], 
+          color: 'Mocca'
+        },
+        { //MADRID CLASSIC BLUE
+          name: 'madrid',
+          picture: 'madrid_birkoflor_navy',
+          tag: ['birkoflor', 'regularfit'],
+          size: [35, 36, 37, 38, 39, 40, 41],
+          gender: ['men', 'women'], 
+          color: 'Navy'
+        }
+	];
+	</script>
+	<script src="../../../scripts/product_details.js"></script><script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-85818416-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
+</html>

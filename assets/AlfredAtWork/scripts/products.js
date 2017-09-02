@@ -28,7 +28,7 @@ function product_tooltype_factory( collection_id ){
 function verification_newelement( collection_id ){
 	var color = $('form.tooltype input#product_name').val();
 	if( color != '' ){
-	var input_datas = "color="+ color;
+	var input_datas = "color="+ encodeURIComponent(color);
 	    $.ajax({
 	      url : BASEURL + "alfredatwork/products/insert_element/" + collection_id,
 	      cache: false,

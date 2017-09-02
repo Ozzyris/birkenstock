@@ -2,10 +2,11 @@
 
     <span id="tooltype">
       <form id="connexion_form" action="login/auth" method="POST">
-            <input id="input_password" name="password" type="password" placeholder="password" />
-            <input id="input_password" name="password" type="password" placeholder="password" />
+            <input id="input_password_recovery" name="password_recovery" type="password" placeholder="password" />
+            <input id="input_password_recovery_bis" name="password_recovery_bis" type="password" placeholder="password" />
+            <input id="token" name="token" type="hidden" value="<?php echo $token ?>" />
         <br />
-        <a href="#" class="input_button active">Change Password</a>
+        <a onclick="main_verification( 'password' ); return false;" class="input_button active">Change Password</a>
         <a href="login" class="input_button">Cancel</a>
       </form>
     </span>
@@ -15,6 +16,6 @@
     <!-- SCRIPTS -->
     <script src="<?php echo base_url(); ?>assets/AlfredAtWork/plugins/jQuery.js"></script>
     <script src="<?php echo base_url(); ?>assets/AlfredAtWork/scripts/main.js"></script>
-    <script src="<?php echo base_url(); ?>assets/AlfredAtWork/scripts/forgotpassword.js"></script>
+    <script src="<?php echo base_url(); ?>assets/AlfredAtWork/scripts/createpassword.js"></script>
   </body>
 </html>

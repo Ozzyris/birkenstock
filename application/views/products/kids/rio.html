@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	  <meta charset="utf-8">
+	  <title>Bondi Birkenstock - Rio</title>
+	  <!-- META -->
+	  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="description" content="Birkenstock Bondi Beach has the widest selection of Birkenstock footwear in Sydney, located on Campbell Pde. Bondi Beach. Features womens', mens' and kids comfort footwear for all seasons, including classic Arizona, Madrid and Gizeh styles in the latest metallic and neon colours.">
+		<meta name="REVISIT-AFTER" content="14 days">
+    	<meta name="audience" content="all">
+    	<meta name="Author" content="Alexandre Nicol">
+    	<meta name="robots" content="INDEX,FOLLOW">
+	  <!-- LINK -->
+	  <link rel="shortcut icon" href="../../../images/favicon.png">
+	  <link rel="stylesheet" href="../../../styles/main.css">
+	  <link rel="stylesheet" href="../../../styles/ui_componantes.css">
+	  <link rel="stylesheet" href="../../../styles/product_details.css">
+	</head>
+	<body>
+	
+	<header class="Global_Header">
+		<img src="../../../images/LOGO_logocolour.svg" alt="logo birkenstock">
+	</header>
+
+	<!-- NAVIGATION -->
+	<nav>
+		<a id="hamburger_icon" href="#" onclick="sidemenu()" title="Menu">
+			<span class="line line-1"></span>
+			<span class="line line-2"></span>
+			<span class="line line-3"></span>
+		</a>
+		<a class="image_logo" href="../../../index.html"><img class="logo" src="../../../images/LOGO_logomenu.svg" alt="Birkenstock"></a>
+		<div class="left_menu" id="left_menu">
+			<ul>
+				<li><a href="http://birkenstockbondibeach.com.au/index.html">Home</a></li>
+				<li class="active"><a href="http://birkenstockbondibeach.com.au/views/products.html?collection=all">Product</a></li>
+				<li><a href="http://birkenstockbondibeach.com.au/views/products.html?collection=seasonal">Seasonal</a></li>
+				<li><a href="http://birkenstockbondibeach.com.au/views/about.html">About Us</a></li>
+				<li><a href="http://birkenstockbondibeach.com.au/views/contact.html">Contact Us</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<section id="product_image">
+		<ul class="gallery">
+			<!-- Javacript gallery insertion here -->
+		</ul>
+		<ul class="dot">
+			<!-- Javacript dot insertion here -->
+		</ul>
+		<span class="arrow left" onclick="slide_image( 'left' )"><img src="../../../images/ELEM_Arrow.svg" alt=""></span>
+		<span class="arrow right" onclick="slide_image( 'right' )"><img src="../../../images/ELEM_Arrow.svg" alt=""></span>
+	</section>
+
+	<section id="product_information">
+		<h1 class="title">RIO</h1>
+		<p>The Rio model, the popular and extremely stylish sandal from BIRKENSTOCK, has now been adapted to the needs of children. This successful model boasts two adjustment options. Thanks to individually adjustable metal buckles, two straps – one in the ankle/heel area and one over the instep – ensure that the shoe is a perfect fit for every foot and that it gives active kids firm support with every step they take.</p>
+		<ul class="tag"></ul>
+    	<p class="size"></p>
+    	<p class="color"></p>
+		<a onclick="modal_contact(); return false;" href="#"><h3>CONTACT US</h3></a>
+	</section>
+
+	<!-- FOOTER -->
+	<footer class="m-scrollable-filter"> 
+		<form id="form_newsletter" class="newsletter" action="//birkenstockbondibeach.us14.list-manage.com/subscribe/post?u=b1c61f30dcc67e681ab1afc31&amp;id=3eb48a33e0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+			<p>Be the first to receive information on upcoming promotions, sales, in store events and more..</p>
+			<div class="input_group">
+				<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    			<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_b1c61f30dcc67e681ab1afc31_3eb48a33e0" tabindex="-1" value=""></div>
+				<input id="input_newsletter" type="text" name="EMAIL" placeholder="Suscribe">
+				<a onclick="newsletter_verification(); return false;" href="#"></a>
+			</div>
+		</form>
+		<ul class="external_link">
+    	  <li><a href="https://www.facebook.com/Birkenstock-Bondi-Beach-952774751471213/" target="_blank"><span>&#xf09a;</span><p>/Birkenstock Bondi Beach</p></a></li>
+    	  <li><a href="https://www.instagram.com/birkenstock_bondi_beach/" target="_blank"><span>&#xf16d;</span><P>/Birkenstock Bondi Beach</p></a></li>
+    	  <li><a href="https://goo.gl/maps/vG6YjBuWVbk" target="_blank"><span>&#xf041;</span><P>7/178 Campbell Pde.<br>Bondi Beach 2026</p></a></li>
+    	  <li><a href="mailto:birkenstockbondi@gmail.com"><span></span><P>birkenstockbondi@gmail.com</p></a></li>
+    	  <li><a href="tel:0291304607"><span>&#xf095;</span><P>02 9130 4607</p></a></li>
+    	</ul>
+    	<p class="copyright">Copyright - Birkenstock Bondi Beach 2016</p>
+	</footer>
+
+	</body>
+
+	<!-- SCRIPT -->
+	<script src="../../../plugins/jquery.js"></script>
+	<script src="../../../scripts/main.js"></script>
+	<script>
+		var gallery_content = [
+        	{ // RIO KIDS SILVER
+        	  name: 'rio',
+        	  picture: 'rio_birkoflor_silver',
+        	  tag: ['birkoflor', 'narrowfit'],
+        	  size: [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37],
+        	  gender: ['kids'], 
+        	  color: 'Silver'
+        	},
+        	{ // RIO KIDS FLOWERS ROSE
+        	  name: 'rio',
+        	  picture: 'rio_birkoflor_flowersrose',
+        	  tag: ['birkoflor', 'narrowfit'],
+        	  size: [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34],
+        	  gender: ['kids'], 
+        	  color: 'Flowers Rose'
+        	},
+        	{ // RIO KIDS GALAXY PINK
+        	  name: 'rio',
+        	  picture: 'rio_birkoflor_galaxypink',
+        	  tag: ['birkoflor', 'narrowfit'],
+        	  size: [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35],
+        	  gender: ['kids'], 
+        	  color: 'Galaxy Pink'
+        	},
+        	{ // RIO KIDS NAVY
+        	  name: 'rio',
+        	  picture: 'rio_eva_navy',
+        	  tag: ['eva', 'narrowfit'],
+        	  size: [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34],
+        	  gender: ['kids'], 
+        	  color: 'Navy'
+        	},
+        	{ // RIO KIDS PINK
+        	  name: 'rio',
+        	  picture: 'rio_eva_pink',
+        	  tag: ['eva', 'narrowfit'],
+        	  size: [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34],
+        	  gender: ['kids'], 
+        	  color: 'Pink'
+        	},
+        	{ // RIO KIDS ORANGE
+        	  name: 'rio',
+        	  picture: 'rio_eva_orange',
+        	  tag: ['eva', 'narrowfit'],
+        	  size: [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34],
+        	  gender: ['kids'], 
+        	  color: 'Orange'
+        	}
+		];
+	</script>
+	<script src="../../../scripts/product_details.js"></script><script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-85818416-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
+</html>

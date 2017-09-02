@@ -10,7 +10,7 @@ function main_verification( type ){
         Internal_notification_center('You cannot send a form with an empty field.', 'error', 5000);
         open_gate = false;
       }else{
-        input_datas = "first_name=" + $( '#input_firstname' ).val() + "&last_name=" + $('#input_lastname').val();
+        input_datas = "first_name=" + encodeURIComponent($( '#input_firstname' ).val()) + "&last_name=" + encodeURIComponent($('#input_lastname').val());
       }
       break;
       
@@ -20,7 +20,7 @@ function main_verification( type ){
         Internal_notification_center('You cannot send a form with an empty field.', 'error', 5000);
         open_gate = false;
       }else{
-        input_datas = "email=" + $( '#input_email' ).val();
+        input_datas = "email=" + encodeURIComponent($( '#input_email' ).val());
       }
       break;
 

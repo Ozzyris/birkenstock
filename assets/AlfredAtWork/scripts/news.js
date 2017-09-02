@@ -1,7 +1,7 @@
 function verification_newproduct(){
 	var value = $('form.tooltype input').val();
 	if( value != '' ){
-		var input_datas = "title="+ value;
+		var input_datas = "title=" + encodeURIComponent(value);
         console.log(input_datas);
           $.ajax({
                 url : BASEURL + "alfredatwork/news/insertData/",

@@ -17,7 +17,8 @@ function initMap() {
   
   
   var contentString  = '<div id="map_content">';
-        contentString += '  <h1 class="firstHeading">Birkenstock Bondi Beach,<br> 7/178 Campbell Pde. Bondi Beach 2026</h1><br />';
+        contentString += '  <h1 class="firstHeading">Birkenstock Bondi Beach,</h1><br />';
+        // contentString += '  <h1 class="firstHeading">Birkenstock Bondi Beach,<br> 7/178 Campbell Pde. Bondi Beach 2026</h1><br />';
         contentString += '  <h5 class="' + isOpen() + '">' + isOpen() + ' Now</h5>';
         contentString += '</div>';
 

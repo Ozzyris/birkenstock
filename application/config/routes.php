@@ -8,6 +8,7 @@ $route['product-details/(:any)/(:any)/(:any)'] = 'Product_details/index/$1/$2/$3
 $route['products/(:any)'] = 'Products/index/$1';
 $route['about'] = 'About';
 $route['contact'] = 'Contact';
+$route['contact/newsletter'] = 'Contact/newsletter';
 
 
 // BACKEND ROUTES
@@ -18,7 +19,8 @@ $route['contact'] = 'Contact';
 	$route['alfredatwork/login/auth'] = 'AlfredAtWork/Login/auth';
 	$route['alfredatwork/forgot-password'] = 'AlfredAtWork/Forgotpassword';
 	$route['alfredatwork/forgot-password/recovery-mail'] = 'AlfredAtWork/Forgotpassword/recovery_email';
-	$route['alfredatwork/create-password'] = 'AlfredAtWork/Createpassword';
+	$route['alfredatwork/create-password/set_password'] = 'AlfredAtWork/Createpassword/Set_password';
+	$route['alfredatwork/create-password/(:any)'] = 'AlfredAtWork/Createpassword/index/$1';
 
 	// API ROUTES
 		// dashboard

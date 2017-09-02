@@ -18,8 +18,8 @@
       		$attributes = array('id' => 'contact_form');
       		echo form_open('/contact/submit', $attributes);
       	?> 
-      	<div class="email_send <?php if( isset( $_SESSION['email_sent'] ) ){ echo 'active'; } ?>" >
-			<h2><?php if(isset($_SESSION['email_sent'])){ echo $_SESSION['email_sent']; }?></h2>
+      	<div style="margin: 50px 0;" class="email_send <?php if( isset( $_SESSION['email_sent'] ) ){ echo 'active'; } ?>" >
+			<h2 style="font-size: 2rem; text-align: center; color: #498098; font-weight: 200;"><?php if(isset($_SESSION['email_sent'])){ echo $_SESSION['email_sent']; }?></h2>
 		</div>
 
 			<div class="inputs_group">
@@ -29,6 +29,7 @@
       			<input name="contact_email" id="input_email" type="text" placeholder="john.doe@outlook.com"/>
       			<label for="input_phone">YOUR PHONE NUMBER</label>
       			<input name="contact_phone" id="input_phone" type="text" placeholder="0456 985 568" />
+      			<p id="contact_wall">Leave this empty: <input type="text" name="input_url" /></p>
       		</div>
       		<div class="inputs_group">
       			<label for="input_message">YOUR MESSAGE</label>

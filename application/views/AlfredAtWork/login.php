@@ -4,7 +4,7 @@
       <form id="connexion_form" action="<?php echo base_url(); ?>alfredatwork/login/auth" method="POST">
         <input id="input_email" name="email" type="text" placeholder="email" /><br />
         <input id="input_password" name="password" onKeyPress="if(event.keyCode == 13) login_verfification();" type="password" placeholder="password" />
-        <a href="forgot-password" class="link">forgot password ?</a>
+        <a href="<?php echo base_url() . 'alfredatwork/forgot-password' ?>" class="link">forgot password ?</a>
         <br />
         <a href="#" onclick="login_verfification();" class="input_button active">Send</a>
         <a href="#" onclick="login_tooltype();" class="input_button">Cancel</a>

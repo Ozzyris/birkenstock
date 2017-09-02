@@ -10,7 +10,7 @@ function main_verification( type ){
 				Internal_notification_center('You cannot send a form with an empty field.', 'error', 5000);
 				open_gate = false;
 			}else{
-				input_datas = "newsletter_text=" + $( '#input_newslettertext' ).val();
+				input_datas = "newsletter_text=" + encodeURIComponent($( '#input_newslettertext' ).val());
 			}
 			break;
 
@@ -24,7 +24,7 @@ function main_verification( type ){
 					Internal_notification_center('An http:// is needed to save a link', 'error', 5000);
 					open_gate = false;
 				}else{
-					input_datas = "facebook_text=" + $( '#input_facebooktext' ).val() + '&facebook_link=' + $( '#input_facebooklink' ).val();
+					input_datas = "facebook_text=" + encodeURIComponent($( '#input_facebooktext' ).val()) + '&facebook_link=' + encodeURIComponent($( '#input_facebooklink' ).val());
 				}
 			}
 			break;
@@ -39,7 +39,7 @@ function main_verification( type ){
 					Internal_notification_center('An http:// is needed to save a link', 'error', 5000);
 					open_gate = false;
 				}else{
-					input_datas = "instagram_text=" + $( '#input_instagramtext' ).val() + '&instagram_link=' + $( '#input_instagramlink' ).val();
+					input_datas = "instagram_text=" + encodeURIComponent($( '#input_instagramtext' ).val()) + '&instagram_link=' + encodeURIComponent($( '#input_instagramlink' ).val());
 				}
 			}
 			break;
@@ -54,7 +54,7 @@ function main_verification( type ){
 					Internal_notification_center('An http:// is needed to save a link', 'error', 5000);
 					open_gate = false;
 				}else{
-					input_datas = "address_text=" + $( '#input_addresstext' ).val() + '&address_link=' + $( '#input_addresslink' ).val();
+					input_datas = "address_text=" + encodeURIComponent($( '#input_addresstext' ).val()) + '&address_link=' + encodeURIComponent($( '#input_addresslink' ).val());
 				}
 			}
 			break;
@@ -69,7 +69,7 @@ function main_verification( type ){
 					Internal_notification_center('An mailto: is needed to save a link', 'error', 5000);
 					open_gate = false;
 				}else{
-					input_datas = "email_text=" + $( '#input_emailtext' ).val() + '&email_link=' + $( '#input_emaillink' ).val();
+					input_datas = "email_text=" + encodeURIComponent($( '#input_emailtext' ).val()) + '&email_link=' + encodeURIComponent($( '#input_emaillink' ).val());
 				}
 			}
 			break;
@@ -84,7 +84,7 @@ function main_verification( type ){
 					Internal_notification_center('An tel: is needed to save a link', 'error', 5000);
 					open_gate = false;
 				}else{
-					input_datas = "phone_text=" + $( '#input_phonetext' ).val() + '&phone_link=' + $( '#input_phonelink' ).val();
+					input_datas = "phone_text=" + encodeURIComponent($( '#input_phonetext' ).val()) + '&phone_link=' + encodeURIComponent($( '#input_phonelink' ).val());
 				}
 			}
 			break;

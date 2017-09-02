@@ -39,7 +39,7 @@ class Newsdetails extends CI_Controller {
     }
 
     public function description_content( $news_id ){
-        if($this->News_Model->description_content( $news_id, $_POST['description'] )){
+        if($this->News_Model->description_content( $news_id, addslashes($_POST['description']) )){
             $data = array('status' => 'success', 'message' => 'Description Updated');    
             header('Content-Type: application/json');
             echo json_encode( $data );

@@ -59,6 +59,7 @@ section#map{
             section#get_in_touch form div.inputs_group{
                 width: 100%;
             }
+                section#get_in_touch form div.inputs_group p#contact_wall{ display: none; }
                 section#get_in_touch form div.inputs_group label{
                     font-size: 1.3rem;
                     font-weight: 600;
