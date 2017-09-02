@@ -1,12 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-$config['ga_api_applicationName']="Birkenstock_backend";
-$config['ga_api_clientId'] = "574051210552-81cc255phc3qpedol9uci8253llimfvq.apps.googleusercontent.com";
-$config['ga_api_clientSecret'] = "or127rNCR8MRSfDrnA88ZvAH";
-$config['ga_api_redirectUri']="http://birkenstockbondibeach.com.au/beta/alfredatwork/dashboard";
-$config['ga_api_developerKey']="AIzaSyCgI4QwvsY0QclaoQ3T9Bg-6NnsBIeGN_E ";
-$config['ga_api_profileId'] = "116653407";
+$config['ga_api_applicationName']="";
+$config['ga_api_clientId'] = "";
+$config['ga_api_clientSecret'] = "";
+$config['ga_api_redirectUri']="";
+$config['ga_api_developerKey']="";
+$config['ga_api_profileId'] = "";
 
 $config['base_url'] = 'http://localhost/Birkenstock/';
 // $config['base_url'] = 'http://birkenstockbondibeach.com.au';
